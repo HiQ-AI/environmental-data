@@ -6,7 +6,7 @@ Environmental Data is a multi-source environmental-data discovery and matching t
 
 Search published process datasets; constrain source/version/system model when needed; inspect references and available metadata; retrieve authorized numerical results; propose matches, proxies or unresolved needs while preserving input identity. Discover actual command inputs with the installed CLI's help and schemas rather than guessing fields.
 
-The [source inventory](../plugins/querying-lca-datasets-expert/SOURCES.md) distinguishes source availability, numerical-data access, LCIA coverage and applicability. Directory membership alone does not establish any account's rights or a successful lookup for every dataset. New databases are not connected by a name change, and this release includes no separate EPD-document query service.
+The [source inventory](../plugins/querying-lca-datasets-expert/SOURCES.md) distinguishes source availability, numerical-data access, LCIA coverage and applicability. Directory membership alone does not establish any account's rights or a successful lookup for every dataset. New databases are not connected by a name change. The separate published-EPD query plugin uses the existing declaration API; it is not an audit expert. Retain declaration publisher, unit, method/module, validity and restrictions separately from background source/version/model coordinates.
 
 ## Using a result
 
@@ -25,3 +25,13 @@ Data retrieval and proposed matching do not write to a model, bind datasets, imp
 Search and upstream processing may use service capabilities; do not promise cost-free or offline operation. Inspect actual errors and receipts, respect host permissions, and do not disguise failed access as an empty source. Agent roles are operating guidance, not backend ACLs.
 
 Spreadsheet editing is a separate optional host capability. No general Office/PDF skills, licensed databases, CLI binaries, credentials or customer data are stored in this repository.
+
+## Source-specific entrypoints
+
+Single-source plugins use the shared CLI runtime scope, which rejects source
+conflicts, cross-source output and tools without a verifiable source contract.
+Opaque-key lookup/statistics/hotspot remain aggregate capabilities rather than
+guessed source-specific operations. The aggregate is selected explicitly, not as
+a recovery route after denied access. Runtime scopes are not OS shell sandboxes.
+Public metadata and EPD search are intentionally read-only public endpoints;
+other queries retain their existing authentication. See [distribution](DISTRIBUTION.md).

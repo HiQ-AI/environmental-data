@@ -1,85 +1,122 @@
 # Environmental Data
 
-Find environmental data across sources. Compare candidates, preserve provenance and match the data to the question you are trying to answer.
+Find environmental data across sources. Compare candidates, preserve provenance
+and match the data to the question you are trying to answer.
 
-Use Environmental Data in research, product comparisons, procurement, reporting, assessment or your own data workflow. You choose the use case. The current connector retrieves environmental **process datasets** from published database sources; the data's format and coverage should not be confused with a restriction to one profession or workflow.
-
-## What you can do
-
-- Search across published sources or constrain a query to a particular source, version and system model.
-- Find candidates for materials, energy, transport, treatment and other data requirements, individually or in supported batches.
-- Inspect source coordinates, dataset identity, reference product/unit and available geographical, temporal and technology evidence.
-- Retrieve numerical results where available and authorized, explaining the indicator/method and its basis.
-- Keep unresolved needs and justified proxies visible instead of forcing every request into a match.
-
-A search result, an accessible record and a suitable value are different things. Environmental Data keeps those distinctions explicit.
+Use it in research, product comparisons, procurement, reporting, assessment or
+your own workflow. Install a source-specific plugin to stay within a requested
+database, the published-EPD query plugin for declarations, or the aggregate
+plugin when the question calls for multiple sources. This marketplace contains
+no editor, modeling tool or audit expert.
 
 ## Install
 
-This repository is an independent marketplace containing the Environmental Data plugin. It does not install Editor, modeling tools or review experts.
-
-In Claude Code, add the marketplace:
+Add the marketplace in Claude Code:
 
 ```text
 /plugin marketplace add HiQ-AI/environmental-data
 ```
 
-Install Environmental Data:
+Choose the plugin you need, for example:
+
+```text
+/plugin install environmental-data-hiqlcd@environmental-data
+```
+
+```text
+/plugin install environmental-data-epd@environmental-data
+```
 
 ```text
 /plugin install querying-lca-datasets-expert@environmental-data
 ```
 
-The technical install ID remains `querying-lca-datasets-expert`; the displayed product name is **Environmental Data**. Installation loads the plugin's guides and agent roles. It does **not** install the business CLI, log in, download databases or grant access to data.
+Codex CLI 0.161.0 also accepts the native marketplace. Use its own plugin manager;
+see [installation and migration](docs/INSTALLATION.md). Native plugin installation
+loads skills and declared roles, not the business CLI or credentials. Prepare
+shared native CLI **0.6.0** separately using the pinned archive and full SHA256.
+Every plugin references the same release; no per-database query client is forked.
 
-Prepare `querying-lca-datasets` CLI **0.5.1** separately, verify its release and use its own login or controlled credential mechanism. See [installation and migration](docs/INSTALLATION.md) for supported platforms, archive verification and moving from the former shared marketplace.
-
-## Plugin
+## Plugins
 
 <!-- catalog:start -->
 | Plugin | Description |
 | --- | --- |
-| [Environmental Data](plugins/querying-lca-datasets-expert/README.md) | Environmental Data: search and match environmental process data across published database sources, preserving source, version, system model, units and applicability evidence. Access depends on source and account entitlements. |
+| [HiQLCD](plugins/environmental-data-hiqlcd/README.md) | Search and match published HiQLCD environmental process datasets using the runtime-enforced hiqlcd source scope, preserving coordinates and access limitations. |
+| [HiQLCD-AL](plugins/environmental-data-hiqlcd-al/README.md) | Search and match published HiQLCD-AL environmental process datasets using the runtime-enforced hiqlcd-al source scope, preserving coordinates and access limitations. |
+| [CALCD](plugins/environmental-data-calcd/README.md) | Search and match published CALCD environmental process datasets using the runtime-enforced calcd source scope, preserving coordinates and access limitations. |
+| [CESI Li-ion Battery Database](plugins/environmental-data-hiq-cesi/README.md) | Search and match published CESI Li-ion Battery Database environmental process datasets using the runtime-enforced hiq-cesi source scope, preserving coordinates and access limitations. |
+| [Ecoinvent](plugins/environmental-data-ecoinvent/README.md) | Search and match published Ecoinvent environmental process datasets using the runtime-enforced ecoinvent source scope, preserving coordinates and access limitations. |
+| [CarbonMinds](plugins/environmental-data-carbonminds/README.md) | Search and match published CarbonMinds environmental process datasets using the runtime-enforced carbonminds source scope, preserving coordinates and access limitations. |
+| [Agri-footprint](plugins/environmental-data-agrifootprint/README.md) | Search and match published Agri-footprint environmental process datasets using the runtime-enforced agrifootprint source scope, preserving coordinates and access limitations. |
+| [EF](plugins/environmental-data-ef/README.md) | Search and match published EF environmental process datasets using the runtime-enforced ef source scope, preserving coordinates and access limitations. |
+| [AusLCI](plugins/environmental-data-auslci/README.md) | Search and match published AusLCI environmental process datasets using the runtime-enforced auslci source scope, preserving coordinates and access limitations. |
+| [BAFU](plugins/environmental-data-bafu/README.md) | Search and match published BAFU environmental process datasets using the runtime-enforced bafu source scope, preserving coordinates and access limitations. |
+| [BioEnergieDat](plugins/environmental-data-bioenergiedat/README.md) | Search and match published BioEnergieDat environmental process datasets using the runtime-enforced bioenergiedat source scope, preserving coordinates and access limitations. |
+| [ELCD](plugins/environmental-data-elcd/README.md) | Search and match published ELCD environmental process datasets using the runtime-enforced elcd source scope, preserving coordinates and access limitations. |
+| [NEEDS](plugins/environmental-data-needs/README.md) | Search and match published NEEDS environmental process datasets using the runtime-enforced needs source scope, preserving coordinates and access limitations. |
+| [OzLCI](plugins/environmental-data-ozlci/README.md) | Search and match published OzLCI environmental process datasets using the runtime-enforced ozlci source scope, preserving coordinates and access limitations. |
+| [Recycled Plastics](plugins/environmental-data-recycledplastics/README.md) | Search and match published Recycled Plastics environmental process datasets using the runtime-enforced recycledplastics source scope, preserving coordinates and access limitations. |
+| [USDA Crop Data](plugins/environmental-data-usda/README.md) | Search and match published USDA Crop Data environmental process datasets using the runtime-enforced usda source scope, preserving coordinates and access limitations. |
+| [USLCI](plugins/environmental-data-uslci/README.md) | Search and match published USLCI environmental process datasets using the runtime-enforced uslci source scope, preserving coordinates and access limitations. |
+| [Worldsteel](plugins/environmental-data-worldsteel/README.md) | Search and match published Worldsteel environmental process datasets using the runtime-enforced worldsteel source scope, preserving coordinates and access limitations. |
+| [Published EPD Data](plugins/environmental-data-epd/README.md) | Search published EPD declarations with traceable publishers, declared units, methods/modules, validity, access restrictions and cursor pagination. This is data retrieval, not EPD audit or certification. |
+| [Environmental Data (Aggregate)](plugins/querying-lca-datasets-expert/README.md) | Query and match environmental data across published background sources and EPD declarations, preserving provenance, units, access limits and coverage gaps. |
 <!-- catalog:end -->
 
-The plugin package is versioned independently of its CLI. A brand or documentation update does not rename the executable, reset credentials or change the underlying service contract.
+The aggregate retains stable ID `querying-lca-datasets-expert`. Plugin package
+versions are independent of the CLI and do not reset its account identity.
 
 ## Sources and coverage
 
-The backing service publishes a [live source directory](https://x.hiqlcd.com/api/relic/sources). Sources observed include Ecoinvent, HiQLCD, CALCD, CarbonMinds, EF, AusLCI, BAFU, ELCD, USLCI and Worldsteel. The [dated source inventory](plugins/querying-lca-datasets-expert/SOURCES.md) records the complete observed list, versions, system models and coverage flags.
+The [live background-source directory](https://x.hiqlcd.com/api/relic/sources)
+provides published versions and system models. The aggregate's [dated source
+inventory](plugins/querying-lca-datasets-expert/SOURCES.md) records observed
+coverage, not permanent account rights. Single-source plugins use a CLI-enforced
+`scoped <code>` entrypoint; source conflicts, unsupported opaque-key tools and
+cross-source responses fail rather than silently broadening the query.
 
-Directory visibility is not account access. Commercial values require the corresponding entitlements. A service's “free” flag does not waive the database owner's terms or grant redistribution rights. Numerical coverage varies by source, version, dataset, method and indicator; some published sources do not advertise LCIA results.
+Published EPD declarations use their existing separate query service and retain
+publisher, declared unit, method/module, validity, restrictions and pagination.
+A declaration is not automatically interchangeable with a background process.
+Neither query plugin performs EPD audit or certification.
 
-The product name does not imply that every environmental database or data type is connected. Additional sources are supported only when actually published and exposed by the service. This release does not add an EPD-document query service or an EPD audit engine.
+Directory visibility is not numerical access. Commercial values depend on
+account entitlements; free-source labels do not waive owner terms or permit
+redistribution. Numerical coverage varies by version, dataset, method and
+indicator. Preserve missing or restricted values and unresolved needs.
 
 ## Your data and permissions
 
-Use the minimum authorized input needed for a request. Do not upload an entire workbook when selected fields suffice. Keep credentials out of conversations and reports, and do not copy tokens from another application.
+Send only authorized fields needed for the query, not an entire workbook when
+selected inputs suffice. Keep credentials out of conversations and do not borrow
+another application's tokens. Public metadata and EPD search need no local login;
+background business queries and MCP tools retain the CLI's existing authentication.
 
-Environmental Data retrieves and proposes matches. It does not bind data into a model, import datasets, calculate a model, modify business records or issue certification. Preserve the source, version, model, units and applicability evidence when using a result. See [capabilities and boundaries](docs/CAPABILITIES.md).
+Queries do not bind/import data, edit models, calculate a footprint, submit
+business records, notify people or certify results. Preserve source coordinates,
+units and applicability evidence. See [capabilities](docs/CAPABILITIES.md).
 
-## Workbook tasks
+Workbook operations need a separately available, properly licensed spreadsheet
+capability. Anthropic's [official XLSX skill](https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md)
+and [its license](https://github.com/anthropics/skills/blob/main/skills/xlsx/LICENSE.txt)
+are references, not bundled dependencies. See [spreadsheet requirements](docs/SPREADSHEETS.md).
 
-A task involving Excel may need a spreadsheet capability actually available and properly licensed in your host. It is not required for ordinary queries.
+## Compatibility and evidence
 
-Anthropic's [official XLSX skill](https://github.com/anthropics/skills/blob/main/skills/xlsx/SKILL.md) and [its license](https://github.com/anthropics/skills/blob/main/skills/xlsx/LICENSE.txt) are references, not bundled or automatically installed dependencies. See [spreadsheet requirements](docs/SPREADSHEETS.md).
+[Compatibility](docs/COMPATIBILITY.md) distinguishes native format/installation,
+actual CLI queries and remaining acceptance gaps. [Distribution](docs/DISTRIBUTION.md)
+records this delivery's scope, runtime contract and evidence. This publication
+does not switch production Desktop's catalog or release Desktop.
 
-## Host support
-
-Claude Code's native marketplace and plugin manifests are validated. Actual isolated marketplace installation is checked without a model call or business login; that is not end-to-end acceptance of every data source. This repository is not an official-directory listing.
-
-Codex marketplace adaptation has not been implemented or tested. The root Cortex catalog preserves pinned CLI supply metadata for compatible Hosts, but existing production Desktop has not switched to this repository and this publication is not a Desktop release. See [compatibility and verification](docs/COMPATIBILITY.md).
-
-## Examples
-
-> Find candidate data for these requirements, preserving source, version, reference unit and unresolved items. Do not silently change the requested database.
-
-> Compare these returned candidates by geography, reference period and technology. Explain what the available evidence does and does not establish.
-
-> Retrieve the authorized numerical result for this exact dataset reference and indicator, and retain its source and unit basis.
+A candidate, an accessible record and a suitable value are different things.
+Keep provenance, coverage and access limits visible when applying a result.
 
 ## Contributing and support
 
-See [catalog maintenance](CONTRIBUTING.md). Report reproducible issues in [GitHub Issues](https://github.com/HiQ-AI/environmental-data/issues) with the OS/architecture, plugin/CLI versions and a redacted error. Do not attach credentials, private materials or customer inputs.
-
-Repository-authored metadata, guides, roles and scripts are MIT licensed. CLI binaries, third-party software, databases and service entitlements retain their own terms. See [LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
+See [catalog maintenance](CONTRIBUTING.md). Report reproducible problems in
+[GitHub Issues](https://github.com/HiQ-AI/environmental-data/issues) with platform,
+plugin/CLI version and a redacted error. Do not attach credentials or private inputs.
+Repository-authored metadata, guides, roles and scripts are MIT licensed. CLI
+software, databases and services retain their own terms; see [LICENSE](LICENSE)
+and [third-party notices](THIRD_PARTY_NOTICES.md).

@@ -1,44 +1,98 @@
 # Installation and migration
 
-## Claude Code plugin
+## Choose a plugin
+
+Add the marketplace in Claude Code:
 
 ```text
 /plugin marketplace add HiQ-AI/environmental-data
 ```
 
+Install the selected source, for example:
+
 ```text
-/plugin install querying-lca-datasets-expert@environmental-data
+/plugin install environmental-data-hiqlcd@environmental-data
 ```
 
-The marketplace name is `environmental-data`; the plugin's stable technical ID is `querying-lca-datasets-expert` and its display name is Environmental Data. These are Claude Code interface commands, not shell commands. The independent marketplace contains only this product.
+For published declarations use `environmental-data-epd@environmental-data`.
+For explicitly selected multi-source access use the stable aggregate ID
+`querying-lca-datasets-expert@environmental-data`. Other source IDs appear in the
+[generated catalog](../README.md#plugins).
 
-Plugin installation loads instructions and agent roles, not a business CLI or credentials. No install hooks, automatic login, model calls or database downloads are bundled.
+Claude Code's slash commands are interface commands, not shell commands. Plugins
+load skills and declared roles; no installation hook installs a binary, signs
+in, calls a model, grants data rights or downloads a licensed database.
 
-## Prepare the native CLI
+## Codex native installation
 
-The supported platforms for CLI **0.5.1** are macOS arm64/x64, Linux arm64/x64 and Windows x64. The [root catalog](../marketplace.json) pins each archive URL, full SHA256 and relative executable path. Choose your actual platform; do not run another platform's binary.
+The pinned native format is accepted by Codex CLI **0.161.0**. Use its own plugin
+commands, not Claude Code slash commands:
 
-Download into a new directory, verify the entire archive digest before extraction/execution, and preserve the complete archive layout. Invoke the listed executable by its actual path or use the publisher's documented registration process with authorization. Do not guess a generic installer URL or pipe an uninspected remote script into a shell.
+```bash
+codex plugin marketplace add HiQ-AI/environmental-data
+```
 
-Start with `querying-lca-datasets version` and `querying-lca-datasets --help`. Discover command schemas through `list --json` / `describe <command>` where documented. Runtime command discovery is not permission to run a search or install another component automatically.
+```bash
+codex plugin add environmental-data-hiqlcd@environmental-data
+```
 
-The CLI owns device/QR login. An existing controlled `QUERYING_LCA_DATASETS_API_KEY` takes precedence over its stored login. Use the intended account and entitlements. Do not paste secrets into chat, inspect credential files, copy Desktop/provider tokens, change endpoints or switch identities to bypass access rules. Installation does not grant commercial-source data rights.
+```bash
+codex plugin list --json
+```
 
-## Moving from the shared marketplace
+Choose the EPD or aggregate ID the same way. Native marketplace support does not
+mean the host automatically installs the business CLI or supplies credentials.
+See [actual verification](COMPATIBILITY.md) for tested scope and limitations.
 
-If you previously installed `querying-lca-datasets-expert@hiq-plugins`, the product now has its own marketplace and source of truth. It is no longer listed alongside other products in the current shared marketplace.
+## Prepare the shared native CLI
 
-The install ID, CLI command, pinned CLI0.5.1 release and authentication contract have not changed. The marketplace namespace **has** changed, so this is an explicit host-plugin migration, not an automatic account or CLI upgrade.
+CLI **0.6.0** supports macOS arm64/x64, Linux arm64/x64 and Windows x64. The
+[root catalog](../marketplace.json) pins each archive's exact URL, full SHA256
+and relative executable. All plugins reference the same release.
 
-1. Check your host's installed-plugin list. Disable the old `querying-lca-datasets-expert@hiq-plugins` instructions before enabling the independent copy, so two sets of roles/skills do not operate in the same session.
-2. Add and install the independent marketplace using the commands above. Confirm the displayed product and installed source.
-3. Once the independent plugin is available, remove the old host-plugin entry using the host's own uninstall interface. Do not delete the separately installed CLI, its credentials or user data as part of this migration.
-4. Restart/reload the host session if it requires that for plugin discovery. Use the independent plugin's instructions and existing CLI thereafter.
+Download into a fresh directory and verify the entire archive before extraction
+or execution. Preserve its complete layout and use your platform's executable.
+Do not guess a generic installer or pipe an uninspected script into a shell.
 
-A marketplace refresh is not an automatic migration. This repository does not silently uninstall old entries, move user configuration or broaden permissions. Older shared-marketplace revisions remain in Git history for traceability, not as a separately maintained product source.
+Check version/help, then the selected scope:
 
-## Other hosts
+```bash
+querying-lca-datasets version
+```
 
-The root Cortex catalog carries existing CLI supply metadata for compatible Hosts, but production Desktop is not switched here by this publication. Codex marketplace installation has not been adapted or tested. Do not apply Claude Code marketplace commands to another host or modify host security settings to force compatibility.
+```bash
+querying-lca-datasets scoped hiqlcd sources --json
+```
 
-For workbook handling see [spreadsheet requirements](SPREADSHEETS.md); for access, scope and side effects see [capabilities](CAPABILITIES.md).
+```bash
+querying-lca-datasets scoped epd epd-search --query concrete --limit 5 --json
+```
+
+Public source metadata and EPD search need no local login. Other background
+queries and MCP tools use this CLI's own device/QR authorization or an existing
+controlled `QUERYING_LCA_DATASETS_API_KEY`. Use the intended account and its
+entitlements. Never paste secrets in chat, inspect credential files, copy another
+app's tokens, redirect authenticated requests or change identities to evade denial.
+
+Source plugins keep `scoped <code>` on business commands. The CLI rejects source
+conflicts, contaminated output and tools without a verifiable source contract.
+Removing the prefix to avoid a rejection defeats the selected product boundary.
+Scopes are invocation controls, not an OS shell sandbox or an entitlement grant.
+
+## Existing installations
+
+The aggregate keeps `querying-lca-datasets-expert`, its guide and role IDs, and
+the CLI's existing identity store. Upgrade the native CLI to 0.6.0 for the new
+source-scoped commands; older CLI 0.5.1 does not implement them. A plugin refresh
+does not itself upgrade a separately installed CLI or reset credentials.
+
+For the former `querying-lca-datasets-expert@hiq-plugins` entry, explicitly add
+the independent marketplace, install its aggregate or selected source plugin,
+then disable/remove the old host-plugin entry through the host's own interface.
+Avoid two copies of the same role/skill in a session. Do not remove the CLI,
+credentials or user data as part of migration. Reload the host if it requires it.
+This repository does not silently migrate user settings or uninstall old entries.
+
+The root Cortex catalog preserves CLI supply metadata for compatible Hosts.
+This publication does not switch production Desktop or release a new Desktop.
+Workbook handling is a separate optional [capability](SPREADSHEETS.md).

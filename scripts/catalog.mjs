@@ -39,6 +39,8 @@ const native = {
       checkComponent(plugin, `agents/${agent.id}.md`);
     }
     const cli = plugin.components.cli;
+    assert.equal(cli.name, 'querying-lca-datasets');
+    assert.deepEqual(cli, catalog.plugins[0].components.cli, 'Source plugins must share the same CLI release and archive pins');
     assert.ok(cli.name && cli.version && cli.executable);
     assert.ok(Object.keys(cli.releases).length);
     for (const [platform, release] of Object.entries(cli.releases)) {

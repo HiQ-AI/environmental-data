@@ -1,0 +1,11 @@
+{
+  "name": "environmental-data-recycledplastics",
+  "displayName": "Recycled Plastics",
+  "version": "0.6.0",
+  "description": "Search and match published Recycled Plastics environmental process datasets using the runtime-enforced recycledplastics source scope, preserving coordinates and access limitations.",
+  "repository": "https://github.com/HiQ-AI/environmental-data",
+  "license": "MIT",
+  "author": {
+    "name": "HiQ"
+  }
+}

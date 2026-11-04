@@ -1,0 +1,11 @@
+{
+  "name": "environmental-data-ozlci",
+  "displayName": "OzLCI",
+  "version": "0.6.0",
+  "description": "Search and match published OzLCI environmental process datasets using the runtime-enforced ozlci source scope, preserving coordinates and access limitations.",
+  "repository": "https://github.com/HiQ-AI/environmental-data",
+  "license": "MIT",
+  "author": {
+    "name": "HiQ"
+  }
+}

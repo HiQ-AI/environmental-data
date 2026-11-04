@@ -1,11 +1,11 @@
 {
   "name": "querying-lca-datasets-expert",
-  "version": "0.5.3",
-  "description": "Environmental Data: search and match environmental process data across published database sources, preserving source, version, system model, units and applicability evidence. Access depends on source and account entitlements.",
+  "version": "0.6.0",
+  "description": "Query and match environmental data across published background sources and EPD declarations, preserving provenance, units, access limits and coverage gaps.",
   "repository": "https://github.com/HiQ-AI/environmental-data",
   "license": "MIT",
   "author": {
     "name": "HiQ"
   },
-  "displayName": "Environmental Data"
+  "displayName": "Environmental Data (Aggregate)"
 }

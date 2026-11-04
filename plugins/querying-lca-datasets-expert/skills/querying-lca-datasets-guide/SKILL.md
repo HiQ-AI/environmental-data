@@ -1,6 +1,6 @@
 ---
 name: querying-lca-datasets-guide
-description: "Environmental Data: search and match environmental process data across published database sources using querying-lca-datasets. Use for source-aware dataset discovery, retrieved emission-factor lookup and inventory matching, preserving source/version/system model, reference product/unit, geography, time, technology and access limits."
+description: "Environmental Data aggregate access: use for explicitly requested cross-source environmental data discovery, published EPD evidence, retrieved emission-factor lookup or inventory matching. Preserve each source/version/model or declaration basis and access limits. For a request fixed to one installed database plugin, keep that plugin's scoped entrypoint instead."
 ---
 
 # Environmental Data
@@ -18,12 +18,13 @@ Inputs are not limited to a BOM: a material description, process requirement, in
 ```sh
 querying-lca-datasets version
 querying-lca-datasets --help
+querying-lca-datasets sources --json
 querying-lca-datasets doctor
 querying-lca-datasets list --json
 querying-lca-datasets describe lookup-datasets
 ```
 
-`doctor` reports credential source and connectivity, not the secret; version 0.5.1 emits human text even with `--json`. Installation or a version check does not establish data access. Runtime tools and parameters come from `list --json` and `describe <command>`; do not copy a server schema into this skill or invent flags. Static commands such as `search-datasets` use `<command> --help`, not `describe`.
+`doctor` reports credential source and connectivity, not the secret; version 0.6.0 emits human text even with `--json`. Installation or a version check does not establish data access. Runtime tools and parameters come from `list --json` and `describe <command>`; do not copy a server schema into this skill or invent flags. Static commands such as `search-datasets` use `<command> --help`, not `describe`.
 
 The CLI owns authentication. User-driven `querying-lca-datasets login` performs device/QR authorization. A securely configured `QUERYING_LCA_DATASETS_API_KEY` takes precedence over this CLI's stored login. This product-name update does not change the executable, login-storage identity or credentials; continue using the CLI's existing authorized login. Never inspect credential files, print environment secrets, copy a token from another app or ask for a secret in chat. Do not initiate login/logout or change identity without authorization. Keep the default service endpoint rather than redirecting authenticated requests.
 
@@ -82,7 +83,9 @@ Use `--json` for machine parsing. Tool commands generally return `{ok, tool, tex
 
 This plugin searches, looks up, compares and verifies background **process datasets**. It does not import datasets, bind them into a model, calculate a product footprint, submit reviews or notify people. Runtime `call` is not permission to invoke arbitrary tools: inspect the schema and restrict execution to read-only tools needed for the request.
 
-The CLI can discover supplementary published-EPD search/benchmark tools, but a product-specific EPD is not automatically an interchangeable background process dataset. Explain its declared unit, boundary and comparability limits if the user explicitly requests such evidence. EPD compliance review, corrective actions, verification reports and certification belong to the EPD specialist, not this plugin. Do not expand the display name to generic “EPD data” or imply an audit capability. Hand off model edits or authoring to the appropriate tool with separate authorization.
+For published declarations requested by the user, CLI 0.6.0 provides `epd-search --query "<user-product>" --limit 5 --json` through the existing public read-only EPD API. Retain its complete envelope, publisher, declared unit, method/module, validity, restricted markers and page cursor. Public metadata/EPD search needs no local login; authenticated background queries and MCP peer tools retain their existing requirements. A product-specific EPD is not automatically an interchangeable background process dataset. Explain comparability gaps. EPD compliance review, corrective actions, reports and certification belong to the separate audit expert.
+
+This aggregate uses the unprefixed CLI only when cross-source access is actually selected. A single-source plugin's failure, denied values or missing match does not authorize removing its scope. Keep the requested sources, versions and models explicit. Do not combine declaration values and background factors without explaining functional-unit, method and boundary differences. Preserve failures, restricted counts, missing coverage and unresolved rows; do not present a partial result as complete. No fallback changes identity or broadens rights.
 
 ## Preset Roles
 
