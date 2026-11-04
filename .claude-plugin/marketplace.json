@@ -8,144 +8,144 @@
   },
   "plugins": [
     {
-      "name": "environmental-data-hiqlcd",
-      "displayName": "HiQLCD",
-      "source": "./plugins/environmental-data-hiqlcd",
-      "description": "Search and match published HiQLCD environmental process datasets using the compiled hiqlcd source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "hiqlcd",
+      "displayName": "HiQLCD 数据查询",
+      "source": "./plugins/hiqlcd",
+      "description": "Find and match HiQLCD data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-hiqlcd-al",
-      "displayName": "HiQLCD-AL",
-      "source": "./plugins/environmental-data-hiqlcd-al",
-      "description": "Search and match published HiQLCD-AL environmental process datasets using the compiled hiqlcd-al source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "hiqlcd-al",
+      "displayName": "HiQLCD-AL 数据查询",
+      "source": "./plugins/hiqlcd-al",
+      "description": "Find and match HiQLCD-AL data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-calcd",
-      "displayName": "CALCD",
-      "source": "./plugins/environmental-data-calcd",
-      "description": "Search and match published CALCD environmental process datasets using the compiled calcd source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "calcd",
+      "displayName": "CALCD 数据查询",
+      "source": "./plugins/calcd",
+      "description": "Find and match CALCD data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-hiq-cesi",
-      "displayName": "CESI Li-ion Battery Database",
-      "source": "./plugins/environmental-data-hiq-cesi",
-      "description": "Search and match published CESI Li-ion Battery Database environmental process datasets using the compiled hiq-cesi source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "cesi",
+      "displayName": "中国锂电池碳足迹数据查询（CESI）",
+      "source": "./plugins/cesi",
+      "description": "Find and match China Li-ion Battery Carbon Footprint Database (CESI) data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-ecoinvent",
-      "displayName": "Ecoinvent",
-      "source": "./plugins/environmental-data-ecoinvent",
-      "description": "Search and match published Ecoinvent environmental process datasets using the compiled ecoinvent source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "ecoinvent",
+      "displayName": "ecoinvent 数据查询",
+      "source": "./plugins/ecoinvent",
+      "description": "Find and match Ecoinvent data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-carbonminds",
-      "displayName": "CarbonMinds",
-      "source": "./plugins/environmental-data-carbonminds",
-      "description": "Search and match published CarbonMinds environmental process datasets using the compiled carbonminds source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "carbonminds",
+      "displayName": "CarbonMinds 数据查询",
+      "source": "./plugins/carbonminds",
+      "description": "Find and match CarbonMinds data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-agrifootprint",
-      "displayName": "Agri-footprint",
-      "source": "./plugins/environmental-data-agrifootprint",
-      "description": "Search and match published Agri-footprint environmental process datasets using the compiled agrifootprint source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "agrifootprint",
+      "displayName": "Agri-footprint 数据查询",
+      "source": "./plugins/agrifootprint",
+      "description": "Find and match Agri-footprint data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-ef",
-      "displayName": "EF",
-      "source": "./plugins/environmental-data-ef",
-      "description": "Search and match published EF environmental process datasets using the compiled ef source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "ef",
+      "displayName": "EF 数据查询",
+      "source": "./plugins/ef",
+      "description": "Find and match EF data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-auslci",
-      "displayName": "AusLCI",
-      "source": "./plugins/environmental-data-auslci",
-      "description": "Search and match published AusLCI environmental process datasets using the compiled auslci source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "auslci",
+      "displayName": "AusLCI 数据查询",
+      "source": "./plugins/auslci",
+      "description": "Find and match AusLCI data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-bafu",
-      "displayName": "BAFU",
-      "source": "./plugins/environmental-data-bafu",
-      "description": "Search and match published BAFU environmental process datasets using the compiled bafu source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "bafu",
+      "displayName": "BAFU 数据查询",
+      "source": "./plugins/bafu",
+      "description": "Find and match BAFU data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-bioenergiedat",
-      "displayName": "BioEnergieDat",
-      "source": "./plugins/environmental-data-bioenergiedat",
-      "description": "Search and match published BioEnergieDat environmental process datasets using the compiled bioenergiedat source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "bioenergiedat",
+      "displayName": "BioEnergieDat 数据查询",
+      "source": "./plugins/bioenergiedat",
+      "description": "Find and match BioEnergieDat data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-elcd",
-      "displayName": "ELCD",
-      "source": "./plugins/environmental-data-elcd",
-      "description": "Search and match published ELCD environmental process datasets using the compiled elcd source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "elcd",
+      "displayName": "ELCD 数据查询",
+      "source": "./plugins/elcd",
+      "description": "Find and match ELCD data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-needs",
-      "displayName": "NEEDS",
-      "source": "./plugins/environmental-data-needs",
-      "description": "Search and match published NEEDS environmental process datasets using the compiled needs source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "needs",
+      "displayName": "NEEDS 数据查询",
+      "source": "./plugins/needs",
+      "description": "Find and match NEEDS data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-ozlci",
-      "displayName": "OzLCI",
-      "source": "./plugins/environmental-data-ozlci",
-      "description": "Search and match published OzLCI environmental process datasets using the compiled ozlci source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "ozlci",
+      "displayName": "OzLCI 数据查询",
+      "source": "./plugins/ozlci",
+      "description": "Find and match OzLCI data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-recycledplastics",
-      "displayName": "Recycled Plastics",
-      "source": "./plugins/environmental-data-recycledplastics",
-      "description": "Search and match published Recycled Plastics environmental process datasets using the compiled recycledplastics source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "recycledplastics",
+      "displayName": "Recycled Plastics 数据查询",
+      "source": "./plugins/recycledplastics",
+      "description": "Find and match Recycled Plastics data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-usda",
-      "displayName": "USDA Crop Data",
-      "source": "./plugins/environmental-data-usda",
-      "description": "Search and match published USDA Crop Data environmental process datasets using the compiled usda source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "usda",
+      "displayName": "USDA Crop Data 数据查询",
+      "source": "./plugins/usda",
+      "description": "Find and match USDA Crop Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-uslci",
-      "displayName": "USLCI",
-      "source": "./plugins/environmental-data-uslci",
-      "description": "Search and match published USLCI environmental process datasets using the compiled uslci source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "uslci",
+      "displayName": "USLCI 数据查询",
+      "source": "./plugins/uslci",
+      "description": "Find and match USLCI data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-worldsteel",
-      "displayName": "Worldsteel",
-      "source": "./plugins/environmental-data-worldsteel",
-      "description": "Search and match published Worldsteel environmental process datasets using the compiled worldsteel source scope, preserving coordinates and access limitations.",
-      "version": "0.7.4"
+      "name": "worldsteel",
+      "displayName": "Worldsteel 数据查询",
+      "source": "./plugins/worldsteel",
+      "description": "Find and match Worldsteel data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "environmental-data-epd",
-      "displayName": "Published EPD Data",
-      "source": "./plugins/environmental-data-epd",
-      "description": "Search published EPD declarations with traceable publishers, declared units, methods/modules, validity, access restrictions and cursor pagination. This is data retrieval, not EPD audit or certification.",
-      "version": "0.7.4"
+      "name": "epd-data",
+      "displayName": "EPD声明查询",
+      "source": "./plugins/epd-data",
+      "description": "Find and match Published EPD Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     },
     {
-      "name": "querying-lca-datasets-expert",
-      "displayName": "Environmental Data (Aggregate)",
-      "source": "./plugins/querying-lca-datasets-expert",
-      "description": "Query and match environmental data across published background sources and EPD declarations, preserving provenance, units, access limits and coverage gaps.",
-      "version": "0.7.4"
+      "name": "environmental-data",
+      "displayName": "环境数据跨库查询",
+      "source": "./plugins/environmental-data",
+      "description": "Find and match Environmental Data (Aggregate) data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.7.5"
     }
   ]
 }

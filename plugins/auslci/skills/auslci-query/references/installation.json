@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "auslci",
+  "sources": [
+    "auslci"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/install.sh",
+      "sha256": "eb400df905df91326ba012149b9be8bfc6bedf3ce13064a33ca83e9d0e991ea6"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/install.ps1",
+      "sha256": "45a08eab94a9da7e387d0c4e82ad1fa134adae0c08563641f5ebe82c1347125c"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-darwin-arm64.tar.gz",
+      "sha256": "612897ee4e9469198afa93c8caf9714a84cab163859109618b4e9d1606f9614a"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-darwin-x64.tar.gz",
+      "sha256": "b7c7d1d05579c5bae39f9367441cb56e2a87fb13a25b6c9404c52770b55e6f0b"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-linux-arm64.tar.gz",
+      "sha256": "4638502d92ea25fa18ab9fe67b22abac42c1eb431a102490bb7a6a5b570876a8"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-linux-x64.tar.gz",
+      "sha256": "effe996ed31c7d34652534bdb80660b9b07e666c42bbea763e9ee5f54fb58f98"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-win32-x64.tar.gz",
+      "sha256": "29f6f26cbf883d458e10a094fec157c894f9bfdb7469e53127ed9b85a97d28ec"
+    }
+  }
+}

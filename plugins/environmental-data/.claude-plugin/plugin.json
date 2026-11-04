@@ -1,0 +1,17 @@
+{
+  "name": "environmental-data",
+  "displayName": "环境数据跨库查询",
+  "version": "0.7.5",
+  "description": "Find and match Environmental Data (Aggregate) data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+  "repository": "https://github.com/HiQ-AI/environmental-data",
+  "license": "MIT",
+  "skills": "./skills/",
+  "agents": [
+    "./agents/data-searcher.md",
+    "./agents/data-matcher.md",
+    "./agents/data-reviewer.md"
+  ],
+  "author": {
+    "name": "HiQ"
+  }
+}

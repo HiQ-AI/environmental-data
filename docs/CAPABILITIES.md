@@ -1,37 +1,74 @@
 # Capabilities and boundaries
 
-Environmental Data is a multi-source environmental-data discovery and matching tool. Use it in the workflow you choose: research, comparisons, reporting, procurement, assessment or downstream analysis. Its current connector's process-dataset format and service coverage do not restrict the user's purpose to LCA.
+## Environmental data queries
 
-## Current connector
+Use Environmental Data to find candidates for research, comparisons,
+procurement, reporting, assessment or another authorized workflow. The supported
+operations are requirement clarification, candidate search, applicability
+comparison, proposed matching and authorized detail retrieval.
 
-Search published process datasets; constrain source/version/system model when needed; inspect references and available metadata; retrieve authorized numerical results; propose matches, proxies or unresolved needs while preserving input identity. Discover actual command inputs with the installed CLI's help and schemas rather than guessing fields.
+`search` accepts the user's complete query. Source/version and system-model
+selectors apply where the selected program supports them. Geography, technology,
+time and functional requirements belong in the query and must be checked against
+returned evidence. `lookup` accepts exact opaque keys returned by the service;
+keys must not be decoded, synthesized or edited.
 
-The [source inventory](../plugins/querying-lca-datasets-expert/SOURCES.md) distinguishes source availability, numerical-data access, LCIA coverage and applicability. Directory membership alone does not establish any account's rights or a successful lookup for every dataset. New databases are not connected by a name change. The separate published-EPD query plugin uses the existing declaration API; it is not an audit expert. Retain declaration publisher, unit, method/module, validity and restrictions separately from background source/version/model coordinates.
+Default output is a preview with partial/omitted coverage information. `--full`
+returns all of the current response, not a complete database inventory. Continue
+with a cursor only where the command actually provides one. Empty search means
+no match for that request; restricted data is a separate access state.
 
-## Using a result
+The skills do not provide a database-wide grouping, median, statistics or hotspot
+API. A calculation over retrieved candidates must identify its finite sample and
+must not be described as a whole-database or industry statistic.
 
-Retain source, version, system model, dataset identity, reference product/unit, geography, available reference period/technology evidence, indicator/method and source link. Compare those against the question before selecting. A database release year is not the dataset's reference year. Explain uncertainty and do not invent missing factors, silently substitute databases or call an identity check a quality judgment.
+## Source and declaration scope
 
-## Permissions and input
+Each database plugin uses its own independently compiled program. Conflicting
+sources and cross-source output fail rather than silently broadening the query.
+The aggregate is selected explicitly and has a compiled closed set. It is not a
+fallback after denied access. Remote source-directory changes cannot expand a
+program's supported set.
 
-Use the intended account and its existing CLI login/controlled credentials. Never request secrets in chat or borrow another application's tokens. Do not redirect authenticated requests to another endpoint to evade entitlement restrictions.
+The [source inventory](../plugins/environmental-data/SOURCES.md) distinguishes
+published availability, advertised numerical coverage and access flags. A source
+listing is not a completed lookup or a statement of the current account's rights.
 
-Read only authorized inputs and send only the necessary query fields. An arbitrary workbook is not automatically a supported bulk upload. Preserve original files and keep sensitive material out of public issue reports.
+Published EPD declarations use the existing separate query service. Preserve
+publisher, declaration identity, declared unit, method/module, validity and
+restrictions. A declaration is not automatically interchangeable with a
+background process dataset. These plugins do not perform EPD audit or certification.
 
-## Effects and exclusions
+## Applying results
 
-Data retrieval and proposed matching do not write to a model, bind datasets, import records, calculate impacts, run an EPD review, notify people or certify a result. Those are separate tools/actions with their own authorization.
+Keep source, version, system model, record identity, reference product/unit,
+geography, available time/technology evidence, method/indicator and source link
+with each candidate. Compare these with the user's requirements before selecting
+or proposing a proxy. A database release year is not the data's reference year.
+A matching name or valid key does not establish suitability.
 
-Search and upstream processing may use service capabilities; do not promise cost-free or offline operation. Inspect actual errors and receipts, respect host permissions, and do not disguise failed access as an empty source. Agent roles are operating guidance, not backend ACLs.
+Preserve original input row identities during list matching. Explain proxies,
+unresolved requirements, missing factors and access restrictions. Do not silently
+switch sources or models, invent numerical values or treat restricted results as
+an empty database.
 
-Spreadsheet editing is a separate optional host capability. No general Office/PDF skills, licensed databases, CLI binaries, credentials or customer data are stored in this repository.
+## Permissions and side effects
 
-## Source-specific entrypoints
+Read only authorized inputs and send the minimum fields needed for the query.
+An arbitrary workbook is not a supported bulk upload. Keep original materials
+intact and private inputs out of public issue reports.
 
-Single-source plugins use independent executables with a compiled source boundary, which rejects source
-conflicts, cross-source output and tools without a verifiable source contract.
-Opaque-key lookup/statistics/hotspot remain aggregate capabilities rather than
-guessed source-specific operations. The aggregate is selected explicitly, not as
-a recovery route after denied access. Compiled scope is not an OS shell sandbox or a narrower OAuth token. The aggregate also has a fixed supported-source/publisher set; remote additions cannot expand it.
-Public metadata and EPD search are intentionally read-only public endpoints;
-other queries retain their existing authentication. See [distribution](DISTRIBUTION.md).
+Use the intended account's existing CLI authentication. Never request secrets in
+chat, borrow another application's tokens or redirect authenticated requests to
+evade entitlements. Compiled scope does not grant a database license, narrow the
+OAuth token or create an OS sandbox. Source terms remain applicable.
+
+Queries may use upstream service capabilities; no offline or cost-free guarantee
+is made. Respect actual errors and host permission decisions. Search and proposed
+matching do not import data, bind records, edit models, calculate a footprint,
+submit business records, purchase access, notify people or certify results.
+
+Spreadsheet editing is a separate optional [capability](SPREADSHEETS.md). General
+Office/PDF skills, licensed databases, CLI binaries, credentials and customer data
+are not bundled here. See [distribution](DISTRIBUTION.md) and
+[installation](INSTALLATION.md) for program preparation and migration.

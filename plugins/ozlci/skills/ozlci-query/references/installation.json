@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "ozlci",
+  "sources": [
+    "ozlci"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/install.sh",
+      "sha256": "816afb93ef211a789705e42c933fa0a2b80b1616a4d37dd44fe38d8ec725ce4f"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/install.ps1",
+      "sha256": "631deac3aa159b5bfd3b82ca995acc38bbc33a967fb2fd60f9da76c1dc556d40"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-darwin-arm64.tar.gz",
+      "sha256": "8f6c77356e2f21458ef280926e2a365caac0a02be614e58ed50265bdcb1eb766"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-darwin-x64.tar.gz",
+      "sha256": "08a631f83a180f94c65b6657b6ae612faa416585963b7a4e75fb6d9562ad6475"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-linux-arm64.tar.gz",
+      "sha256": "4cb911e879fc56faaee16a973d8531f2ee6c546c6482be0a2006d77cbf67e613"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-linux-x64.tar.gz",
+      "sha256": "6e9c6054f04a76197824445803f14ed3e054d37a3f375f7a74f683c9f9a1d016"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-win32-x64.tar.gz",
+      "sha256": "649854a61071cc5d3caa1987926490ab4dc2bd0b7b6672a97c0211576347738e"
+    }
+  }
+}
