@@ -8,11 +8,144 @@
   },
   "plugins": [
     {
+      "name": "environmental-data-hiqlcd",
+      "displayName": "HiQLCD",
+      "source": "./plugins/environmental-data-hiqlcd",
+      "description": "Search and match published HiQLCD environmental process datasets using the runtime-enforced hiqlcd source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-hiqlcd-al",
+      "displayName": "HiQLCD-AL",
+      "source": "./plugins/environmental-data-hiqlcd-al",
+      "description": "Search and match published HiQLCD-AL environmental process datasets using the runtime-enforced hiqlcd-al source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-calcd",
+      "displayName": "CALCD",
+      "source": "./plugins/environmental-data-calcd",
+      "description": "Search and match published CALCD environmental process datasets using the runtime-enforced calcd source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-hiq-cesi",
+      "displayName": "CESI Li-ion Battery Database",
+      "source": "./plugins/environmental-data-hiq-cesi",
+      "description": "Search and match published CESI Li-ion Battery Database environmental process datasets using the runtime-enforced hiq-cesi source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-ecoinvent",
+      "displayName": "Ecoinvent",
+      "source": "./plugins/environmental-data-ecoinvent",
+      "description": "Search and match published Ecoinvent environmental process datasets using the runtime-enforced ecoinvent source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-carbonminds",
+      "displayName": "CarbonMinds",
+      "source": "./plugins/environmental-data-carbonminds",
+      "description": "Search and match published CarbonMinds environmental process datasets using the runtime-enforced carbonminds source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-agrifootprint",
+      "displayName": "Agri-footprint",
+      "source": "./plugins/environmental-data-agrifootprint",
+      "description": "Search and match published Agri-footprint environmental process datasets using the runtime-enforced agrifootprint source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-ef",
+      "displayName": "EF",
+      "source": "./plugins/environmental-data-ef",
+      "description": "Search and match published EF environmental process datasets using the runtime-enforced ef source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-auslci",
+      "displayName": "AusLCI",
+      "source": "./plugins/environmental-data-auslci",
+      "description": "Search and match published AusLCI environmental process datasets using the runtime-enforced auslci source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-bafu",
+      "displayName": "BAFU",
+      "source": "./plugins/environmental-data-bafu",
+      "description": "Search and match published BAFU environmental process datasets using the runtime-enforced bafu source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-bioenergiedat",
+      "displayName": "BioEnergieDat",
+      "source": "./plugins/environmental-data-bioenergiedat",
+      "description": "Search and match published BioEnergieDat environmental process datasets using the runtime-enforced bioenergiedat source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-elcd",
+      "displayName": "ELCD",
+      "source": "./plugins/environmental-data-elcd",
+      "description": "Search and match published ELCD environmental process datasets using the runtime-enforced elcd source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-needs",
+      "displayName": "NEEDS",
+      "source": "./plugins/environmental-data-needs",
+      "description": "Search and match published NEEDS environmental process datasets using the runtime-enforced needs source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-ozlci",
+      "displayName": "OzLCI",
+      "source": "./plugins/environmental-data-ozlci",
+      "description": "Search and match published OzLCI environmental process datasets using the runtime-enforced ozlci source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-recycledplastics",
+      "displayName": "Recycled Plastics",
+      "source": "./plugins/environmental-data-recycledplastics",
+      "description": "Search and match published Recycled Plastics environmental process datasets using the runtime-enforced recycledplastics source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-usda",
+      "displayName": "USDA Crop Data",
+      "source": "./plugins/environmental-data-usda",
+      "description": "Search and match published USDA Crop Data environmental process datasets using the runtime-enforced usda source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-uslci",
+      "displayName": "USLCI",
+      "source": "./plugins/environmental-data-uslci",
+      "description": "Search and match published USLCI environmental process datasets using the runtime-enforced uslci source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-worldsteel",
+      "displayName": "Worldsteel",
+      "source": "./plugins/environmental-data-worldsteel",
+      "description": "Search and match published Worldsteel environmental process datasets using the runtime-enforced worldsteel source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0"
+    },
+    {
+      "name": "environmental-data-epd",
+      "displayName": "Published EPD Data",
+      "source": "./plugins/environmental-data-epd",
+      "description": "Search published EPD declarations with traceable publishers, declared units, methods/modules, validity, access restrictions and cursor pagination. This is data retrieval, not EPD audit or certification.",
+      "version": "0.6.0"
+    },
+    {
       "name": "querying-lca-datasets-expert",
-      "displayName": "Environmental Data",
+      "displayName": "Environmental Data (Aggregate)",
       "source": "./plugins/querying-lca-datasets-expert",
-      "description": "Environmental Data: search and match environmental process data across published database sources, preserving source, version, system model, units and applicability evidence. Access depends on source and account entitlements.",
-      "version": "0.5.3"
+      "description": "Query and match environmental data across published background sources and EPD declarations, preserving provenance, units, access limits and coverage gaps.",
+      "version": "0.6.0"
     }
   ]
 }

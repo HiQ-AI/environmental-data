@@ -1,0 +1,11 @@
+{
+  "name": "environmental-data-hiq-cesi",
+  "displayName": "CESI Li-ion Battery Database",
+  "version": "0.6.0",
+  "description": "Search and match published CESI Li-ion Battery Database environmental process datasets using the runtime-enforced hiq-cesi source scope, preserving coordinates and access limitations.",
+  "repository": "https://github.com/HiQ-AI/environmental-data",
+  "license": "MIT",
+  "author": {
+    "name": "HiQ"
+  }
+}

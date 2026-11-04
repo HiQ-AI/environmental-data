@@ -11,12 +11,1076 @@
   ],
   "plugins": [
     {
+      "id": "environmental-data-hiqlcd",
+      "type": "plugin",
+      "name": "HiQLCD",
+      "description": "HiQLCD 环境过程数据查询与匹配；CLI 固定来源 hiqlcd，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published HiQLCD environmental process datasets using the runtime-enforced hiqlcd source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "hiqlcd",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-hiqlcd",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-hiqlcd-query",
+            "description": "Search and match published HiQLCD environmental process datasets using the runtime-enforced hiqlcd source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 HiQLCD 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in HiQLCD; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-hiqlcd-al",
+      "type": "plugin",
+      "name": "HiQLCD-AL",
+      "description": "HiQLCD-AL 环境过程数据查询与匹配；CLI 固定来源 hiqlcd-al，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published HiQLCD-AL environmental process datasets using the runtime-enforced hiqlcd-al source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "hiqlcd-al",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-hiqlcd-al",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-hiqlcd-al-query",
+            "description": "Search and match published HiQLCD-AL environmental process datasets using the runtime-enforced hiqlcd-al source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 HiQLCD-AL 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in HiQLCD-AL; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-calcd",
+      "type": "plugin",
+      "name": "CALCD",
+      "description": "CALCD 环境过程数据查询与匹配；CLI 固定来源 calcd，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published CALCD environmental process datasets using the runtime-enforced calcd source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "calcd",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-calcd",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-calcd-query",
+            "description": "Search and match published CALCD environmental process datasets using the runtime-enforced calcd source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 CALCD 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in CALCD; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-hiq-cesi",
+      "type": "plugin",
+      "name": "CESI Li-ion Battery Database",
+      "description": "CESI Li-ion Battery Database 环境过程数据查询与匹配；CLI 固定来源 hiq-cesi，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published CESI Li-ion Battery Database environmental process datasets using the runtime-enforced hiq-cesi source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "hiq-cesi",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-hiq-cesi",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-hiq-cesi-query",
+            "description": "Search and match published CESI Li-ion Battery Database environmental process datasets using the runtime-enforced hiq-cesi source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 CESI Li-ion Battery Database 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in CESI Li-ion Battery Database; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-ecoinvent",
+      "type": "plugin",
+      "name": "Ecoinvent",
+      "description": "Ecoinvent 环境过程数据查询与匹配；CLI 固定来源 ecoinvent，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published Ecoinvent environmental process datasets using the runtime-enforced ecoinvent source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "ecoinvent",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-ecoinvent",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-ecoinvent-query",
+            "description": "Search and match published Ecoinvent environmental process datasets using the runtime-enforced ecoinvent source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 Ecoinvent 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in Ecoinvent; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-carbonminds",
+      "type": "plugin",
+      "name": "CarbonMinds",
+      "description": "CarbonMinds 环境过程数据查询与匹配；CLI 固定来源 carbonminds，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published CarbonMinds environmental process datasets using the runtime-enforced carbonminds source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "carbonminds",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-carbonminds",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-carbonminds-query",
+            "description": "Search and match published CarbonMinds environmental process datasets using the runtime-enforced carbonminds source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 CarbonMinds 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in CarbonMinds; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-agrifootprint",
+      "type": "plugin",
+      "name": "Agri-footprint",
+      "description": "Agri-footprint 环境过程数据查询与匹配；CLI 固定来源 agrifootprint，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published Agri-footprint environmental process datasets using the runtime-enforced agrifootprint source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "agrifootprint",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-agrifootprint",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-agrifootprint-query",
+            "description": "Search and match published Agri-footprint environmental process datasets using the runtime-enforced agrifootprint source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 Agri-footprint 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in Agri-footprint; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-ef",
+      "type": "plugin",
+      "name": "EF",
+      "description": "EF 环境过程数据查询与匹配；CLI 固定来源 ef，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published EF environmental process datasets using the runtime-enforced ef source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "ef",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-ef",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-ef-query",
+            "description": "Search and match published EF environmental process datasets using the runtime-enforced ef source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 EF 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in EF; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-auslci",
+      "type": "plugin",
+      "name": "AusLCI",
+      "description": "AusLCI 环境过程数据查询与匹配；CLI 固定来源 auslci，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published AusLCI environmental process datasets using the runtime-enforced auslci source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "auslci",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-auslci",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-auslci-query",
+            "description": "Search and match published AusLCI environmental process datasets using the runtime-enforced auslci source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 AusLCI 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in AusLCI; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-bafu",
+      "type": "plugin",
+      "name": "BAFU",
+      "description": "BAFU 环境过程数据查询与匹配；CLI 固定来源 bafu，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published BAFU environmental process datasets using the runtime-enforced bafu source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "bafu",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-bafu",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-bafu-query",
+            "description": "Search and match published BAFU environmental process datasets using the runtime-enforced bafu source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 BAFU 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in BAFU; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-bioenergiedat",
+      "type": "plugin",
+      "name": "BioEnergieDat",
+      "description": "BioEnergieDat 环境过程数据查询与匹配；CLI 固定来源 bioenergiedat，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published BioEnergieDat environmental process datasets using the runtime-enforced bioenergiedat source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "bioenergiedat",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-bioenergiedat",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-bioenergiedat-query",
+            "description": "Search and match published BioEnergieDat environmental process datasets using the runtime-enforced bioenergiedat source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 BioEnergieDat 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in BioEnergieDat; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-elcd",
+      "type": "plugin",
+      "name": "ELCD",
+      "description": "ELCD 环境过程数据查询与匹配；CLI 固定来源 elcd，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published ELCD environmental process datasets using the runtime-enforced elcd source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "elcd",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-elcd",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-elcd-query",
+            "description": "Search and match published ELCD environmental process datasets using the runtime-enforced elcd source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 ELCD 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in ELCD; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-needs",
+      "type": "plugin",
+      "name": "NEEDS",
+      "description": "NEEDS 环境过程数据查询与匹配；CLI 固定来源 needs，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published NEEDS environmental process datasets using the runtime-enforced needs source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "needs",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-needs",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-needs-query",
+            "description": "Search and match published NEEDS environmental process datasets using the runtime-enforced needs source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 NEEDS 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in NEEDS; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-ozlci",
+      "type": "plugin",
+      "name": "OzLCI",
+      "description": "OzLCI 环境过程数据查询与匹配；CLI 固定来源 ozlci，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published OzLCI environmental process datasets using the runtime-enforced ozlci source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "ozlci",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-ozlci",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-ozlci-query",
+            "description": "Search and match published OzLCI environmental process datasets using the runtime-enforced ozlci source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 OzLCI 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in OzLCI; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-recycledplastics",
+      "type": "plugin",
+      "name": "Recycled Plastics",
+      "description": "Recycled Plastics 环境过程数据查询与匹配；CLI 固定来源 recycledplastics，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published Recycled Plastics environmental process datasets using the runtime-enforced recycledplastics source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "recycledplastics",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-recycledplastics",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-recycledplastics-query",
+            "description": "Search and match published Recycled Plastics environmental process datasets using the runtime-enforced recycledplastics source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 Recycled Plastics 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in Recycled Plastics; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-usda",
+      "type": "plugin",
+      "name": "USDA Crop Data",
+      "description": "USDA Crop Data 环境过程数据查询与匹配；CLI 固定来源 usda，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published USDA Crop Data environmental process datasets using the runtime-enforced usda source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "usda",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-usda",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-usda-query",
+            "description": "Search and match published USDA Crop Data environmental process datasets using the runtime-enforced usda source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 USDA Crop Data 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in USDA Crop Data; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-uslci",
+      "type": "plugin",
+      "name": "USLCI",
+      "description": "USLCI 环境过程数据查询与匹配；CLI 固定来源 uslci，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published USLCI environmental process datasets using the runtime-enforced uslci source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "uslci",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-uslci",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-uslci-query",
+            "description": "Search and match published USLCI environmental process datasets using the runtime-enforced uslci source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 USLCI 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in USLCI; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-worldsteel",
+      "type": "plugin",
+      "name": "Worldsteel",
+      "description": "Worldsteel 环境过程数据查询与匹配；CLI 固定来源 worldsteel，保留版本、系统模型、单位及访问限制。",
+      "description_en": "Search and match published Worldsteel environmental process datasets using the runtime-enforced worldsteel source scope, preserving coordinates and access limitations.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "worldsteel",
+        "source-scoped"
+      ],
+      "path": "plugins/environmental-data-worldsteel",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-worldsteel-query",
+            "description": "Search and match published Worldsteel environmental process datasets using the runtime-enforced worldsteel source scope, preserving coordinates and access limitations."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "仅在 Worldsteel 中查找我的问题需要的环境数据，保留来源坐标、单位、适用性证据与未解决项，不换库。",
+      "recommended_prompt_en": "Find data for my question only in Worldsteel; preserve coordinates, units, applicability evidence and unresolved needs without changing databases."
+    },
+    {
+      "id": "environmental-data-epd",
+      "type": "plugin",
+      "name": "Published EPD Data",
+      "description": "已发布 EPD 声明查询：保留发布机构、声明单位、方法/模块、有效期、访问限制与分页；不执行审核或认证。",
+      "description_en": "Search published EPD declarations with traceable publishers, declared units, methods/modules, validity, access restrictions and cursor pagination. This is data retrieval, not EPD audit or certification.",
+      "version": "0.6.0",
+      "author": "HiQ",
+      "category": "environmental-data",
+      "tags": [
+        "environmental-data",
+        "epd",
+        "published-declarations"
+      ],
+      "path": "plugins/environmental-data-epd",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
+      "components": {
+        "skills": [
+          {
+            "id": "environmental-data-epd-query",
+            "description": "Search published EPD declarations with traceable publishers, declared units, methods/modules, validity, access restrictions and cursor pagination. This is data retrieval, not EPD audit or certification."
+          }
+        ],
+        "agents": [],
+        "cli": {
+          "name": "querying-lca-datasets",
+          "version": "0.6.0",
+          "executable": "bin/querying-lca-datasets",
+          "releases": {
+            "darwin-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
+            },
+            "darwin-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
+            },
+            "linux-arm64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
+            },
+            "linux-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
+            },
+            "win32-x64": {
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
+            }
+          }
+        }
+      },
+      "recommended_prompt": "查找与我的产品相关的已发布 EPD，报告发布机构、声明单位、方法与模块、有效期和缺失或受限指标，不把声明当成可互换的背景过程或认证结果。",
+      "recommended_prompt_en": "Find published EPD declarations for my product and preserve publisher, declared unit, method/module, validity and missing or restricted indicators, without treating declarations as interchangeable backgrounds or certification."
+    },
+    {
       "id": "querying-lca-datasets-expert",
       "type": "plugin",
-      "name": "Environmental Data",
-      "description": "Environmental Data：跨已发布数据库检索与匹配环境过程数据，保留来源、版本、系统模型、单位及适用性证据；可访问数据取决于来源和账户权益。",
-      "description_en": "Environmental Data: search and match environmental process data across published database sources, preserving source, version, system model, units and applicability evidence. Access depends on source and account entitlements.",
-      "version": "0.5.3",
+      "name": "Environmental Data (Aggregate)",
+      "description": "跨来源查询与匹配环境数据，保留各数据库和 EPD 声明的来源、单位、访问限制与覆盖缺口。",
+      "description_en": "Query and match environmental data across published background sources and EPD declarations, preserving provenance, units, access limits and coverage gaps.",
+      "version": "0.6.0",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -27,8 +1091,8 @@
         "matching"
       ],
       "path": "plugins/querying-lca-datasets-expert",
-      "requirements": "原生 CLI 0.5.1，五平台自包含二进制，无需额外运行环境；只从自有 CDN 取得带 manifest 的原生归档。使用 querying-lca-datasets 自身登录或受控的 QUERYING_LCA_DATASETS_API_KEY，不注入 Desktop JWT，不读取旧客户端登录存储。安装不授予商业数值访问权益。本插件只读检索、匹配、查询与核验，不导入、绑定、计算、审核或通知。Chat 独立 querying-lca-datasets 技能原样保留；本插件使用不同的 expert/guide ID，不能据此声称 Desktop 旧 catalog 下载已退役。",
-      "requirements_en": "Native CLI 0.5.1, five self-contained platform binaries with no external runtime, supplied only from the owned CDN in manifest-bearing archives. Uses its own login or a controlled QUERYING_LCA_DATASETS_API_KEY, never Desktop JWT or an old client login store. Installation grants no commercial numerical-data rights. Read-only search, inventory matching, lookup and verification: no import, binding, calculation, audit or notifications. The standalone Chat querying-lca-datasets skill is unchanged; distinct expert/guide IDs coexist without claiming Desktop legacy catalog retirement.",
+      "requirements": "共同原生 CLI 0.6.0，使用自有 CDN 的固定版本归档与完整 SHA256；插件管理器仅加载技能，不安装 CLI、不登录或授予数据许可。公开来源目录和 EPD 检索无需本机登录；背景数据查询与 MCP 工具沿用 CLI 自身授权和服务端权益。只读查询，不建模、审核、提交或通知。",
+      "requirements_en": "Shared native CLI 0.6.0, supplied from pinned owned-CDN archives. Native plugin managers load skills, not the CLI or credentials. Public source metadata and EPD search need no local login; background queries and MCP tools retain their existing authentication and server entitlements. Read-only queries do not grant data licenses or perform modeling, audit, submission or notifications.",
       "components": {
         "skills": [
           {
@@ -52,34 +1116,34 @@
         ],
         "cli": {
           "name": "querying-lca-datasets",
-          "version": "0.5.1",
+          "version": "0.6.0",
           "executable": "bin/querying-lca-datasets",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.5.1/querying-lca-datasets-darwin-arm64.tar.gz",
-              "sha256": "fa6b0cf8d4da04e5ca349ad4e58c9748b804579d9a4866b3674d6f8de82574da"
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-arm64.tar.gz",
+              "sha256": "3ae22d008d19670bd37c46e6fda60483a8fe2e227e5b799df88df5eb376d2488"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.5.1/querying-lca-datasets-darwin-x64.tar.gz",
-              "sha256": "5ad0e689bd25e75ebdcaf9fdbb96c6fb6e33d0bafce5d20523a751024e14cc56"
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-darwin-x64.tar.gz",
+              "sha256": "a5a10d82218ff167071f921bbb9c6b2c7f153f18439ea934b0efa373acd040c2"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.5.1/querying-lca-datasets-linux-arm64.tar.gz",
-              "sha256": "e5c56f3786243cec244d8e9d27db40eeabad4e27b353cc9d466d0b5a7f5ab866"
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-arm64.tar.gz",
+              "sha256": "79d495e0f5e0c1ad03899401857606d3f248a867c5f5020a1e286a0bbf4bab84"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.5.1/querying-lca-datasets-linux-x64.tar.gz",
-              "sha256": "9060f20a3744cf2c4e21d578fa70030c74b6b4c2818ffe69a554a5fef718a393"
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-linux-x64.tar.gz",
+              "sha256": "7f809dccdefec2412e66bbb312092e419d898a0f8172d7740c06461ef616d3ba"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.5.1/querying-lca-datasets-win32-x64.tar.gz",
-              "sha256": "3af22e08c8f1bb70c106e65a89a8c8cd10df2054424240f297fdc10b1fae222c"
+              "url": "https://download.hiq.earth/cli/querying-lca-datasets/releases/v0.6.0/querying-lca-datasets-win32-x64.tar.gz",
+              "sha256": "9b8b2948c89414b8cecb18e96433b0e3793160ac47de2be0b6039559e116e09c"
             }
           }
         }
       },
-      "recommended_prompt": "用 Querying LCA Datasets 为中国生产的 304 不锈钢寻找参考单位 kg 的过程数据集。先检查 CLI 与访问状态；列出来源、版本、模型、参考产品/单位、地域和可用时间/技术证据，说明代理及代表性缺口。有权限时读取真实 GWP，不估算，不修改模型或执行 EPD 审核。",
-      "recommended_prompt_en": "Use Querying LCA Datasets to find process datasets for 304 stainless steel produced in China, with kg as reference unit. Check CLI access; report source/version/model, reference product/unit, geography and available temporal/technology evidence. Explain proxies and representativeness gaps; retrieve real GWP only if authorized, without estimating, model edits or EPD audit."
+      "recommended_prompt": "按我的问题选择实际已接入的数据库或 EPD 声明，报告来源、版本或声明口径、单位、权限与覆盖缺口，不静默换源。",
+      "recommended_prompt_en": "Find data for my question using the connected background databases or published EPD declarations. Preserve source, version or declaration basis, units, access restrictions and coverage gaps; do not silently substitute sources."
     }
   ]
 }

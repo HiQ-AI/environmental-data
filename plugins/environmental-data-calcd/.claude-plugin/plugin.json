@@ -1,0 +1,11 @@
+{
+  "name": "environmental-data-calcd",
+  "displayName": "CALCD",
+  "version": "0.6.0",
+  "description": "Search and match published CALCD environmental process datasets using the runtime-enforced calcd source scope, preserving coordinates and access limitations.",
+  "repository": "https://github.com/HiQ-AI/environmental-data",
+  "license": "MIT",
+  "author": {
+    "name": "HiQ"
+  }
+}
