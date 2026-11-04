@@ -8,7 +8,7 @@ Expected CLI: uslci 0.7.5. This package's installation.json pins the exact archi
 4. Use the host's existing permissions; request only a genuinely necessary approval. Do not change global profiles, credentials or another application's settings. Use the same trusted absolute path throughout, or add only its verified directory to this session's PATH. Execute version and info --json and compare the program/version/scope to installation.json; then read search --help and lookup --help.
 5. Complete authentication below when required, then continue the pending original request. Do not substitute a webpage factor for a failed CLI query.
 
-## Authentication / 登录与继续查询
+## Sign in and resume the query
 
 Use the same trusted executable throughout preparation, login and query. Substitute its verified absolute path for the bare command in every example if using an independent install directory.
 
@@ -26,7 +26,7 @@ uslci login --json
 
 The CLI does not open a browser and has no --no-browser switch. --json does not return immediately: QR, authorization URL, user code and waiting text appear on stderr; stdout is reserved for final success JSON. Capture both streams. Retain the host task/process ID and the pending query, source/model/kind and exact lookup keys.
 
-Extract the actual authorization URL from this process. If the host has an available, authorized capability to open the user's normal browser, use it. Also present a clickable Markdown link, for example [打开授权页面](<ACTUAL_URL_FROM_THIS_LOGIN>), replacing the placeholder with the actual returned URL, plus the real user code. If opening fails or is unavailable, the clickable link is the continuation path; do not leave only a code-block URL or ask the user to copy it. Do not guess URLs or hard-code a host tool name. Do not use an isolated automation browser without the user's login state as a substitute for their browser. The user personally approves the data-client device authorization; do not approve or sign in on their behalf. This is not an official Claude login.
+Extract the actual authorization URL from this process. If the host has an available, authorized capability to open the user's normal browser, use it. Also present a clickable Markdown link, for example [Open the authorization page](<ACTUAL_URL_FROM_THIS_LOGIN>), replacing the placeholder with the actual returned URL, plus the real user code. If opening fails or is unavailable, the clickable link is the continuation path; do not leave only a code-block URL or ask the user to copy it. Do not guess URLs or hard-code a host tool name. Do not use an isolated automation browser without the user's login state as a substitute for their browser. The user personally approves the data-client device authorization; do not approve or sign in on their behalf. This is not an official Claude login.
 
 The current CLI does not display expiry duration; do not invent a countdown. Preserve an expiry only if actually returned. Never disclose device codes, access tokens or credential contents, and never ask the user to paste a token.
 
