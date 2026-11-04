@@ -1,18 +1,18 @@
 ---
 name: environmental-data-worldsteel-query
-description: "Search and match Worldsteel environmental process data with the querying-lca-datasets CLI. Use when the user explicitly requests Worldsteel or source code worldsteel, including dataset candidates, emission-factor evidence, materials, energy, transport or inventory matching. Keep all requests within this source; do not use for cross-source analysis or EPD auditing."
+description: "Search and match Worldsteel environmental process data with the environmental-data-worldsteel CLI. Use when the user explicitly requests Worldsteel or source code worldsteel, including dataset candidates, emission-factor evidence, materials, energy, transport or inventory matching. Keep all requests within this source; do not use for cross-source analysis or EPD auditing."
 ---
 
 # Worldsteel data queries
 
-Use the installed shared `querying-lca-datasets` CLI version **0.6.0**. This
-plugin's source is `worldsteel`. Keep `scoped worldsteel` on every business command:
-the CLI enforces the boundary, rather than trusting a prompt-only source filter.
+Use the independently installed `environmental-data-worldsteel` CLI version **0.7.0**. Its compiled
+source is `worldsteel`; parameters, environment variables and adjacent configuration
+cannot expand it. No `scoped` selector is needed or supported.
 
 ```sh
-querying-lca-datasets version
-querying-lca-datasets scoped worldsteel sources --json
-querying-lca-datasets scoped worldsteel search-datasets --help
+environmental-data-worldsteel version
+environmental-data-worldsteel sources --json
+environmental-data-worldsteel search-datasets --help
 ```
 
 Read the actual published versions and system models from `sources`. Choose the
@@ -21,7 +21,7 @@ question. Do not assume the default CUT_OFF model exists in this source.
 For deterministic catalog candidates, replace these placeholders with real values:
 
 ```sh
-querying-lca-datasets scoped worldsteel search-datasets --source worldsteel --ver "<published-version>" --model "<published-model>" --queries "<user-query>" --json
+environmental-data-worldsteel search-datasets --source worldsteel --ver "<published-version>" --model "<published-model>" --queries "<user-query>" --json
 ```
 
 Establish function/reference product, unit, geography, time, technology and any
@@ -30,8 +30,8 @@ Keep input-row identity for batches. Read `--help` for supported JSON query-file
 inputs; do not upload an arbitrary workbook or unrelated columns.
 
 `search-datasets` is deterministic catalog search, not a numerical factor lookup.
-Use scoped `verify-datasets --help` to verify returned dataset identities. The
-scoped `search` command can perform service-side semantic search when authorized
+Use `verify-datasets --help` to verify returned dataset identities. The
+`search` command can perform service-side semantic search when authorized
 and actually needed; it may invoke models and is not promised free. Wait for the
 request rather than launching concurrent retries. It still stays in `worldsteel`;
 inspect each returned coordinate rather than assuming version/model filters.
@@ -45,7 +45,7 @@ numerical access; installation does not grant it.
 Source scopes reject opaque-key lookup, aggregate/statistics, hotspot and unknown
 tools because their current inputs cannot establish this source reliably. Do not
 infer a source from opaque key encoding, use raw `call` to escape the scope, or
-remove the prefix. Report the limitation. Only an explicit cross-source request
+replace the executable to broaden the scope. Report the limitation. Only an explicit cross-source request
 can select the aggregate plugin; denial or no match never authorizes that change.
 
 Return retrieved candidates or values with source/version/model, dataset reference,

@@ -44,47 +44,73 @@ Choose the EPD or aggregate ID the same way. Native marketplace support does not
 mean the host automatically installs the business CLI or supplies credentials.
 See [actual verification](COMPATIBILITY.md) for tested scope and limitations.
 
-## Prepare the shared native CLI
+## Prepare the selected native CLI
 
-CLI **0.6.0** supports macOS arm64/x64, Linux arm64/x64 and Windows x64. The
-[root catalog](../marketplace.json) pins each archive's exact URL, full SHA256
-and relative executable. All plugins reference the same release.
+Version **0.7.0** supplies independent commands for macOS arm64/x64, Linux
+arm64/x64 and Windows x64. Select the program belonging to the plugin:
+`environmental-data-<source>`, `environmental-data-epd`, or aggregate
+`environmental-data`. Their implementation shares one private core; each binary
+embeds its own supported-source/publisher declaration.
 
-Download into a fresh directory and verify the entire archive before extraction
-or execution. Preserve its complete layout and use your platform's executable.
-Do not guess a generic installer or pipe an uninspected script into a shell.
+The [catalog](../marketplace.json) pins each complete archive URL/SHA256 and
+executable. [Sealed release metadata](../cli-release.json) additionally pins
+per-command installers and checksums. Its producer index is
+https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/index.json .
+Download into a new empty directory, verify the complete SHA256 before extraction
+or execution, and retain manifest, LICENSE, NOTICE and bin together. macOS has
+Developer ID/Hardened Runtime/JIT, timestamp and accepted notarization. Windows
+is unsigned: normal Windows trust/SmartScreen controls remain applicable. Never
+weaken security settings to install it.
 
-Check version/help, then the selected scope:
+Optional per-command `install.sh` / `install.ps1` URLs and exact script SHA256
+are in the sealed metadata. Download and inspect the selected script, verify its
+SHA256 against that record, then execute it from outside the downloaded directory.
+Do not pipe an uninspected download into a shell. Installers retain the complete
+versioned release, do not edit PATH or credentials, and do not stop running
+processes. `ENVIRONMENTAL_DATA_INSTALL_ROOT` and `ENVIRONMENTAL_DATA_BIN_DIR`
+only select installation destinations; they cannot change query scope. The
+Windows installer has not yet been actually executed in this delivery; native
+Windows archive/executable validation is separate evidence.
 
 ```bash
-querying-lca-datasets version
+environmental-data-hiqlcd version
 ```
 
 ```bash
-querying-lca-datasets scoped hiqlcd sources --json
+environmental-data-hiqlcd info --json
 ```
 
 ```bash
-querying-lca-datasets scoped epd epd-search --query concrete --limit 5 --json
+environmental-data-hiqlcd sources --json
 ```
 
-Public source metadata and EPD search need no local login. Other background
-queries and MCP tools use this CLI's own device/QR authorization or an existing
-controlled `QUERYING_LCA_DATASETS_API_KEY`. Use the intended account and its
-entitlements. Never paste secrets in chat, inspect credential files, copy another
-app's tokens, redirect authenticated requests or change identities to evade denial.
+```bash
+environmental-data-epd epd-search --query concrete --limit 5 --json
+```
 
-Source plugins keep `scoped <code>` on business commands. The CLI rejects source
-conflicts, contaminated output and tools without a verifiable source contract.
-Removing the prefix to avoid a rejection defeats the selected product boundary.
-Scopes are invocation controls, not an OS shell sandbox or an entitlement grant.
+Public metadata and published EPD queries need no local login. Authenticated
+background queries and MCP tools reuse this data-client product family's normal
+login or controlled `QUERYING_LCA_DATASETS_API_KEY`; it is not a token borrowed
+from another product. Use the intended account and its server entitlements.
+Never inspect credential files, paste secrets in chat, redirect authenticated
+requests or change identities to evade denial. A compiled source boundary does
+not grant licenses or narrow the OAuth token.
+
+No `scoped` selector is supported. Single-source commands reject conflicting
+sources, contaminated results and unsupported opaque-key tools. The aggregate
+only supports its embedded set and preflights opaque keys using canonical source
+metadata before tool execution. Installing another program is not an authorized
+fallback for denied access or missing data.
 
 ## Existing installations
 
-The aggregate keeps `querying-lca-datasets-expert`, its guide and role IDs, and
-the CLI's existing identity store. Upgrade the native CLI to 0.6.0 for the new
-source-scoped commands; older CLI 0.5.1 does not implement them. A plugin refresh
-does not itself upgrade a separately installed CLI or reset credentials.
+Plugin IDs, skill IDs and aggregate role IDs remain stable. Upgrade plugin
+instructions and install the new program matching the selected plugin. Old
+`querying-lca-datasets` 0.6.0 with a `scoped` prefix is the previous delivery,
+not an equivalent substitute for these independent compiled programs. The old
+binary is not silently replaced or uninstalled. Existing data-client login
+identity is intentionally shared; migration neither resets nor copies secrets.
+Refreshing a plugin alone does not install or upgrade its business program.
 
 For the former `querying-lca-datasets-expert@hiq-plugins` entry, explicitly add
 the independent marketplace, install its aggregate or selected source plugin,

@@ -1,6 +1,6 @@
 {
   "name": "querying-lca-datasets-expert",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Query and match environmental data across published background sources and EPD declarations, preserving provenance, units, access limits and coverage gaps.",
   "repository": "https://github.com/HiQ-AI/environmental-data",
   "license": "MIT",

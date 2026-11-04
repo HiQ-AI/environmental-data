@@ -1,5 +1,46 @@
 # Compatibility and verification
 
+## Current independent 0.7.0 programs
+
+The sealed producer projection supplies 20 independent commands across macOS
+arm64/x64, Linux arm64/x64 and Windows x64. All100 actual CDN programs executed
+version/info and platform signature checks on their native target architecture.
+This does not establish business-query acceptance on those platforms. Mac uses
+formal Developer ID/notarization; Windows binaries are unsigned/NotSigned.
+
+Fresh isolated installation of all 20 version-0.7.0 plugins passed through both
+Claude Code 2.1.317 and Codex CLI 0.161.0 native plugin managers. Every installed
+skill matches current source bytes; Claude Code strict marketplace and all
+plugin-manifest validations passed. No login, model run or global configuration
+change was required. The older evidence below remains historical. Native installation does not install a business
+CLI, grant credentials or prove data suitability. Production Desktop is unchanged.
+
+The Windows installer and normal-account authenticated background query remain
+unverified. Public metadata/EPD, local fixtures and native version checks do not
+replace either gate. [Current distribution contract](DISTRIBUTION.md).
+
+## Current installed instructions and real calls
+
+On macOS arm64, the exact checksum-verified production CDN POSIX installers
+installed `environmental-data-hiqlcd`, `environmental-data-epd` and aggregate
+`environmental-data` into an isolated destination. Actual version 0.7.0, embedded
+info and native codesign verification passed. Complete releases/licenses remain
+in their versioned installation directories; no login or PATH change occurred.
+
+After reading each host's installed HiQLCD, EPD and aggregate skill, manually
+executed its documented command with the matching production program:
+- HiQLCD sources returned only HiQLCD metadata.
+- EPD concrete search returned an actual declaration with a supported publisher
+  and page cursor.
+- Aggregate sources returned its compiled 18-source closed set, missing empty.
+- Conflicting HiQLCD/Ecoinvent source arguments exited 3 with no success stdout.
+
+All six host/instruction query executions passed. This is installed-instruction
+and actual-program verification, not evidence of a model choosing a skill or
+performing a reasoning workflow. No paid models or business writes occurred.
+
+## Historical 0.6.0 host evidence
+
 ## Hosts
 
 - **Claude Code 2.1.317:** the marketplace and all plugin manifests pass native

@@ -1,54 +1,65 @@
-# Source plugin distribution
+# Independent program distribution
 
 Tracking: [product Feature](https://github.com/HiQ-AI/environmental-data/issues/1).
-Shared runtime: [CLI source scopes](https://github.com/HiQ-AI/hiq-cortex-cli/pull/10),
-merged revision `63a81cc1ee7cffd7ab491e420d0eaebece5ad107`, version `0.6.0`.
 
-## Delivery boundary
+## Current 0.7.0 delivery
 
-This delivery provides independently installable plugins for these background
-sources: `hiqlcd`, `hiqlcd-al`, `calcd`, `hiq-cesi`, `ecoinvent`, `carbonminds`,
-`agrifootprint`, `ef`, `auslci`, `bafu`, `bioenergiedat`, `elcd`, `needs`, `ozlci`,
-`recycledplastics`, `usda`, `uslci`, `worldsteel`; one published-EPD query plugin;
-and one aggregate plugin. The acceptance target is 20 plugins. This is a delivery
-inventory, not a permanent limit on this product.
+One private core and authoritative channel declaration generate independently
+compiled single-database, published-EPD and aggregate programs. The public
+repository contains their sealed distribution metadata and distinct operating
+skills, not the private CLI implementation, credentials or database content.
+The current inventory is 18 database plugins plus EPD and aggregate; it is not
+a permanent product ceiling. Plugin IDs remain stable.
 
-The aggregate retains installation ID `querying-lca-datasets-expert`. Source
-plugins use `environmental-data-<source>` and the EPD query plugin uses
-`environmental-data-epd`. Each owns a distinct skill and references the same
-published CLI release. Neither binaries nor query implementations are forked
-per database. This marketplace contains no editor, audit expert or other product.
+[cli-release.json](../cli-release.json) is the read-only producer projection,
+not a second editable source list. Catalog CLI declarations must exactly match
+the corresponding sealed plugin entry. It records version 0.7.0, source commit
+`837d4759e1b3da43bf5965b25c18ac7959eec89d`, five platforms, 100 archives and
+per-program installer/checksum digests. Producer index:
+https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/index.json .
+Its exact original bytes have SHA256
+`f2a4546f3348d8200bf4ec7e9246d8045ef46232acc7dac06677db834d532ae7`.
 
-## Runtime and access contract
+Each single-database program binds its source at compilation. Arguments,
+environment, adjacent config, binary renaming and old scoped selectors do not
+select a wider supported set. EPD uses the existing declaration protocol and
+compiled publisher set, distinct from background data and the auditing expert.
+The aggregate has an explicit closed source/tool/publisher set; a remote catalog
+addition cannot expand it. Opaque keys are checked against canonical source
+metadata before aggregate tool execution; unverifiable keys fail. Single-source
+opaque-key tools remain unavailable rather than guessing provenance.
 
-- Background plugins invoke `querying-lca-datasets scoped <code> ...`. The CLI
-  rejects conflicting sources, unsupported tools and cross-source responses.
-  Supported commands are `sources`, `search-datasets`, `verify-datasets`,
-  `search-flows`, `verify-flows`, and source-limited semantic `search`.
-- Opaque-key lookup, statistics and hotspot tools lack a verifiable single-source
-  input contract in the current CLI. Source plugins reject them instead of
-  guessing key encodings or retrieving a different source and hiding it later.
-  Explicitly selected aggregate access retains these capabilities.
-- The aggregate uses the unprefixed CLI and the account's server-enforced access.
-  It preserves source/version/model, permissions, failures and coverage gaps;
-  installing it does not authorize hidden source substitution.
-- `scoped epd epd-search` queries the existing public read-only
-  `/api/relic/epd/search` API. EPD publishers such as `eco`, `epditaly` and
-  `epdnorge` belong to this declaration domain, not the background-source list.
-  The response retains declared units, publisher, method/module, validity,
-  restricted markers, metadata and cursor pagination. It neither audits nor
-  certifies declarations. A declaration is not an interchangeable background
-  process dataset.
-- Public source metadata and published-EPD search deliberately work without
-  local login. Authenticated background queries and MCP tools retain the
-  existing login/API-key requirement. An access failure is never retried using
-  a different identity, broader source or different data domain.
-- Server access rules remain authoritative. Public metadata, plugin licenses
-  and free-source labels do not grant data redistribution or commercial rights.
-  Check source terms and account entitlements for the intended use.
-- Runtime scopes constrain an invocation, not an operating-system shell. The
-  same executable supports explicit aggregate invocations; no shell sandbox or
-  narrower OAuth token is claimed.
+Server authorization and source terms remain authoritative. All programs share
+the existing data-client product identity, not new rights or narrower OAuth
+tokens. Errors and restrictions remain visible; no fallback changes identity,
+source or data domain. A binary boundary is not an OS shell sandbox.
+
+The real tag-triggered release completed five-platform native validation of all
+100 CDN executables: archive/manifest/binary hashes, actual version and embedded
+info, Mac Developer ID/runtime/timestamp/notarization Accepted, Windows actual
+NotSigned, Linux signing not-applicable. Final seal was written only after all
+platforms passed. A separate readback matched all five platform indexes and 60
+installer/checksum file digests to the sealed projection. These are packaging
+and execution checks, not platform business-query or professional acceptance.
+
+Local source tests compiled all 20 Mac development programs and passed 4 regression
+tests covering all source boundaries, local real-SDK HTTP/MCP error handling,
+and actual POSIX archive install/reinstall/corruption protection. Real public
+metadata returned each of 18 sources only in its own program, the aggregate closed
+set, and an actual EPD declaration. No paid model or business write occurred.
+
+Windows installer and normal-account authenticated background queries remain
+unverified; neither public EPD success nor synthetic tests replaces them. Fresh native installation of all 20 plugins in both pinned hosts passed;
+installed skills match source bytes. Three production CDN POSIX program installs
+and six actual public queries from installed instructions passed on Mac arm64.
+This does not claim model-selected execution. Full evidence is recorded in
+[compatibility](COMPATIBILITY.md). No production Desktop switch or release is
+part of this delivery. The Feature remains open for unmet product acceptance.
+
+## Historical 0.6.0 evidence
+
+The following records the earlier shared-runtime delivery. It does not establish
+that new independent 0.7.0 instructions or programs were installed in a host.
 
 ## Acceptance evidence
 

@@ -10,19 +10,18 @@ Use the data for the question and workflow you choose; preserve its limitations.
 ```
 
 For Codex, use its native plugin manager as documented in
-[installation](../../docs/INSTALLATION.md). Prepare the shared native CLI
-`querying-lca-datasets` **0.6.0** separately. This plugin supplies its own skill;
+[installation](../../docs/INSTALLATION.md). Prepare the independent native CLI
+`environmental-data-needs` **0.7.0** separately. This plugin supplies its own skill;
 it does not bundle a binary, log in or grant database rights.
 
 ## Source boundary
 
-Every business invocation uses `querying-lca-datasets scoped needs ...`.
+Every business invocation uses the independently compiled `environmental-data-needs` command.
 The runtime rejects conflicting source arguments, cross-source responses and
-opaque-key/unknown tools without a verifiable source contract. Do not remove the
-scope to work around a failure. Cross-source analysis requires explicit aggregate
+opaque-key/unknown tools without a verifiable source contract. Do not replace the executable to work around a failure. Cross-source analysis requires explicit aggregate
 selection; it is not a fallback for denied access or a missing match.
 
-Inspect current versions/models with `scoped needs sources --json`. Background
+Inspect current versions/models with `environmental-data-needs sources --json`. Background
 queries use the CLI's own authorized login or controlled API key. Source terms,
 account entitlements and numerical coverage remain authoritative. Missing or
 restricted values are not zero; a directory entry is not a suitability verdict.

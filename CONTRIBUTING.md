@@ -21,3 +21,14 @@ Validate native marketplace/plugin manifests with the available host validator a
 Never commit credentials, customer inputs, downloaded binaries or restricted third-party Office/PDF skills. Preserve applicable publisher/database terms. Report issues with redacted evidence, actual OS/architecture and plugin/CLI versions.
 
 This repository does not switch Desktop production routing or publish Desktop. Do not broaden a plugin change into another host or service deployment.
+
+## Native CLI release projection
+
+The private producer owns source/channel declarations and executable builds.
+After actual release verification, copy the exact sealed producer index into
+`cli-release.json`, update each catalog CLI from its matching plugin entry, and
+update operating instructions for that compiled executable. Do not hand-maintain
+a second source list or reintroduce a shared CLI/scoped selector. Record the
+original index SHA256 and native verification scope in distribution evidence.
+Run `npm run generate` and `npm test`; no dependency installation is needed.
+Native host installation and business-query evidence remain distinct.

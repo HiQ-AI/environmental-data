@@ -1,32 +1,32 @@
 ---
 name: querying-lca-datasets-guide
-description: "Environmental Data aggregate access: use for explicitly requested cross-source environmental data discovery, published EPD evidence, retrieved emission-factor lookup or inventory matching. Preserve each source/version/model or declaration basis and access limits. For a request fixed to one installed database plugin, keep that plugin's scoped entrypoint instead."
+description: "Environmental Data aggregate access: use for explicitly requested cross-source environmental data discovery, published EPD evidence, retrieved emission-factor lookup or inventory matching. Preserve each source/version/model or declaration basis and access limits. For a request fixed to one installed database plugin, keep that plugin's independently compiled entrypoint instead."
 ---
 
 # Environmental Data
 
-The public product name is Environmental Data. The stable plugin ID `querying-lca-datasets-expert`, this skill ID and the `querying-lca-datasets` CLI command remain unchanged; a branding update does not require reinstalling under a new identity or replacing authentication.
+The public product name is Environmental Data. The stable plugin ID `querying-lca-datasets-expert` and this skill ID remain unchanged. The independent aggregate executable is `environmental-data` version 0.7.0; it shares the existing data-client login identity, not an unbounded source selector.
 
-Use the installed `querying-lca-datasets` executable to search and match **environmental process datasets** across published sources. The current connector exposes environmental process data, including records commonly used as LCA backgrounds. Follow the user's question and intended use; do not require an LCA study or force a general request into an inventory template. A database, a process dataset, its reference product and its numerical LCIA result are distinct things. Do not infer availability from a product name or invent a dataset/factor from memory.
+Use the installed `environmental-data` executable to search and match **environmental process datasets** across published sources. The current connector exposes environmental process data, including records commonly used as LCA backgrounds. Follow the user's question and intended use; do not require an LCA study or force a general request into an inventory template. A database, a process dataset, its reference product and its numerical LCIA result are distinct things. Do not infer availability from a product name or invent a dataset/factor from memory.
 
-Read the plugin's [source inventory and limits](../../SOURCES.md). It records dated metadata from the live public source directory, including HiQLCD, Ecoinvent, CALCD and other advertised sources. It is not a per-account access inventory or a permanent allowlist. Discover current sources, versions and models using the CLI's available tools/help and service metadata; a directory entry does not grant numerical-data access. Some advertised sources lack LCIA results, and an unlisted database is not integrated just because the product has a broad name. Retain source/version/model and applicability evidence; do not silently substitute a different source.
+Read the plugin's [source inventory and limits](../../SOURCES.md). It records dated metadata from the live public source directory, including HiQLCD, Ecoinvent, CALCD and other advertised sources. It is not a per-account access inventory. The executable's `info --json` is the compiled supported-source set; remote directory additions cannot expand it. Discover current sources, versions and models using the CLI's available tools/help and service metadata; a directory entry does not grant numerical-data access. Some advertised sources lack LCIA results, and an unlisted database is not integrated just because the product has a broad name. Retain source/version/model and applicability evidence; do not silently substitute a different source.
 
 Inputs are not limited to a BOM: a material description, process requirement, individual inventory exchange, energy or transport service, or batch inventory rows can all be search queries. Discover what each actual command accepts. This skill is the CLI operating guide, not a local catalog or a modeling/calculation engine. Do not download SQLite catalogs, run retired Querying scripts, install another client, configure an additional Host MCP server or inject Desktop JWT. The CLI's own service protocol is internal to the CLI; it does not require a separate Host MCP connection. Search runs remotely within the user's data entitlements.
 
 ## Discover Commands And Access
 
 ```sh
-querying-lca-datasets version
-querying-lca-datasets --help
-querying-lca-datasets sources --json
-querying-lca-datasets doctor
-querying-lca-datasets list --json
-querying-lca-datasets describe lookup-datasets
+environmental-data version
+environmental-data --help
+environmental-data sources --json
+environmental-data doctor
+environmental-data list --json
+environmental-data describe lookup-datasets
 ```
 
-`doctor` reports credential source and connectivity, not the secret; version 0.6.0 emits human text even with `--json`. Installation or a version check does not establish data access. Runtime tools and parameters come from `list --json` and `describe <command>`; do not copy a server schema into this skill or invent flags. Static commands such as `search-datasets` use `<command> --help`, not `describe`.
+`doctor` reports credential source and connectivity, not the secret; version 0.7.0 emits human text even with `--json`. Installation or a version check does not establish data access. Runtime tools and parameters come from `list --json` and `describe <command>`; do not copy a server schema into this skill or invent flags. Static commands such as `search-datasets` use `<command> --help`, not `describe`.
 
-The CLI owns authentication. User-driven `querying-lca-datasets login` performs device/QR authorization. A securely configured `QUERYING_LCA_DATASETS_API_KEY` takes precedence over this CLI's stored login. This product-name update does not change the executable, login-storage identity or credentials; continue using the CLI's existing authorized login. Never inspect credential files, print environment secrets, copy a token from another app or ask for a secret in chat. Do not initiate login/logout or change identity without authorization. Keep the default service endpoint rather than redirecting authenticated requests.
+The CLI owns authentication. User-driven `environmental-data login` performs device/QR authorization. A securely configured `QUERYING_LCA_DATASETS_API_KEY` takes precedence over this CLI's stored login. The executable name changes, while the existing data-client login-storage identity and credentials remain shared; continue using the CLI's existing authorized login. Never inspect credential files, print environment secrets, copy a token from another app or ask for a secret in chat. Do not initiate login/logout or change identity without authorization. Keep the default service endpoint rather than redirecting authenticated requests.
 
 ## Search Background Process Datasets
 
@@ -38,10 +38,10 @@ The CLI owns authentication. User-driven `querying-lca-datasets login` performs 
 
 ```sh
 # Example coordinates only; use coordinates the user requested or the service actually exposes.
-querying-lca-datasets search-datasets --source hiqlcd --ver 1.5.0 --model CUT_OFF --queries "电力,天然气" --json
+environmental-data search-datasets --source hiqlcd --ver 1.5.0 --model CUT_OFF --queries "电力,天然气" --json
 # Original requirement when the source is not fixed.
-querying-lca-datasets search "中国生产的 304 不锈钢，参考单位 kg" --json
-querying-lca-datasets describe lookup-datasets
+environmental-data search "中国生产的 304 不锈钢，参考单位 kg" --json
+environmental-data describe lookup-datasets
 ```
 
 For commas in names or to preserve row `identity`, use a user-authorized workspace JSON input file with the documented `--queries @file` form. Supported records include `{query, locations?, activityTypes?, identity?}`; the file is a batch of queries, not an arbitrary BOM/workbook upload. Send only necessary search fields, not unrelated columns or a whole workspace. Creating/exporting a file needs the requested destination; do not modify the source inventory automatically.
@@ -49,7 +49,7 @@ For commas in names or to preserve row `identity`, use a user-authorized workspa
 ## Verify Process Dataset Identity
 
 ```sh
-querying-lca-datasets verify-datasets --help
+environmental-data verify-datasets --help
 ```
 
 `verify-datasets --datasets` takes `id[:unit],...` or `@file` with strings or `{id, model?, unit?}` records. It requires `--source` and `--ver`; use real identifiers returned by the service. If an ID exists only in another model, report `availableModels` instead of treating it as verified for the requested model. A missing, unit-mismatched or unpublished record causes verification exit 2; this differs from missing-login exit 2 on other commands. Identity verification does not prove the dataset's temporal, geographical or technological suitability.
@@ -83,9 +83,9 @@ Use `--json` for machine parsing. Tool commands generally return `{ok, tool, tex
 
 This plugin searches, looks up, compares and verifies background **process datasets**. It does not import datasets, bind them into a model, calculate a product footprint, submit reviews or notify people. Runtime `call` is not permission to invoke arbitrary tools: inspect the schema and restrict execution to read-only tools needed for the request.
 
-For published declarations requested by the user, CLI 0.6.0 provides `epd-search --query "<user-product>" --limit 5 --json` through the existing public read-only EPD API. Retain its complete envelope, publisher, declared unit, method/module, validity, restricted markers and page cursor. Public metadata/EPD search needs no local login; authenticated background queries and MCP peer tools retain their existing requirements. A product-specific EPD is not automatically an interchangeable background process dataset. Explain comparability gaps. EPD compliance review, corrective actions, reports and certification belong to the separate audit expert.
+For published declarations requested by the user, CLI 0.7.0 provides `epd-search --query "<user-product>" --limit 5 --json` through the existing public read-only EPD API. Retain its complete envelope, publisher, declared unit, method/module, validity, restricted markers and page cursor. Public metadata/EPD search needs no local login; authenticated background queries and MCP peer tools retain their existing requirements. A product-specific EPD is not automatically an interchangeable background process dataset. Explain comparability gaps. EPD compliance review, corrective actions, reports and certification belong to the separate audit expert.
 
-This aggregate uses the unprefixed CLI only when cross-source access is actually selected. A single-source plugin's failure, denied values or missing match does not authorize removing its scope. Keep the requested sources, versions and models explicit. Do not combine declaration values and background factors without explaining functional-unit, method and boundary differences. Preserve failures, restricted counts, missing coverage and unresolved rows; do not present a partial result as complete. No fallback changes identity or broadens rights.
+This independently compiled aggregate is used only when cross-source access is explicitly selected. It rejects undeclared sources, tools and publishers and preflights opaque keys using canonical source metadata before the tool call. A single-source plugin's failure, denied values or missing match does not authorize removing its scope. Keep the requested sources, versions and models explicit. Do not combine declaration values and background factors without explaining functional-unit, method and boundary differences. Preserve failures, restricted counts, missing coverage and unresolved rows; do not present a partial result as complete. No fallback changes identity or broadens rights.
 
 ## Preset Roles
 

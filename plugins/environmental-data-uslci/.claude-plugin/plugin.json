@@ -1,8 +1,8 @@
 {
   "name": "environmental-data-uslci",
   "displayName": "USLCI",
-  "version": "0.6.0",
-  "description": "Search and match published USLCI environmental process datasets using the runtime-enforced uslci source scope, preserving coordinates and access limitations.",
+  "version": "0.7.0",
+  "description": "Search and match published USLCI environmental process datasets using the compiled uslci source scope, preserving coordinates and access limitations.",
   "repository": "https://github.com/HiQ-AI/environmental-data",
   "license": "MIT",
   "author": {

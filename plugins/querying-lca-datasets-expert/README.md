@@ -17,7 +17,7 @@ Catalog visibility is not access to numerical data. Commercial-source values req
 Published declarations are available through the separate public `epd-search`
 command. Retain publisher, declared unit, method/module, validity and restricted
 markers; do not substitute declarations for background processes without an
-explicit comparability basis. This aggregate keeps unprefixed CLI capabilities;
+explicit comparability basis. This aggregate has a compiled closed set of supported sources and publishers;
 use a source plugin when the question is fixed to one database. Removing a
 single-source scope is not a fallback for missing data or denied access.
 
@@ -38,8 +38,8 @@ This loads instructions and agent roles, not a CLI, credentials or business data
 ## Native CLI and requirements
 
 - Public product name: **Environmental Data**. The install ID remains `querying-lca-datasets-expert` so existing installations and upgrades keep their identity.
-- Plugin version: **0.6.0** (aggregate access and source-plugin distribution).
-- CLI executable: `querying-lca-datasets`. CLI version: **0.6.0**.
+- Plugin version: **0.7.0** (aggregate access and source-plugin distribution).
+- CLI executable: `environmental-data`. CLI version: **0.7.0**.
 - Catalog platforms: `darwin-arm64, darwin-x64, linux-arm64, linux-x64, win32-x64`. Missing platforms are unsupported by this catalog.
 - Exact archive URLs, SHA256 and executable/skill paths: [release catalog](https://github.com/HiQ-AI/environmental-data/blob/main/marketplace.json).
 

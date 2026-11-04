@@ -8,8 +8,8 @@ process sources; no invented background-source ID is used.
 /plugin install environmental-data-epd@environmental-data
 ```
 
-Prepare shared CLI **0.6.0** separately. Query with
-`querying-lca-datasets scoped epd epd-search --query concrete --limit 5 --json`.
+Prepare independent `environmental-data-epd` CLI **0.7.0** separately. Query with
+`environmental-data-epd epd-search --query concrete --limit 5 --json`.
 This uses the existing public read-only declaration API. Local login is not
 required for this endpoint; server restrictions and publisher terms still apply.
 The complete envelope preserves publisher, unit, indicator/method/module,
