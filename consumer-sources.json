@@ -1,0 +1,32 @@
+[
+  {
+    "market": "environmental-data",
+    "channel": "published",
+    "source": "environmental-data",
+    "ids": [
+      "hiqlcd",
+      "hiqlcd-al",
+      "calcd",
+      "cesi",
+      "ecoinvent",
+      "carbonminds",
+      "agrifootprint",
+      "ef",
+      "auslci",
+      "bafu",
+      "bioenergiedat",
+      "elcd",
+      "needs",
+      "ozlci",
+      "recycledplastics",
+      "usda",
+      "uslci",
+      "worldsteel",
+      "epd-data",
+      "environmental-data"
+    ],
+    "archivePrefixes": [
+      "/cli/environmental-data/releases/"
+    ]
+  }
+]
