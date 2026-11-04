@@ -1,0 +1,40 @@
+{
+  "version": "0.7.4",
+  "program": "environmental-data-bafu",
+  "sources": [
+    "bafu"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/install.sh",
+      "sha256": "41167171dfec7be6c529f68e8244713c1cb2a3ed08131af648bd0acf5ab4dabd"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/install.ps1",
+      "sha256": "93bc6e9cb4a2d9daa4bed2b0086e3e8bd284b94105cf43bbf48399291c671611"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-darwin-arm64.tar.gz",
+      "sha256": "29775ceb17fbc9757dbec69c77c84948a3c42d93fbbb0368bdc7ce124d15fdff"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-darwin-x64.tar.gz",
+      "sha256": "e30015980cd5c6cb8f398f1ef8b447194d98b2728a6b47d3ea4cccae5cef9343"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-linux-arm64.tar.gz",
+      "sha256": "1894042c476a334649e06a925d182376cae21d0f7cf12f44b0f10df4ba973eb4"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-linux-x64.tar.gz",
+      "sha256": "bb032b60e065c604d67d506a206c28d7f0ce3181be13b0a562e2e31448cb9333"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-win32-x64.tar.gz",
+      "sha256": "47d62b3718d0f49bb44eeb62256b90b3b0f1c423eb2d912f759579309d6edfb9"
+    }
+  }
+}

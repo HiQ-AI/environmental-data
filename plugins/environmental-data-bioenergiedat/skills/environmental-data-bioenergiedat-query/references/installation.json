@@ -1,0 +1,40 @@
+{
+  "version": "0.7.4",
+  "program": "environmental-data-bioenergiedat",
+  "sources": [
+    "bioenergiedat"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/install.sh",
+      "sha256": "db4335ea93c70ebf45fde286e444b1c2c1c3852499d349c23e29453881831682"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/install.ps1",
+      "sha256": "aac0a462dd0a48080978f7d7357c2a0dc2a1b5ac317bf5a0cc53d7ae47ca72b1"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-darwin-arm64.tar.gz",
+      "sha256": "d647ed5c19b0f68288e70a9935ea08ded21c3da1a2d3b2178bae9eb6a49cbd62"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-darwin-x64.tar.gz",
+      "sha256": "06dd79669cd30a41020bfc6bb874aa32422467e64a9e519717ff4875c7910718"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-linux-arm64.tar.gz",
+      "sha256": "5040903a5609c231f87125e642c50df5dda28f6f21fa020de3be5bcadf712ca1"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-linux-x64.tar.gz",
+      "sha256": "8879203549135b6377ce851deb13ff71db4387af708482cc88a3c291b73dac42"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-win32-x64.tar.gz",
+      "sha256": "cfbb76bc072bb62ab1db745cc2eea2af9d0576ba8cc961fb89c8e0b970fdd37b"
+    }
+  }
+}

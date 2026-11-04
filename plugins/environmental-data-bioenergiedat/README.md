@@ -1,3 +1,5 @@
+> CLI 0.7.4 uses `search` and `lookup` only for business queries. Follow the bundled SKILL and [release migration notes](../../docs/RELEASE_0.7.4.md); retired commands in historical examples do not apply. Windows automated installer verification remains unpassed.
+
 # BioEnergieDat
 
 Query and match environmental process data published under source `bioenergiedat`.

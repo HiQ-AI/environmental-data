@@ -1,0 +1,40 @@
+{
+  "version": "0.7.4",
+  "program": "environmental-data-worldsteel",
+  "sources": [
+    "worldsteel"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/install.sh",
+      "sha256": "7319f06a5af3b8eb1461356360ab3f1cb165d2bed42da657c4a5d68148896dea"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/install.ps1",
+      "sha256": "1ee8cbeffe78102e0a95009a5a7936dcf3f8b0e701c4da53325b728e5bf26b2b"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-darwin-arm64.tar.gz",
+      "sha256": "2992534f83aa0b1ededb26e0cf2b2bbf0b178eb36f6cba00538fb8a9c4629163"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-darwin-x64.tar.gz",
+      "sha256": "6d6d95c6d129824cd0bac6431c646afe1c32c7e79fa5b88cfd6049d839360d8e"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-linux-arm64.tar.gz",
+      "sha256": "7203210470aa5d7e89cd09993d919842200257fc8afc8840200cc6a3a2a537e5"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-linux-x64.tar.gz",
+      "sha256": "4c7e38b4b845a368881d101a65d147fa24bf9dd84468f6f1db3a0c165af8bfe2"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-win32-x64.tar.gz",
+      "sha256": "b8d60fb5ea248e781aabb21a079c0fc7138737c0f8b83bb628008a4d005696d4"
+    }
+  }
+}

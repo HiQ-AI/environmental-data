@@ -1,5 +1,7 @@
 # Compatibility and verification
 
+> Current pins and compatible commands: [CLI 0.7.4 migration and verification limits](RELEASE_0.7.4.md). The older version-specific instructions/evidence below are historical; do not use retired commands with 0.7.4. Windows installer verification has not passed.
+
 ## Current independent 0.7.0 programs
 
 The sealed producer projection supplies 20 independent commands across macOS

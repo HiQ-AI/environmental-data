@@ -1,0 +1,40 @@
+{
+  "version": "0.7.4",
+  "program": "environmental-data-carbonminds",
+  "sources": [
+    "carbonminds"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/install.sh",
+      "sha256": "7556b360d260d4d3d35fcb3ff4ada5d860591d8a4002a6c7ad430eaff7cea6b5"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/install.ps1",
+      "sha256": "fd65569ef34f4806fb3eff7861501898b628c8e31a82e91eafaa3f96c8432ff5"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-darwin-arm64.tar.gz",
+      "sha256": "079134040f2fc0dc21a3ed7992698e75c8ad742784fce2db6fe82f5affce9aab"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-darwin-x64.tar.gz",
+      "sha256": "3797e642b7514dc54131d63e8e65a896e1a3e98ec7fbc465c4e1cc811bac2f26"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-linux-arm64.tar.gz",
+      "sha256": "24139aeabf2b86ddace46ceeece37daa79e99a3271d2d764967f2efd7634caf7"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-linux-x64.tar.gz",
+      "sha256": "f75adeac79b089d1db7a540c029e627dff6dd0346f5ecdb62089abc06460761c"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-win32-x64.tar.gz",
+      "sha256": "9ea5a99336fc107d34bdd3fdc02946cdd1071799bc442ce7f93a50b036880def"
+    }
+  }
+}
