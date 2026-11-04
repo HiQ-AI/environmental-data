@@ -1,8 +1,16 @@
-# Contributing
+# Catalog maintenance
 
-This repository is the authoritative source for the Environmental Data plugin's metadata, roles, guides and CLI supply pins. Do not maintain a separate editable copy in another marketplace.
+## Ownership
 
-The root `marketplace.json` owns identities, versions, component inventory and CLI supply metadata. The native `.claude-plugin/marketplace.json` and marked README plugin index are generated projections:
+The private producer owns the channel declaration, program scope, consumer-name
+mapping and executable builds. Its sealed index is copied without modification
+to `cli-release.json`. The public repository owns the published plugin content,
+host integration and user documentation. Do not copy private implementation code
+or create another editable source list.
+
+`marketplace.json` is the typed consumer catalog. Its CLI entries must match the
+sealed release exactly. `.claude-plugin/marketplace.json` and the marked README
+catalog are generated projections:
 
 ```bash
 npm run generate
@@ -12,23 +20,48 @@ npm run generate
 npm test
 ```
 
-Use a feature branch and PR. Preserve the stable plugin ID, CLI command/authentication and existing release pins unless a scoped change explicitly requires a compatible migration. Keep the public product name in supported `displayName` fields and the Cortex catalog's human-readable name, not in a renamed technical ID. Do not freeze the current inventory count into long-term positioning.
+No dependency installation is required for these checks.
 
-Update the actual plugin guides when capabilities, access, dependencies or side effects change. Describe current published sources and coverage accurately; new branding does not integrate a new database. Database-specific product packaging is not implied by this repository's name or directory layout.
+## Names and components
 
-Validate native marketplace/plugin manifests with the available host validator after schema changes. For changed archives, verify full digests and actual platform/version before execution. Hosted CI performs static checks only, using GitHub-hosted runners with read-only permissions: no business/model/database/browser/native-runtime integration tests, deployment workflow or internal self-hosted runner.
+Plugin ID and CLI name are identical. Database skills use `<source>-query`;
+EPD uses `epd-query`, and the aggregate uses `environmental-data-query`.
+Skill titles use Data Querying. Only the aggregate declares the three roles
+`data-searcher`, `data-matcher` and `data-reviewer`.
 
-Never commit credentials, customer inputs, downloaded binaries or restricted third-party Office/PDF skills. Preserve applicable publisher/database terms. Report issues with redacted evidence, actual OS/architecture and plugin/CLI versions.
+A naming change must update IDs, directories, manifests, skill frontmatter,
+component references, installation metadata and both catalog formats together.
+Document the user migration explicitly. Do not leave legacy aliases or duplicate
+active entries. Database service source codes and account identity must not
+change merely because a public name changes.
 
-This repository does not switch Desktop production routing or publish Desktop. Do not broaden a plugin change into another host or service deployment.
+## Release updates
 
-## Native CLI release projection
+Use a feature branch and PR. Generate consumer content from the producer's
+matching declaration and actual sealed release, then update the catalog and
+native projection. Preserve immutable release URLs and full digests. Never
+rewrite an existing version's artifacts or replace real release metadata with a
+fixture. Version-specific evidence must identify its source revision and limits.
 
-The private producer owns source/channel declarations and executable builds.
-After actual release verification, copy the exact sealed producer index into
-`cli-release.json`, update each catalog CLI from its matching plugin entry, and
-update operating instructions for that compiled executable. Do not hand-maintain
-a second source list or reintroduce a shared CLI/scoped selector. Record the
-original index SHA256 and native verification scope in distribution evidence.
-Run `npm run generate` and `npm test`; no dependency installation is needed.
-Native host installation and business-query evidence remain distinct.
+Write current installation, capability and distribution documents as complete
+instructions for the current version. Keep historical facts in their versioned
+release record or Git history, not as contradictory current instructions.
+Descriptions must list supported capabilities and preserve access, coverage,
+input and side-effect boundaries.
+
+## Verification and safety
+
+Run the catalog checks and validate changed native manifests using the host's
+validator. Exercise affected host discovery or installation paths when IDs or
+layout change. Changed artifacts require full-digest and actual platform/version
+verification before execution. Packaging, host discovery and authenticated
+business queries are separate evidence.
+
+Hosted CI performs static checks only with read-only permissions. Do not add
+business, model, database, browser or native-runtime integration tests to it.
+Never commit credentials, customer inputs, downloaded binaries or restricted
+third-party skills. Preserve applicable publisher and database terms.
+
+This repository does not switch Desktop production routing, publish Desktop or
+authorize another service deployment. Report reproducible issues with the actual
+platform, plugin/CLI version and redacted evidence.

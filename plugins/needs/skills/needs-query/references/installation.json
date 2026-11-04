@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "needs",
+  "sources": [
+    "needs"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/install.sh",
+      "sha256": "38d02086c2af19ad0fc5c91052312084467147ad721b81cbbdf917c0eda7b6ed"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/install.ps1",
+      "sha256": "2e77542ccec6691b3b35df6405cce81fddff4205b7e6fd1a3d576ae56b2cf67c"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-darwin-arm64.tar.gz",
+      "sha256": "30de03981755f60d43f86b091c23f32e8a22ed9c3b30af05c8ae9781ca41d15d"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-darwin-x64.tar.gz",
+      "sha256": "794e8d936fb69c3642a9eeaf63afa2533506ab9e98b07f9faf9e8ad3288881b4"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-linux-arm64.tar.gz",
+      "sha256": "d963c328c01f3229ba7ba1585c2fd2a186a61b240ff8ec7ecf843f0616516fc0"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-linux-x64.tar.gz",
+      "sha256": "1654e89c33e17b17f9b4519c5a5a3f6aef7cda21afa53300d72e9b1b15dffb78"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-win32-x64.tar.gz",
+      "sha256": "f284612dd37649c6bd605b0958410dc1ad9b4de7147c2dbed215b6a79d02743f"
+    }
+  }
+}

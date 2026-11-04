@@ -44,6 +44,24 @@ const native = {
     }
     const cli = plugin.components.cli;
     const published = release.plugins.find(entry => entry.id === plugin.id);
+    assert.equal(plugin.id, cli.name, 'Plugin ID must match its program name');
+    assert.equal(published.consumer.pluginId, plugin.id);
+    assert.equal(plugin.name, published.consumer.displayName);
+    assert.deepEqual((plugin.components.skills ?? []).map(skill => skill.id), [published.consumer.skillId]);
+    assert.deepEqual(plugin.components.agents ?? [], published.consumer.agents);
+    const skillRoot = `skills/${published.consumer.skillId}`;
+    const skillText = read(`${plugin.path}/${skillRoot}/SKILL.md`);
+    assert.match(skillText, new RegExp(`^name: ${published.consumer.skillId}$`, 'm'));
+    assert.ok(skillText.includes(`# ${published.consumer.skillTitle}\n`));
+    const installation = JSON.parse(read(`${plugin.path}/${skillRoot}/references/installation.json`));
+    assert.deepEqual(installation, {
+      version: release.version,
+      program: cli.name,
+      sources: published.scope.sources.map(source => source.code),
+      publishers: published.scope.publishers,
+      installers: published.installers,
+      releases: cli.releases,
+    }, 'Installation metadata must match the sealed program');
     assert.deepEqual(cli, published.cli, 'CLI pins must match this plugin in the sealed release projection');
     assert.equal(cli.executable, `bin/${cli.name}`);
     assert.equal(cli.version, release.version);

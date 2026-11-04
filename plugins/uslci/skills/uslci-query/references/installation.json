@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "uslci",
+  "sources": [
+    "uslci"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/install.sh",
+      "sha256": "1c64276ee3b35d462d40c937a4acdb0ee9058256c2c09005cc8241786930263e"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/install.ps1",
+      "sha256": "9fe356fbfbdfa72a63e40f5e9c8206a86b6709e15ea186d0e0d7e05b900effc0"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-darwin-arm64.tar.gz",
+      "sha256": "dea8a828358fe0cd447fa9f7e50bea657eb9899569d100829216f0dd62f2a41e"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-darwin-x64.tar.gz",
+      "sha256": "df09141d165f8a0524819e210e6c71bd7d52cfe632ebe56a1bd677bc26205922"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-linux-arm64.tar.gz",
+      "sha256": "9e9b0ca72de97275a0dd2d4e0425a644fa40e81736690c46a17ce6b218daa0a7"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-linux-x64.tar.gz",
+      "sha256": "52d08381fab40befdbd0f86e78ac03e72b63b120032db65d4b49b1d3f3ab4e35"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-win32-x64.tar.gz",
+      "sha256": "ca0ae4f1abbc5daf44ec5b19180a093c072580f1aa7f88b5604c271bbda6130f"
+    }
+  }
+}

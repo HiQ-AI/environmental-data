@@ -1,0 +1,12 @@
+{
+  "name": "ozlci",
+  "displayName": "OzLCI 数据查询",
+  "version": "0.7.5",
+  "description": "Find and match OzLCI data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+  "repository": "https://github.com/HiQ-AI/environmental-data",
+  "license": "MIT",
+  "skills": "./skills/",
+  "author": {
+    "name": "HiQ"
+  }
+}

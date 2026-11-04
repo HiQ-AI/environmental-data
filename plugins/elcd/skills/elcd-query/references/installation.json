@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "elcd",
+  "sources": [
+    "elcd"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/install.sh",
+      "sha256": "3b00172102c7b1b6d0061aabfd2c763b68907257e9fe5728a08453968e734302"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/install.ps1",
+      "sha256": "a3dab840af01d379085c7c5bb8472217d805b7e56225759c08330119d2be9112"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-darwin-arm64.tar.gz",
+      "sha256": "2d69e7f3860a5e6cb402a2db86ad49b3c2515e71e031d8a3f737953005e210e4"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-darwin-x64.tar.gz",
+      "sha256": "11be3fd9800b0c332375eb6dde684a8114617a7eb46bd10b193042b79dd09315"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-linux-arm64.tar.gz",
+      "sha256": "f2a55509d4481d5c1d5828db003078885436c45c349572d598089ac85161ccd6"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-linux-x64.tar.gz",
+      "sha256": "587fe18e2c6e50f02f2fb1f32c707e676b68d54f18a1359f96056ef6d5dc13c0"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-win32-x64.tar.gz",
+      "sha256": "cd6862abf6f0614ec857fa94aabb81e22db984bda5ef2216880443ab25c0262b"
+    }
+  }
+}

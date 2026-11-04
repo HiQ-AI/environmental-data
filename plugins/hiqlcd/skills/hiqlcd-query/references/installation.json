@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "hiqlcd",
+  "sources": [
+    "hiqlcd"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/install.sh",
+      "sha256": "a9529d7e6ce13ecafab283c1fc0e1b6e29324728f2932d9e6472cf062285867f"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/install.ps1",
+      "sha256": "72a37697bade1fc509384afa9ce245770bce1751635c0b4375725d766fc4332f"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-darwin-arm64.tar.gz",
+      "sha256": "3210bfe8bd8ae44d8fcf02d7df6c8c87dd45f77f84e2ea6f6a4ae437e1b0cddd"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-darwin-x64.tar.gz",
+      "sha256": "74b1cb774b1b432a43735f7e5043db99f2afe29252240ac06b14f9a35e1672bd"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-linux-arm64.tar.gz",
+      "sha256": "007d4a139cc111773b67d33cff043f1204c8a350cc4f26f2a5c20880c06753ba"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-linux-x64.tar.gz",
+      "sha256": "8e3bbc96b506822b53302298d5274c3343c6a0015794be34136e9a3898cebff7"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-win32-x64.tar.gz",
+      "sha256": "64598a50d44371de2e52f70e2ccc7c39b5095ec868d7f4b5f9c837d51fa97f55"
+    }
+  }
+}

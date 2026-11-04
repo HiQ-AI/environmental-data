@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "cesi",
+  "sources": [
+    "hiq-cesi"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/install.sh",
+      "sha256": "acfb1c6573b5231b5ea4e3cc6486996175a4da1de93441ca3981a50c749a9496"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/install.ps1",
+      "sha256": "12a58369946351666ad903ec10c1e949a0b7ad61bda1f301d42e2ddef78c8ba9"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-darwin-arm64.tar.gz",
+      "sha256": "6dd43e45b73324b72e8797a192ca1c887cc9d757b835f7d6f38ce4efe8259ebd"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-darwin-x64.tar.gz",
+      "sha256": "ede8ab51f27822a6d66c3764d514c15b00ff9bd23a7fcf4cde9626f433afc8f4"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-linux-arm64.tar.gz",
+      "sha256": "3fea3cb36c66f5637dc187389e6a4ac7806961b872d199137c0e54cba7f46fe6"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-linux-x64.tar.gz",
+      "sha256": "c44dc399abf6500f7ead7101c7a765a09120d7dd5e4c21d042e7f1ef82570bdf"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-win32-x64.tar.gz",
+      "sha256": "1f368c060a2bbe9864abe34ac5f663c3410621ee17fb0d1aa5a270b8c72fb1c0"
+    }
+  }
+}

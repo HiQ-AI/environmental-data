@@ -1,0 +1,40 @@
+{
+  "version": "0.7.5",
+  "program": "agrifootprint",
+  "sources": [
+    "agrifootprint"
+  ],
+  "publishers": [],
+  "installers": {
+    "sh": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/install.sh",
+      "sha256": "e147ad2baaf7810d39dc7700e3eae3dc0ba5e01bac9f1aa3989b68949ebcde34"
+    },
+    "ps1": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/install.ps1",
+      "sha256": "733053eaa636db7f0030ab2600bc86154f659c4f37b891931612c6b27b81f1d3"
+    }
+  },
+  "releases": {
+    "darwin-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-darwin-arm64.tar.gz",
+      "sha256": "2da8dc8e4571398d5167c43820e5170634e49acdaf9b8ea0ef66a05a8d99fdee"
+    },
+    "darwin-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-darwin-x64.tar.gz",
+      "sha256": "9794c53d637dd72d3a380a4c06aaf36b85ca92649f5b3ff5ec7a214b27ce004d"
+    },
+    "linux-arm64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-linux-arm64.tar.gz",
+      "sha256": "537423b4ef0216cf30e48aaf06508f3c9f467adefe2761572f68ea01fca4053a"
+    },
+    "linux-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-linux-x64.tar.gz",
+      "sha256": "82427da2bdedbbe10d92776641b586150b36e8c7c59aaf2d10e5751c0bb80ed3"
+    },
+    "win32-x64": {
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-win32-x64.tar.gz",
+      "sha256": "ff7535916d309954aa68aaff9e016e7bf022c0061dc88e6f72b1d10bb9da540d"
+    }
+  }
+}

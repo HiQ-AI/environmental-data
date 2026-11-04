@@ -1,7 +1,5 @@
 # Installation and migration
 
-> Current pins and compatible commands: [CLI 0.7.4 migration and verification limits](RELEASE_0.7.4.md). The older version-specific instructions/evidence below are historical; do not use retired commands with 0.7.4. Windows installer verification has not passed.
-
 ## Choose a plugin
 
 Add the marketplace in Claude Code:
@@ -10,117 +8,109 @@ Add the marketplace in Claude Code:
 /plugin marketplace add HiQ-AI/environmental-data
 ```
 
-Install the selected source, for example:
+Install the selected source:
 
 ```text
-/plugin install environmental-data-hiqlcd@environmental-data
+/plugin install hiqlcd@environmental-data
 ```
 
-For published declarations use `environmental-data-epd@environmental-data`.
-For explicitly selected multi-source access use the stable aggregate ID
-`querying-lca-datasets-expert@environmental-data`. Other source IDs appear in the
-[generated catalog](../README.md#plugins).
+Use `epd-data@environmental-data` for published declarations or
+`environmental-data@environmental-data` for cross-source queries. The
+[catalog](../README.md#plugins) lists all 18 database plugins.
 
-Claude Code's slash commands are interface commands, not shell commands. Plugins
-load skills and declared roles; no installation hook installs a binary, signs
-in, calls a model, grants data rights or downloads a licensed database.
+These are host interface commands, not shell commands. Native installation loads
+skills and declared roles; it does not install the business CLI, sign in, call a
+model, grant data rights or download a licensed database.
 
 ## Codex native installation
 
-The pinned native format is accepted by Codex CLI **0.161.0**. Use its own plugin
-commands, not Claude Code slash commands:
+Codex CLI 0.161.0 accepts the same native marketplace:
 
 ```bash
 codex plugin marketplace add HiQ-AI/environmental-data
 ```
 
 ```bash
-codex plugin add environmental-data-hiqlcd@environmental-data
+codex plugin add hiqlcd@environmental-data
 ```
 
 ```bash
 codex plugin list --json
 ```
 
-Choose the EPD or aggregate ID the same way. Native marketplace support does not
-mean the host automatically installs the business CLI or supplies credentials.
-See [actual verification](COMPATIBILITY.md) for tested scope and limitations.
+Codex 0.161.0 loads plugin skills but does not register bundled agent Markdown as
+roles. Claude Code supports the aggregate's three declared roles.
 
-## Prepare the selected native CLI
+## Prepare the selected CLI
 
-Version **0.7.0** supplies independent commands for macOS arm64/x64, Linux
-arm64/x64 and Windows x64. Select the program belonging to the plugin:
-`environmental-data-<source>`, `environmental-data-epd`, or aggregate
-`environmental-data`. Their implementation shares one private core; each binary
-embeds its own supported-source/publisher declaration.
+Version 0.7.5 provides 20 independent commands on macOS arm64/x64, Linux arm64/x64
+and Windows x64. Plugin ID and program name are identical: `hiqlcd`, `cesi`,
+`epd-data`, `environmental-data`, and the other source names in the catalog.
 
-The [catalog](../marketplace.json) pins each complete archive URL/SHA256 and
-executable. [Sealed release metadata](../cli-release.json) additionally pins
-per-command installers and checksums. Its producer index is
-https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/index.json .
-Download into a new empty directory, verify the complete SHA256 before extraction
-or execution, and retain manifest, LICENSE, NOTICE and bin together. macOS has
-Developer ID/Hardened Runtime/JIT, timestamp and accepted notarization. Windows
-is unsigned: normal Windows trust/SmartScreen controls remain applicable. Never
-weaken security settings to install it.
+Read the selected plugin's skill and its bundled `references/installation.json`.
+It pins the exact archive, installer and complete SHA256 for each platform from
+[the sealed producer projection](../cli-release.json). Download into a new empty
+directory, verify the full SHA256 before extraction or execution, and keep
+manifest, LICENSE, NOTICE and bin together. Inspect the checksum-verified
+installer before running it from outside the download directory; do not pipe an
+uninspected download into a shell.
 
-Optional per-command `install.sh` / `install.ps1` URLs and exact script SHA256
-are in the sealed metadata. Download and inspect the selected script, verify its
-SHA256 against that record, then execute it from outside the downloaded directory.
-Do not pipe an uninspected download into a shell. Installers retain the complete
-versioned release, do not edit PATH or credentials, and do not stop running
-processes. `ENVIRONMENTAL_DATA_INSTALL_ROOT` and `ENVIRONMENTAL_DATA_BIN_DIR`
-only select installation destinations; they cannot change query scope. The
-Windows installer has not yet been actually executed in this delivery; native
-Windows archive/executable validation is separate evidence.
+Before using an existing same-name command, establish its ownership from the
+managed versioned manifest, binary hash and compiled scope. Do not execute an
+unknown same-name program to identify it. Installers refuse unrelated files,
+directories, external links and unverifiable entries without replacing them.
+If a name conflicts, retain the existing entry and choose an independent install
+and bin directory; invoke the verified program by its absolute path.
+
+Installers retain complete versioned releases, do not edit PATH or credentials,
+and do not stop running processes. Installation destination settings cannot
+change query scope. macOS uses Developer ID, Hardened Runtime, timestamp and
+notarization; Windows binaries are unsigned. Keep normal OS trust controls enabled.
 
 ```bash
-environmental-data-hiqlcd version
+hiqlcd version
 ```
 
 ```bash
-environmental-data-hiqlcd info --json
+hiqlcd info --json
 ```
 
 ```bash
-environmental-data-hiqlcd sources --json
+epd-data search 'concrete' --limit 5 --json
 ```
 
-```bash
-environmental-data-epd epd-search --query concrete --limit 5 --json
-```
+The business commands are `search` and `lookup`. Use the full natural-language
+query for geography and other requirements; preserve opaque keys for lookup.
+Read the selected skill for supported `sources` and `system_model` options,
+preview coverage and `--full` semantics. Do not use retired tool-dispatch or
+`scoped` commands.
 
-Public metadata and published EPD queries need no local login. Authenticated
-background queries and MCP tools reuse this data-client product family's normal
-login or controlled `QUERYING_LCA_DATASETS_API_KEY`; it is not a token borrowed
-from another product. Use the intended account and its server entitlements.
-Never inspect credential files, paste secrets in chat, redirect authenticated
-requests or change identities to evade denial. A compiled source boundary does
-not grant licenses or narrow the OAuth token.
+Public metadata and published EPD search need no local login. Background queries
+use the data client's existing normal authentication and server entitlements.
+Migration does not rename its OAuth identity or credential location. Never copy
+credentials, borrow another product's tokens or change identity to evade denial.
+A compiled source boundary does not grant a database license.
 
-No `scoped` selector is supported. Single-source commands reject conflicting
-sources, contaminated results and unsupported opaque-key tools. The aggregate
-only supports its embedded set and preflights opaque keys using canonical source
-metadata before tool execution. Installing another program is not an authorized
-fallback for denied access or missing data.
+## Migrate existing installations
 
-## Existing installations
+0.7.5 changes plugin, skill and role IDs as well as program names. Refresh the
+marketplace, install the desired new plugin ID through the host's native manager,
+and disable or uninstall the former plugin entry through that same manager.
+Subscriptions to old IDs do not automatically become subscriptions to new IDs.
 
-Plugin IDs, skill IDs and aggregate role IDs remain stable. Upgrade plugin
-instructions and install the new program matching the selected plugin. Old
-`querying-lca-datasets` 0.6.0 with a `scoped` prefix is the previous delivery,
-not an equivalent substitute for these independent compiled programs. The old
-binary is not silently replaced or uninstalled. Existing data-client login
-identity is intentionally shared; migration neither resets nor copies secrets.
-Refreshing a plugin alone does not install or upgrade its business program.
+- Database plugin/program: `environmental-data-<source>` becomes `<source>`;
+  the former CESI entry becomes `cesi` (its backend source remains `hiq-cesi`).
+- EPD plugin/program: `environmental-data-epd` becomes `epd-data`.
+- Aggregate plugin: `querying-lca-datasets-expert` becomes `environmental-data`;
+  its program remains `environmental-data`.
+- Skills use `<source>-query`, `epd-query` and `environmental-data-query`.
+- Aggregate roles are `data-searcher`, `data-matcher` and `data-reviewer`.
 
-For the former `querying-lca-datasets-expert@hiq-plugins` entry, explicitly add
-the independent marketplace, install its aggregate or selected source plugin,
-then disable/remove the old host-plugin entry through the host's own interface.
-Avoid two copies of the same role/skill in a session. Do not remove the CLI,
-credentials or user data as part of migration. Reload the host if it requires it.
-This repository does not silently migrate user settings or uninstall old entries.
+There are no aliases or parallel legacy entries in the current catalog. Old
+immutable releases remain available as historical records. Migration does not
+automatically delete old programs, user settings, credentials or data. Updating
+a plugin alone does not upgrade its CLI. Reload the host when required.
 
-The root Cortex catalog preserves CLI supply metadata for compatible Hosts.
-This publication does not switch production Desktop or release a new Desktop.
-Workbook handling is a separate optional [capability](SPREADSHEETS.md).
+This publication does not switch production Desktop's catalog or release
+Desktop. Workbook handling remains an optional [capability](SPREADSHEETS.md).
+See [compatibility and evidence](COMPATIBILITY.md) for the tested boundaries.

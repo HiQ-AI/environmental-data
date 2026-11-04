@@ -1,108 +1,69 @@
 # Compatibility and verification
 
-> Current pins and compatible commands: [CLI 0.7.4 migration and verification limits](RELEASE_0.7.4.md). The older version-specific instructions/evidence below are historical; do not use retired commands with 0.7.4. Windows installer verification has not passed.
+## Supported distribution
 
-## Current independent 0.7.0 programs
+CLI 0.7.5 supplies 20 independent programs on macOS arm64/x64, Linux arm64/x64
+and Windows x64. The [sealed release projection](../cli-release.json) identifies
+the exact artifacts, hashes and source revision. macOS distribution uses
+Developer ID, Hardened Runtime, timestamp and notarization. Windows binaries are
+unsigned; OS trust and SmartScreen controls remain applicable.
 
-The sealed producer projection supplies 20 independent commands across macOS
-arm64/x64, Linux arm64/x64 and Windows x64. All100 actual CDN programs executed
-version/info and platform signature checks on their native target architecture.
-This does not establish business-query acceptance on those platforms. Mac uses
-formal Developer ID/notarization; Windows binaries are unsigned/NotSigned.
+The [release run](https://github.com/HiQ-AI/cortex/actions/runs/41822886153)
+completed all five builds, native execution checks for all 100 CDN programs and
+final sealing. Its Windows installer job failed during archive extraction with
+`Extraction failed`; installation and the subsequent 15 entry-protection cases
+did not pass. The native archive-runtime probes passed in both runner and isolated
+environments, which does not explain the extraction failure. Windows installer
+acceptance remains incomplete; do not treat this release as a fully verified
+Windows installation path.
 
-Fresh isolated installation of all 20 version-0.7.0 plugins passed through both
-Claude Code 2.1.317 and Codex CLI 0.161.0 native plugin managers. Every installed
-skill matches current source bytes; Claude Code strict marketplace and all
-plugin-manifest validations passed. No login, model run or global configuration
-change was required. The older evidence below remains historical. Native installation does not install a business
-CLI, grant credentials or prove data suitability. Production Desktop is unchanged.
+## Native plugin hosts
 
-The Windows installer and normal-account authenticated background query remain
-unverified. Public metadata/EPD, local fixtures and native version checks do not
-replace either gate. [Current distribution contract](DISTRIBUTION.md).
+Claude Code supports the marketplace's skills and declared agent roles. Codex
+CLI 0.161.0 accepts the native marketplace and plugin skills, but does not register
+bundled agent Markdown as roles. Its plugin skill namespace is derived from the
+plugin manifest. The catalog still gives every skill its own distinct ID.
 
-## Current installed instructions and real calls
+Both native plugin managers installed all 20 new plugin IDs in isolated
+configurations. All 40 installed skill files match the published source bytes;
+Claude's strict marketplace and plugin-manifest validation passed. This is native
+installation evidence, not a model-selected query evaluation.
 
-On macOS arm64, the exact checksum-verified production CDN POSIX installers
-installed `environmental-data-hiqlcd`, `environmental-data-epd` and aggregate
-`environmental-data` into an isolated destination. Actual version 0.7.0, embedded
-info and native codesign verification passed. Complete releases/licenses remain
-in their versioned installation directories; no login or PATH change occurred.
+Native plugin installation does not install the business CLI, create credentials
+or grant database rights. A plugin manager listing is not evidence that a model
+selected a skill or completed a query. See [installation](INSTALLATION.md) for
+program preparation and migration.
 
-After reading each host's installed HiQLCD, EPD and aggregate skill, manually
-executed its documented command with the matching production program:
-- HiQLCD sources returned only HiQLCD metadata.
-- EPD concrete search returned an actual declaration with a supported publisher
-  and page cursor.
-- Aggregate sources returned its compiled 18-source closed set, missing empty.
-- Conflicting HiQLCD/Ecoinvent source arguments exited 3 with no success stdout.
+## Local regression scope
 
-All six host/instruction query executions passed. This is installed-instruction
-and actual-program verification, not evidence of a model choosing a skill or
-performing a reasoning workflow. No paid models or business writes occurred.
+The 0.7.5 producer changes passed targeted tests for consumer generation, native
+program scope, POSIX installation and Windows release-declaration validation.
+Consumer generation checks all 20 unique skill IDs, exact program references,
+installation metadata and the aggregate's three roles. CESI retains backend
+source `hiq-cesi`.
 
-## Historical 0.6.0 host evidence
+POSIX installation tests exercise managed upgrades, repeated installation,
+corrupt archives, unrelated entries and linked payloads. Rejected entries and
+external sentinel files remain unchanged; unknown same-name programs are not
+executed. Release-declaration tests compare the immutable Git blob digest while
+allowing equivalent LF/CRLF checkouts, and reject changed source or content.
 
-## Hosts
+These local tests do not substitute actual Windows installer execution. Native
+platform results and any remaining release limitation must be read separately
+from the release record.
 
-- **Claude Code 2.1.317:** the marketplace and all plugin manifests pass native
-  strict validation. All 20 plugins install through the actual plugin manager
-  using an isolated HOME/configuration. Installed skill files match their source
-  bytes; this is more than listing available entries.
-- **Codex CLI 0.161.0:** its native `plugin marketplace add` and `plugin add`
-  commands accept the same marketplace. All 20 plugins install in an isolated
-  CODEX_HOME, and installed skill files match their source bytes. No separate
-  adapter, global permission change, login or model run was needed.
-- **Cortex Hosts:** root `marketplace.json` preserves typed CLI supply metadata.
-  This publication does not switch production Desktop's catalog or release
-  Desktop. No new production Host acceptance is implied.
+## Business and professional boundaries
 
-## Shared runtime
+Naming changes do not modify `search` or `lookup` service contracts. Existing
+public-metadata and EPD evidence does not prove every account's background-data
+or restricted numerical access. A successful search does not establish data
+suitability, an industry-wide statistic, an audit or certification.
 
-All entries pin CLI **0.6.0**, independently versioned from the plugin packages,
-for macOS arm64/x64, Linux arm64/x64 and Windows x64. The shared CLI is published
-from [reviewed source](https://github.com/HiQ-AI/hiq-cortex-cli/pull/10) through
-[its actual native release workflow](https://github.com/HiQ-AI/hiq-cortex-cli/actions/runs/41773480030).
-The downloaded macOS arm64 archive's full SHA256 matches the published checksum;
-its verified native executable reports 0.6.0. No binaries are checked into this
-marketplace and no per-database CLI implementation is forked.
+This release does not claim a new paid-model reasoning evaluation, all-platform
+business-query acceptance or production Desktop activation. Credentials are not
+borrowed from other products. Remaining product acceptance belongs to the
+[product Feature](https://github.com/HiQ-AI/environmental-data/issues/1), not to a
+plugin pin update.
 
-The CLI's local regression tests cover source-parameter rejection before HTTP,
-opaque-key/unknown-tool denial, cross-source and missing-provenance rejection,
-public EPD query fields, retained restrictions and cursor pagination. Five native
-archives passed integrity/layout/architecture checks; native macOS arm64
-version/help/missing-credential behavior executed locally. This is not native
-Windows/Linux business-query acceptance.
-
-## Installed instructions and real calls
-
-After native installation in each host, verification reads the installed HiQLCD
-and EPD skills, confirms their scoped entrypoints and executes the documented
-commands with the actual CDN native CLI:
-
-- `scoped hiqlcd sources --json`: actual published source versions/models,
-  containing only HiQLCD in scoped output.
-- `scoped epd epd-search --query concrete --limit 1 --json`: an actual published
-  declaration with publisher, declared unit, headline method/module and cursor.
-- Aggregate `sources --json`: the live background directory currently has 18
-  entries. This is public metadata, not per-source numerical lookup acceptance.
-- Conflicting HiQLCD scope / Ecoinvent source: exit 3 before business HTTP, with
-  no successful-result stdout.
-
-These are manually executed commands from installed instructions, not evidence
-that a model selected a skill or completed an end-to-end reasoning workflow. No
-paid model run, original customer upload, business write or notification occurred.
-
-## Remaining acceptance gap
-
-The CLI's own normal identity currently has no credential. Authenticated
-background dataset search and restricted numerical lookup have therefore **not**
-been accepted against a real account. No token was borrowed from another app;
-public EPD success, metadata and synthetic tests do not replace this gate. The
-[product Feature](https://github.com/HiQ-AI/environmental-data/issues/1) stays open
-until its remaining acceptance conditions are satisfied.
-
-Native installation does not provision the business CLI, sign in, grant licenses
-or prove data suitability. A successful query is not professional certification.
-Preserve source terms, coverage, applicability and access limits. See the
-[distribution contract](DISTRIBUTION.md).
+Version-specific older evidence is preserved in the repository history and
+[0.7.4 release record](RELEASE_0.7.4.md); it is not current installation guidance.
