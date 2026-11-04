@@ -16,7 +16,7 @@
       "name": "HiQLCD",
       "description": "HiQLCD 环境过程数据查询与匹配；CLI 固定来源 hiqlcd，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published HiQLCD environmental process datasets using the compiled hiqlcd source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -25,8 +25,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-hiqlcd",
-      "requirements": "独立原生 CLI environmental-data-hiqlcd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-hiqlcd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-hiqlcd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-hiqlcd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -37,28 +37,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-hiqlcd",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-hiqlcd",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd/environmental-data-hiqlcd-darwin-arm64.tar.gz",
-              "sha256": "a4dccc0a3976ddb13f406db3836df5648154e9a8b29fb9c0a1fd47a35491cdfe"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd/environmental-data-hiqlcd-darwin-arm64.tar.gz",
+              "sha256": "3ebda4d4ac5488917638a7d1d869124eeb3f4efccb13a0b9be479171b6a9ebe9"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd/environmental-data-hiqlcd-darwin-x64.tar.gz",
-              "sha256": "8cc34a08d8c8ed86a8f696489b18782587d617cb5d128f0c738ee71cd844a705"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd/environmental-data-hiqlcd-darwin-x64.tar.gz",
+              "sha256": "f29d2593d015ed75a1fd147e096d19836b017ff37ae8f0336160135569436fa8"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd/environmental-data-hiqlcd-linux-arm64.tar.gz",
-              "sha256": "d3f22cb0423b4ac5e009ea5964fab755bcd5e4068b072be00d3972530db20001"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd/environmental-data-hiqlcd-linux-arm64.tar.gz",
+              "sha256": "0ffeff9c0608e4b72eefbdb69e3daf2ed8be6066986ae072895be75f591ec0a6"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd/environmental-data-hiqlcd-linux-x64.tar.gz",
-              "sha256": "6a9533a6f1fd2932a8828a1c16fe6875399a4fac5e926da8ccde02dcd597561b"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd/environmental-data-hiqlcd-linux-x64.tar.gz",
+              "sha256": "6bc2e7314e76b720f9b2e6c5f8a1d728268a7a75c028a2e0583b79fb930caa68"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd/environmental-data-hiqlcd-win32-x64.tar.gz",
-              "sha256": "23187ab4cf267bacec1c7164610277ada238bb51389e46bb4a49f96b38865a4d"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd/environmental-data-hiqlcd-win32-x64.tar.gz",
+              "sha256": "679892d64a299764e0a063799b7ee6cf75f819bcbe3a9eab854b85ace9d19411"
             }
           }
         }
@@ -72,7 +72,7 @@
       "name": "HiQLCD-AL",
       "description": "HiQLCD-AL 环境过程数据查询与匹配；CLI 固定来源 hiqlcd-al，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published HiQLCD-AL environmental process datasets using the compiled hiqlcd-al source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -81,8 +81,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-hiqlcd-al",
-      "requirements": "独立原生 CLI environmental-data-hiqlcd-al 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-hiqlcd-al 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-hiqlcd-al 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-hiqlcd-al 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -93,28 +93,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-hiqlcd-al",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-hiqlcd-al",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-darwin-arm64.tar.gz",
-              "sha256": "05f6a36da57947e9e7f9b41cb751c3f834545bddc39c7078ad15d18abd39841d"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-darwin-arm64.tar.gz",
+              "sha256": "b46cadf572ebf7575f861d0b840d1f3a902e3182d66be360ba79fe44ef0f09ba"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-darwin-x64.tar.gz",
-              "sha256": "3967051586896c6891910860df7beabb15d4848f085b65fdba0cb87bd1ee57e7"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-darwin-x64.tar.gz",
+              "sha256": "1c01b9df13e5889bbe876b5b31c0eddbcadff3c64c8b8943e10f5955aa6697f4"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-linux-arm64.tar.gz",
-              "sha256": "b77fbc3f063d72bc1feb2101d7b4cba0a29f7437f212fa415dfc32b5382daec2"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-linux-arm64.tar.gz",
+              "sha256": "0384889b59e1e333c5b4a65d9aa32b72c46c54bb871e3ea9914f78589e20a153"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-linux-x64.tar.gz",
-              "sha256": "4103a8356d7a739fb5652dca17bbcd75550dcff99958dc337a9a86ae13719c44"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-linux-x64.tar.gz",
+              "sha256": "73510e74a075b319a48e93eb9789ed860f007334f4902be3df05b6a4dc22599e"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-win32-x64.tar.gz",
-              "sha256": "d3852ea871ff02bb28f15b061245e0b5906d4e6f2aac88717e06d44c864df825"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiqlcd-al/environmental-data-hiqlcd-al-win32-x64.tar.gz",
+              "sha256": "0be1448bbfe555277f853a8ad8371d5a9ebaf4adf5f9c02a8d402bb1394c45f7"
             }
           }
         }
@@ -128,7 +128,7 @@
       "name": "CALCD",
       "description": "CALCD 环境过程数据查询与匹配；CLI 固定来源 calcd，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published CALCD environmental process datasets using the compiled calcd source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -137,8 +137,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-calcd",
-      "requirements": "独立原生 CLI environmental-data-calcd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-calcd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-calcd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-calcd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -149,28 +149,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-calcd",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-calcd",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-calcd/environmental-data-calcd-darwin-arm64.tar.gz",
-              "sha256": "331cd5116fe0737b2831b07fd672296f0544445a503c72012add4822fac350a3"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-calcd/environmental-data-calcd-darwin-arm64.tar.gz",
+              "sha256": "2c944de8c0584b02853db0477249be4627aad0b8872af12d3391d9f055a3a2a4"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-calcd/environmental-data-calcd-darwin-x64.tar.gz",
-              "sha256": "52065a3a5272e9ae7ce24fbb7fa2e706892709007e81f78d5908b4155cb0c144"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-calcd/environmental-data-calcd-darwin-x64.tar.gz",
+              "sha256": "9c1463aed5ca7cea42104b941553a28f927578bd92bd82f4e049cd20a6d2de2b"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-calcd/environmental-data-calcd-linux-arm64.tar.gz",
-              "sha256": "cf7313f07ccd2cfac1ca2ae1b3e9be3d59334f87cf43c04bc999c71c78253f99"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-calcd/environmental-data-calcd-linux-arm64.tar.gz",
+              "sha256": "5222e3ddea7ab7a91da65e20a4fdc6ddf2358e58fb2b956a9a016d9602ec4aec"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-calcd/environmental-data-calcd-linux-x64.tar.gz",
-              "sha256": "28e399cf7ff746aa62b835e9d7ed912e342b8f3e7a4bc527a5753eb4bcd39da6"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-calcd/environmental-data-calcd-linux-x64.tar.gz",
+              "sha256": "f5bbbb081186ea0e59f8df850ac244ca7c911d511dcf4324e8bd7cde797fa753"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-calcd/environmental-data-calcd-win32-x64.tar.gz",
-              "sha256": "b13863acd6eeff2528ca25fe8a54fc40903931f50bbc8ac25a56c20892005ff5"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-calcd/environmental-data-calcd-win32-x64.tar.gz",
+              "sha256": "c11efba983dbcbe4fd0c610f0ef479b1692e05da6458f193c188261c51d96531"
             }
           }
         }
@@ -184,7 +184,7 @@
       "name": "CESI Li-ion Battery Database",
       "description": "CESI Li-ion Battery Database 环境过程数据查询与匹配；CLI 固定来源 hiq-cesi，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published CESI Li-ion Battery Database environmental process datasets using the compiled hiq-cesi source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -193,8 +193,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-hiq-cesi",
-      "requirements": "独立原生 CLI environmental-data-hiq-cesi 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-hiq-cesi 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-hiq-cesi 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-hiq-cesi 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -205,28 +205,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-hiq-cesi",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-hiq-cesi",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiq-cesi/environmental-data-hiq-cesi-darwin-arm64.tar.gz",
-              "sha256": "605906e9def829eb672d4487f59cf4f2d1f26d6820e13613b770b1a38de123f1"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiq-cesi/environmental-data-hiq-cesi-darwin-arm64.tar.gz",
+              "sha256": "359a9cd62e54af8501ae9930d3c9a75509583fbe6d99be7952c711c3547d8aae"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiq-cesi/environmental-data-hiq-cesi-darwin-x64.tar.gz",
-              "sha256": "f8b4703cacdf35927afa95984b6c0eb79a9d8ec037eeb8e092164ca4fba604cf"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiq-cesi/environmental-data-hiq-cesi-darwin-x64.tar.gz",
+              "sha256": "2382c66ba14904ee597f50ce6c7c8a77d5334afbff4336792f75933416db67e1"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiq-cesi/environmental-data-hiq-cesi-linux-arm64.tar.gz",
-              "sha256": "38950587d93e1efae5880a1025a3087eb23c8c4bd3f66c176711e6a7177c233f"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiq-cesi/environmental-data-hiq-cesi-linux-arm64.tar.gz",
+              "sha256": "3025a625887b10b21074d0242578d922a6a7f7d08d73657a0bebb3ff014b6831"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiq-cesi/environmental-data-hiq-cesi-linux-x64.tar.gz",
-              "sha256": "2e71a8fea8b33c4b77e085717d458ec3b26745b9d6da4bd2c6d6adbfa13b9176"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiq-cesi/environmental-data-hiq-cesi-linux-x64.tar.gz",
+              "sha256": "81422e86536b5e89fa3029595d5bc64f83ed891e951c378d6673aa560e5019b9"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-hiq-cesi/environmental-data-hiq-cesi-win32-x64.tar.gz",
-              "sha256": "5d327aae0fac315a23c3b96fdc94d7cfaf72482a0590d8e0bba34962ba7284f3"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-hiq-cesi/environmental-data-hiq-cesi-win32-x64.tar.gz",
+              "sha256": "771e74a9e65f549eae0c61acd51c147c4e44f6feacbfb49373e5d9dda9388bed"
             }
           }
         }
@@ -240,7 +240,7 @@
       "name": "Ecoinvent",
       "description": "Ecoinvent 环境过程数据查询与匹配；CLI 固定来源 ecoinvent，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published Ecoinvent environmental process datasets using the compiled ecoinvent source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -249,8 +249,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-ecoinvent",
-      "requirements": "独立原生 CLI environmental-data-ecoinvent 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-ecoinvent 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-ecoinvent 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-ecoinvent 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -261,28 +261,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-ecoinvent",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-ecoinvent",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ecoinvent/environmental-data-ecoinvent-darwin-arm64.tar.gz",
-              "sha256": "7c4588f78476c6d5dc1d2f264657e3d180f1a24358079bb32ae7a84857511aa2"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ecoinvent/environmental-data-ecoinvent-darwin-arm64.tar.gz",
+              "sha256": "8c80f9aab7e0ce1afeda7c50cfe3ebe73565bea91e2aed305d44949e1f72cb3f"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ecoinvent/environmental-data-ecoinvent-darwin-x64.tar.gz",
-              "sha256": "61917f70965c498202e2eea339941f76703adcf5e5386fc1d0ad1b61e9385afb"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ecoinvent/environmental-data-ecoinvent-darwin-x64.tar.gz",
+              "sha256": "99c0bc10ed9083a28237f3c5608203d642ffb02f417d1a216d2bbff92362e9ff"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ecoinvent/environmental-data-ecoinvent-linux-arm64.tar.gz",
-              "sha256": "5be1b7740924c32466e1221b0325bebeb36adb3c3002c8877f4db0333e8e9a69"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ecoinvent/environmental-data-ecoinvent-linux-arm64.tar.gz",
+              "sha256": "881926bdbfdde23fc871c19157f7b4fb13c3f336cdced3dacff4a97bd498a7b2"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ecoinvent/environmental-data-ecoinvent-linux-x64.tar.gz",
-              "sha256": "268f01e1cb835b83839f513791f2e89cf65f285853eb751be5bfc31583f35d0d"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ecoinvent/environmental-data-ecoinvent-linux-x64.tar.gz",
+              "sha256": "d96bc951e7ef05220318323f518c442bf0dbd7e4aec4891983e8453f5b204123"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ecoinvent/environmental-data-ecoinvent-win32-x64.tar.gz",
-              "sha256": "fd656e6621422f28ffc65b7f0f13159f4a677f09cb0328b8521338510e7b0c36"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ecoinvent/environmental-data-ecoinvent-win32-x64.tar.gz",
+              "sha256": "426da773522b0206711f50d6e64d6a51dfc11e24f116b39f6f27c84addaa3528"
             }
           }
         }
@@ -296,7 +296,7 @@
       "name": "CarbonMinds",
       "description": "CarbonMinds 环境过程数据查询与匹配；CLI 固定来源 carbonminds，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published CarbonMinds environmental process datasets using the compiled carbonminds source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -305,8 +305,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-carbonminds",
-      "requirements": "独立原生 CLI environmental-data-carbonminds 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-carbonminds 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-carbonminds 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-carbonminds 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -317,28 +317,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-carbonminds",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-carbonminds",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-carbonminds/environmental-data-carbonminds-darwin-arm64.tar.gz",
-              "sha256": "e1485d3f68d1c77e1c9fa1e831ae144a36114a4a230bb89110591180e55aac8b"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-darwin-arm64.tar.gz",
+              "sha256": "079134040f2fc0dc21a3ed7992698e75c8ad742784fce2db6fe82f5affce9aab"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-carbonminds/environmental-data-carbonminds-darwin-x64.tar.gz",
-              "sha256": "40a9a077b188f130414d5ff7b2ab551a2633034acfd711e6ad4e64c70b2efffa"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-darwin-x64.tar.gz",
+              "sha256": "3797e642b7514dc54131d63e8e65a896e1a3e98ec7fbc465c4e1cc811bac2f26"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-carbonminds/environmental-data-carbonminds-linux-arm64.tar.gz",
-              "sha256": "845627e973f258fe48e4a483501de72c28d92ac4f021505b0e560dba41a6bc27"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-linux-arm64.tar.gz",
+              "sha256": "24139aeabf2b86ddace46ceeece37daa79e99a3271d2d764967f2efd7634caf7"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-carbonminds/environmental-data-carbonminds-linux-x64.tar.gz",
-              "sha256": "b387481ab603fb5f212a46000832d2906fc120ab155f87bc2a3d6834174b5629"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-linux-x64.tar.gz",
+              "sha256": "f75adeac79b089d1db7a540c029e627dff6dd0346f5ecdb62089abc06460761c"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-carbonminds/environmental-data-carbonminds-win32-x64.tar.gz",
-              "sha256": "b1f16dc93260bb36645b5cb261b933b2beae07602505241cd5a7f90df8968e19"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-carbonminds/environmental-data-carbonminds-win32-x64.tar.gz",
+              "sha256": "9ea5a99336fc107d34bdd3fdc02946cdd1071799bc442ce7f93a50b036880def"
             }
           }
         }
@@ -352,7 +352,7 @@
       "name": "Agri-footprint",
       "description": "Agri-footprint 环境过程数据查询与匹配；CLI 固定来源 agrifootprint，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published Agri-footprint environmental process datasets using the compiled agrifootprint source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -361,8 +361,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-agrifootprint",
-      "requirements": "独立原生 CLI environmental-data-agrifootprint 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-agrifootprint 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-agrifootprint 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-agrifootprint 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -373,28 +373,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-agrifootprint",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-agrifootprint",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-agrifootprint/environmental-data-agrifootprint-darwin-arm64.tar.gz",
-              "sha256": "6ac7b0a88d781f069570e8403da8f4fc78b16a15d8089d78cf71bf61e18567c1"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-agrifootprint/environmental-data-agrifootprint-darwin-arm64.tar.gz",
+              "sha256": "bb7d78d1ac1fb73a6bacbfe76967df813cfa9631f2f49ac1ec01c176bea258c5"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-agrifootprint/environmental-data-agrifootprint-darwin-x64.tar.gz",
-              "sha256": "bf2fc707407a193836978dff9cfed9e46d5c37781448a5b2faf5ba3848369110"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-agrifootprint/environmental-data-agrifootprint-darwin-x64.tar.gz",
+              "sha256": "663b3e90b738d3cb9fdec890bfb0b2ace710bdcecd8a2b2a7ed3c717b3b26214"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-agrifootprint/environmental-data-agrifootprint-linux-arm64.tar.gz",
-              "sha256": "b0a83966fa65ea529f03b9065e0932e9622e18b4b6168b9340a64c712a3dec51"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-agrifootprint/environmental-data-agrifootprint-linux-arm64.tar.gz",
+              "sha256": "3ec9a86fa15b3ea857ca44c81b9e511e545d2a8b10a980205e9d7412e067958f"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-agrifootprint/environmental-data-agrifootprint-linux-x64.tar.gz",
-              "sha256": "4b1e404973e2a0e31bfd9bbe4065d4c764c1e26ac0bafe50f48914d6f1696a4e"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-agrifootprint/environmental-data-agrifootprint-linux-x64.tar.gz",
+              "sha256": "4470d73851174593c2f899b170577be99bcd4c48793053ab219696a6981a068d"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-agrifootprint/environmental-data-agrifootprint-win32-x64.tar.gz",
-              "sha256": "3d96683d5012a9f1266da82b7255945ef6c1c1d6d54d53e7e40632dd84796d79"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-agrifootprint/environmental-data-agrifootprint-win32-x64.tar.gz",
+              "sha256": "ba5ffcca62af0c6044009e9614205d781a8fcab22d8525152be318c027458887"
             }
           }
         }
@@ -408,7 +408,7 @@
       "name": "EF",
       "description": "EF 环境过程数据查询与匹配；CLI 固定来源 ef，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published EF environmental process datasets using the compiled ef source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -417,8 +417,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-ef",
-      "requirements": "独立原生 CLI environmental-data-ef 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-ef 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-ef 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-ef 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -429,28 +429,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-ef",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-ef",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ef/environmental-data-ef-darwin-arm64.tar.gz",
-              "sha256": "37d96fcbbedd97af913aa7cc9ed036f269e941a801dd08be4d05dabe599b41f5"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ef/environmental-data-ef-darwin-arm64.tar.gz",
+              "sha256": "67381448466756ad426b0c36c7a4628e76ebdcbc4e19c721fcf4182710942a9d"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ef/environmental-data-ef-darwin-x64.tar.gz",
-              "sha256": "75d6ca4a0fdeaf8a49205de26ef78a9edd0a12a95b38307a761b398d557b0451"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ef/environmental-data-ef-darwin-x64.tar.gz",
+              "sha256": "10e4c2bfdf3c9559881e93f9995187305124615981c2f05246c9bf47c7811880"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ef/environmental-data-ef-linux-arm64.tar.gz",
-              "sha256": "b1813f46ff587f0c17081fd7e33abf27bd52edb0c3bb72eb5124763ea70e43b0"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ef/environmental-data-ef-linux-arm64.tar.gz",
+              "sha256": "141f8c8a9fd4cd5027bb8f5e7ba8464bf3efc92b01ff42ffc9efd3f193af2578"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ef/environmental-data-ef-linux-x64.tar.gz",
-              "sha256": "eb8a23e8224e0cd5d0bbfef194cadfdc1f885a4cf2ef887d5281fac2b7754e19"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ef/environmental-data-ef-linux-x64.tar.gz",
+              "sha256": "9a6cf49c9777eaeefb05313a9e9fad62a521b48aee2274d6865bd38afe7864d2"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ef/environmental-data-ef-win32-x64.tar.gz",
-              "sha256": "5bf1f5a00720bf2ff8d6fe04515442652ce1309a3e79a62ac594f8d0f7219467"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ef/environmental-data-ef-win32-x64.tar.gz",
+              "sha256": "a1b5de4c697126f2216d6b41b99e77ce87131241d18ae2f42d2aa0d791cf9583"
             }
           }
         }
@@ -464,7 +464,7 @@
       "name": "AusLCI",
       "description": "AusLCI 环境过程数据查询与匹配；CLI 固定来源 auslci，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published AusLCI environmental process datasets using the compiled auslci source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -473,8 +473,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-auslci",
-      "requirements": "独立原生 CLI environmental-data-auslci 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-auslci 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-auslci 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-auslci 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -485,28 +485,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-auslci",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-auslci",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-auslci/environmental-data-auslci-darwin-arm64.tar.gz",
-              "sha256": "0a56eeba4bbc874aed76a68b1801329f345677b082551801b0c6f17fe4682a34"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-auslci/environmental-data-auslci-darwin-arm64.tar.gz",
+              "sha256": "33fb80e54d517508c8a28bc162b535520b2a7c6247a64e9c4c9804198d9b1fc2"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-auslci/environmental-data-auslci-darwin-x64.tar.gz",
-              "sha256": "b2c16686b3b7f7d4fae7353ba4cf8a323f1504b18862a97ddc0d0499b05bd86f"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-auslci/environmental-data-auslci-darwin-x64.tar.gz",
+              "sha256": "1786fa158a06c236264155ba7490522e20ccdec932cbde50f1a6f32efc2a18d2"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-auslci/environmental-data-auslci-linux-arm64.tar.gz",
-              "sha256": "8fdf929347918bc0973297f72d5fbd51dc34701583e600c0670722a9bcdef3c1"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-auslci/environmental-data-auslci-linux-arm64.tar.gz",
+              "sha256": "2059edb87745ccba16dc8b59e57bff4d14d5e19b43e403dd7cd173419112b32c"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-auslci/environmental-data-auslci-linux-x64.tar.gz",
-              "sha256": "8d987b01f1e03ee909e14364b4047d43d56695ca4933b6056dccc33a81ae7aa0"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-auslci/environmental-data-auslci-linux-x64.tar.gz",
+              "sha256": "b034ad197917307cdcc7e19b6a644ec20f9c354be30db5f4ca91906f5300c2bb"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-auslci/environmental-data-auslci-win32-x64.tar.gz",
-              "sha256": "0a3bcf933788adc3dd56e35f3e63d867fec3a62501628edf59f59b6622209f0d"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-auslci/environmental-data-auslci-win32-x64.tar.gz",
+              "sha256": "1b599cee553acbb52314953962c8f51b32d81602609760ac796b325d25c1af9e"
             }
           }
         }
@@ -520,7 +520,7 @@
       "name": "BAFU",
       "description": "BAFU 环境过程数据查询与匹配；CLI 固定来源 bafu，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published BAFU environmental process datasets using the compiled bafu source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -529,8 +529,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-bafu",
-      "requirements": "独立原生 CLI environmental-data-bafu 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-bafu 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-bafu 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-bafu 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -541,28 +541,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-bafu",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-bafu",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bafu/environmental-data-bafu-darwin-arm64.tar.gz",
-              "sha256": "e021eed5324833f8c89dc851ddb3e7889d646194eda0b61a280a59772c41d79d"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-darwin-arm64.tar.gz",
+              "sha256": "29775ceb17fbc9757dbec69c77c84948a3c42d93fbbb0368bdc7ce124d15fdff"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bafu/environmental-data-bafu-darwin-x64.tar.gz",
-              "sha256": "83ba5865bedb2e1e39370c9400c1c9d1297df8f87bae54ccba6929a65ef0ba22"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-darwin-x64.tar.gz",
+              "sha256": "e30015980cd5c6cb8f398f1ef8b447194d98b2728a6b47d3ea4cccae5cef9343"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bafu/environmental-data-bafu-linux-arm64.tar.gz",
-              "sha256": "9c205674b73bfaf83e56569a6cc843b3ba13317ec870458ffc204d757c22097c"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-linux-arm64.tar.gz",
+              "sha256": "1894042c476a334649e06a925d182376cae21d0f7cf12f44b0f10df4ba973eb4"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bafu/environmental-data-bafu-linux-x64.tar.gz",
-              "sha256": "cf07a3a2bd67b938ce2f88f492081a82345b0e16f3a3d243a587800a25c41715"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-linux-x64.tar.gz",
+              "sha256": "bb032b60e065c604d67d506a206c28d7f0ce3181be13b0a562e2e31448cb9333"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bafu/environmental-data-bafu-win32-x64.tar.gz",
-              "sha256": "e356d538eb34f7a28b44977a9509ea2566e86c66960bb6a1b979054dc6a0af83"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bafu/environmental-data-bafu-win32-x64.tar.gz",
+              "sha256": "47d62b3718d0f49bb44eeb62256b90b3b0f1c423eb2d912f759579309d6edfb9"
             }
           }
         }
@@ -576,7 +576,7 @@
       "name": "BioEnergieDat",
       "description": "BioEnergieDat 环境过程数据查询与匹配；CLI 固定来源 bioenergiedat，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published BioEnergieDat environmental process datasets using the compiled bioenergiedat source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -585,8 +585,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-bioenergiedat",
-      "requirements": "独立原生 CLI environmental-data-bioenergiedat 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-bioenergiedat 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-bioenergiedat 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-bioenergiedat 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -597,28 +597,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-bioenergiedat",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-bioenergiedat",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bioenergiedat/environmental-data-bioenergiedat-darwin-arm64.tar.gz",
-              "sha256": "7db7f1575fdccccee4b9475890d236d7d058ecbe7d389cdc1d2ea98cef2898a4"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-darwin-arm64.tar.gz",
+              "sha256": "d647ed5c19b0f68288e70a9935ea08ded21c3da1a2d3b2178bae9eb6a49cbd62"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bioenergiedat/environmental-data-bioenergiedat-darwin-x64.tar.gz",
-              "sha256": "c03cb921f48fab57f6a6e45c6b7f703c8c15e100cce8b7a8949ef82c53f49d60"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-darwin-x64.tar.gz",
+              "sha256": "06dd79669cd30a41020bfc6bb874aa32422467e64a9e519717ff4875c7910718"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bioenergiedat/environmental-data-bioenergiedat-linux-arm64.tar.gz",
-              "sha256": "cd249ae6b42c1dbc2a7f9e47448f87a4c1cef6d048154a26228d383fef35f12d"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-linux-arm64.tar.gz",
+              "sha256": "5040903a5609c231f87125e642c50df5dda28f6f21fa020de3be5bcadf712ca1"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bioenergiedat/environmental-data-bioenergiedat-linux-x64.tar.gz",
-              "sha256": "635005529229f108ce124873e16ce51546c69edcd16cb0bb1b79061215c5aee4"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-linux-x64.tar.gz",
+              "sha256": "8879203549135b6377ce851deb13ff71db4387af708482cc88a3c291b73dac42"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-bioenergiedat/environmental-data-bioenergiedat-win32-x64.tar.gz",
-              "sha256": "95518dd5ebad0bebef193431e0f244df0778b8c44684bd31a4e66d8a9ce14c51"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-bioenergiedat/environmental-data-bioenergiedat-win32-x64.tar.gz",
+              "sha256": "cfbb76bc072bb62ab1db745cc2eea2af9d0576ba8cc961fb89c8e0b970fdd37b"
             }
           }
         }
@@ -632,7 +632,7 @@
       "name": "ELCD",
       "description": "ELCD 环境过程数据查询与匹配；CLI 固定来源 elcd，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published ELCD environmental process datasets using the compiled elcd source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -641,8 +641,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-elcd",
-      "requirements": "独立原生 CLI environmental-data-elcd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-elcd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-elcd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-elcd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -653,28 +653,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-elcd",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-elcd",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-elcd/environmental-data-elcd-darwin-arm64.tar.gz",
-              "sha256": "789a11b3f19b197113d7a43cefd2b2f2cb0795ea87efbda2fabf58cf64fc0ef6"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-elcd/environmental-data-elcd-darwin-arm64.tar.gz",
+              "sha256": "859f71fecb4c3f1fa9ae301ed0c7e0f8be366d00ce3530120ad67989bbc1b85a"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-elcd/environmental-data-elcd-darwin-x64.tar.gz",
-              "sha256": "17fe5de31b82a8f7b054f10862862eac41dcafef3714acf1aec5bc05f4f66240"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-elcd/environmental-data-elcd-darwin-x64.tar.gz",
+              "sha256": "e04bf8a11441c10154dd67423351b2152302c18d781506315e6771783538541d"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-elcd/environmental-data-elcd-linux-arm64.tar.gz",
-              "sha256": "248ca11110df159776988fb1b43eb5ca54561b103ee607ad6c063cf45bdee603"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-elcd/environmental-data-elcd-linux-arm64.tar.gz",
+              "sha256": "3988a736c50be1aa6ad10baae0959ae7ae7b2dd5c2db01c6ad271d4a9645bec8"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-elcd/environmental-data-elcd-linux-x64.tar.gz",
-              "sha256": "0b747667930612cc15110f6f8634a1ca1be6c89fc6600a1c2652903b7fe77002"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-elcd/environmental-data-elcd-linux-x64.tar.gz",
+              "sha256": "c8570305e1a0305fe7c425471ea1539bf8fb6a4a6a47396861a9a9b3015caf8f"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-elcd/environmental-data-elcd-win32-x64.tar.gz",
-              "sha256": "913a36d3fffd2798d953504956aa529481f2b244c876658979e029f22f5aa435"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-elcd/environmental-data-elcd-win32-x64.tar.gz",
+              "sha256": "5e6b2febd6c0cb6e82a9f551a900f57291650d4a66da336ab26452e8f71e118e"
             }
           }
         }
@@ -688,7 +688,7 @@
       "name": "NEEDS",
       "description": "NEEDS 环境过程数据查询与匹配；CLI 固定来源 needs，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published NEEDS environmental process datasets using the compiled needs source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -697,8 +697,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-needs",
-      "requirements": "独立原生 CLI environmental-data-needs 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-needs 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-needs 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-needs 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -709,28 +709,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-needs",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-needs",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-needs/environmental-data-needs-darwin-arm64.tar.gz",
-              "sha256": "b34d2bab1c4607c1e0c7bff430d67843033a505f3b3c33ce180433020c01546b"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-needs/environmental-data-needs-darwin-arm64.tar.gz",
+              "sha256": "9b29cd62902a3300b12531c81e5e30a7f1e51d64f5d0cce3643500be944bc26b"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-needs/environmental-data-needs-darwin-x64.tar.gz",
-              "sha256": "33b4dfa44a4b1624e097fb2399bd52c3cbb7632c7d59b84b09cbc59b76f593aa"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-needs/environmental-data-needs-darwin-x64.tar.gz",
+              "sha256": "7b4635e4b0e613295779cdcd0ee46e61ccb9ccb00cd93603a21c19b50070d8c1"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-needs/environmental-data-needs-linux-arm64.tar.gz",
-              "sha256": "d0b07fc67cd50079852c77f70e0ea65cf8c85e416f3a35f15c6551eb8bccf9e2"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-needs/environmental-data-needs-linux-arm64.tar.gz",
+              "sha256": "43008728565aa5c47e421f476d909699f246d84969738de21e7f58fc283515ea"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-needs/environmental-data-needs-linux-x64.tar.gz",
-              "sha256": "dcf1a63c25f99dd9e3d11a5b124e817f7fe98f18a4fe7902e6dac4cbe8249e2e"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-needs/environmental-data-needs-linux-x64.tar.gz",
+              "sha256": "48c5ef46b9f2dc8847585a62cb1a5ffdd59e185a1140048313cacd673d951537"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-needs/environmental-data-needs-win32-x64.tar.gz",
-              "sha256": "c51d98079c8fe33e11c41fc4a98e99dfdb842f2baf649497e812ee2e93f49c3c"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-needs/environmental-data-needs-win32-x64.tar.gz",
+              "sha256": "44c72f0cfcf6ada10d071b2612a47be4352c0a0b55ea6afe43ab2c85fdd9046a"
             }
           }
         }
@@ -744,7 +744,7 @@
       "name": "OzLCI",
       "description": "OzLCI 环境过程数据查询与匹配；CLI 固定来源 ozlci，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published OzLCI environmental process datasets using the compiled ozlci source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -753,8 +753,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-ozlci",
-      "requirements": "独立原生 CLI environmental-data-ozlci 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-ozlci 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-ozlci 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-ozlci 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -765,28 +765,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-ozlci",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-ozlci",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ozlci/environmental-data-ozlci-darwin-arm64.tar.gz",
-              "sha256": "2b0696c8ed99b8ac5603617e234a31b8871721ffdbcd646809cf01d70c4dacda"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ozlci/environmental-data-ozlci-darwin-arm64.tar.gz",
+              "sha256": "f06bf6878d83c05c80e0146bab3c7ac036d73967a00250f071b7c3631930a337"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ozlci/environmental-data-ozlci-darwin-x64.tar.gz",
-              "sha256": "5d7f521927dfdfb4d87e1e92e9490f7be65603935e053d7b87030bd53dca5963"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ozlci/environmental-data-ozlci-darwin-x64.tar.gz",
+              "sha256": "37f8cbcbb59c93e0dec2985d3e7e17052c12622bdceee23590416d45ba86feb3"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ozlci/environmental-data-ozlci-linux-arm64.tar.gz",
-              "sha256": "fb009dc62882d8fd17889f8b45c1aa576efc8aa20e1552d3a654a7e7b7234bbf"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ozlci/environmental-data-ozlci-linux-arm64.tar.gz",
+              "sha256": "ea302102aa4d4da5437207c1306b9c1e6a6dbc2cb7c53fe8a9bc5a9aff4c1b64"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ozlci/environmental-data-ozlci-linux-x64.tar.gz",
-              "sha256": "b92dcbb72a5e3dc98670e20e89423d66d31c2cb41d1d3b544d6cb811e971bfcb"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ozlci/environmental-data-ozlci-linux-x64.tar.gz",
+              "sha256": "c45b51bd821e68f9d08294e5e32aba692e493b99c937d0b29c29c59bbe1efea0"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-ozlci/environmental-data-ozlci-win32-x64.tar.gz",
-              "sha256": "ae73235bb34f1cbf5cf827c84d3437e9b19d995a5c0ca3231a5de085ba624a47"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-ozlci/environmental-data-ozlci-win32-x64.tar.gz",
+              "sha256": "8ae543db4013f86fd0e464f7d587473d491aa3776e4e1fee60c7a0be29b8c789"
             }
           }
         }
@@ -800,7 +800,7 @@
       "name": "Recycled Plastics",
       "description": "Recycled Plastics 环境过程数据查询与匹配；CLI 固定来源 recycledplastics，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published Recycled Plastics environmental process datasets using the compiled recycledplastics source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -809,8 +809,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-recycledplastics",
-      "requirements": "独立原生 CLI environmental-data-recycledplastics 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-recycledplastics 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-recycledplastics 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-recycledplastics 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -821,28 +821,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-recycledplastics",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-recycledplastics",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-recycledplastics/environmental-data-recycledplastics-darwin-arm64.tar.gz",
-              "sha256": "b83a2d84090648c3583d9fa576d3055c7c78a35bfaa3f439a481d7b043201f7b"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-recycledplastics/environmental-data-recycledplastics-darwin-arm64.tar.gz",
+              "sha256": "9ab2a7918a9b49a4b39c8b1fed06fbc0007c00b0a764860f309adefef2f8b4d1"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-recycledplastics/environmental-data-recycledplastics-darwin-x64.tar.gz",
-              "sha256": "91d1cc36ab00fa96649620e35a23dab274f22863b71880954d0a0c7e6052706c"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-recycledplastics/environmental-data-recycledplastics-darwin-x64.tar.gz",
+              "sha256": "80ba676813ef0a62529bfbd42b6b7e6e2c316f4b340558ed6238eb4b9d4ff069"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-recycledplastics/environmental-data-recycledplastics-linux-arm64.tar.gz",
-              "sha256": "1b8c9d2d4e5c2aa016f5ae1c9f11d519b462581608ed45265b52f888a75fca94"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-recycledplastics/environmental-data-recycledplastics-linux-arm64.tar.gz",
+              "sha256": "7693c1dd83f4c5c482a9658f534bd62e0bc51f63780ad612e119f1b5249e2abe"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-recycledplastics/environmental-data-recycledplastics-linux-x64.tar.gz",
-              "sha256": "9ad07c7f73964d435246aa5cab7c49c6d2b514124571c9a5aa5292bcc5f26c20"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-recycledplastics/environmental-data-recycledplastics-linux-x64.tar.gz",
+              "sha256": "b672953ab250a8724903164c5593c03eb4023378aa2219acccc86f36550256c5"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-recycledplastics/environmental-data-recycledplastics-win32-x64.tar.gz",
-              "sha256": "7a5836c51391d7fef1dd3007d60e2e4d86d9dfa2d77ad5416af7e863a0e6ee02"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-recycledplastics/environmental-data-recycledplastics-win32-x64.tar.gz",
+              "sha256": "c081600ca723294d038a6d02d40da0ab2b52fe0f7c797a50d54f6ca64c8d26f4"
             }
           }
         }
@@ -856,7 +856,7 @@
       "name": "USDA Crop Data",
       "description": "USDA Crop Data 环境过程数据查询与匹配；CLI 固定来源 usda，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published USDA Crop Data environmental process datasets using the compiled usda source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -865,8 +865,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-usda",
-      "requirements": "独立原生 CLI environmental-data-usda 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-usda 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-usda 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-usda 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -877,28 +877,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-usda",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-usda",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-usda/environmental-data-usda-darwin-arm64.tar.gz",
-              "sha256": "44b582abe944f09ff02435c6d5e7281186cef6b7fabdee762b8b2b5b799d120e"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-usda/environmental-data-usda-darwin-arm64.tar.gz",
+              "sha256": "fd03cda6152c5698d1747db94aa100b3f7a29cf2ae382c1c5dccd58c2de01b22"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-usda/environmental-data-usda-darwin-x64.tar.gz",
-              "sha256": "07366fad47b4635fa5cfebeff5af78dec03a0915ff2da9a9b19c65b1430fe148"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-usda/environmental-data-usda-darwin-x64.tar.gz",
+              "sha256": "0076fda858dca37fd0aa1bad26584a99b677efe41927791c34e8db84e9be2b80"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-usda/environmental-data-usda-linux-arm64.tar.gz",
-              "sha256": "8a6983efb5a106f99502d956b333b30877f58b2d5347ceeadedffc5c690b2cbd"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-usda/environmental-data-usda-linux-arm64.tar.gz",
+              "sha256": "629759aee8769b1f590d914c5582833be501c8ea6662a5a35e74ed650ffa12e2"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-usda/environmental-data-usda-linux-x64.tar.gz",
-              "sha256": "53d53f5344cb3ffa04bbc8b4540c2b1b24d1aef03afe540ca38d4283fa8ec709"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-usda/environmental-data-usda-linux-x64.tar.gz",
+              "sha256": "17a0729ed74974ffddb5350838d8c0e2205414c72dd901f7190399796ca8b953"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-usda/environmental-data-usda-win32-x64.tar.gz",
-              "sha256": "01dac4ec89c3ebdd1326c53c58882636728f6cb12fb69da08ffa364bd10ca9f5"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-usda/environmental-data-usda-win32-x64.tar.gz",
+              "sha256": "892df75ac9a069e8725f6d5e7e2690f3772124d89db7b02fef77f52e9d5376e1"
             }
           }
         }
@@ -912,7 +912,7 @@
       "name": "USLCI",
       "description": "USLCI 环境过程数据查询与匹配；CLI 固定来源 uslci，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published USLCI environmental process datasets using the compiled uslci source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -921,8 +921,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-uslci",
-      "requirements": "独立原生 CLI environmental-data-uslci 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-uslci 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-uslci 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-uslci 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -933,28 +933,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-uslci",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-uslci",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-uslci/environmental-data-uslci-darwin-arm64.tar.gz",
-              "sha256": "5bd16f960834ffab89eb41f9decf31df23c7d8e2de6ecfc315dd1534f181c80e"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-uslci/environmental-data-uslci-darwin-arm64.tar.gz",
+              "sha256": "1fb04f202f96d233e88a993ed2368b69191e33c387e03831233f4b9f69949426"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-uslci/environmental-data-uslci-darwin-x64.tar.gz",
-              "sha256": "44a80263866f96c98eab79b706824f14e76012ad198237db9998bbd0a0725499"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-uslci/environmental-data-uslci-darwin-x64.tar.gz",
+              "sha256": "3234f1dbb02a4ff468999f6d257025d6807bb12a9a04065a0b7b5a13fa342b31"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-uslci/environmental-data-uslci-linux-arm64.tar.gz",
-              "sha256": "f132946e05993843c1e68968b592d07431ccb53fd4b3e4766a71ff84a1695849"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-uslci/environmental-data-uslci-linux-arm64.tar.gz",
+              "sha256": "91402d76fb18e797fa11ef22b1afd81211a2ad6dad0f3d7847d2bba4bcb2c7bf"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-uslci/environmental-data-uslci-linux-x64.tar.gz",
-              "sha256": "b828cd4409721ba22b52d6bad8cc059678b17601d1b17a1b163730a002f62b04"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-uslci/environmental-data-uslci-linux-x64.tar.gz",
+              "sha256": "631f580fec07cb68b61463540e3f4a1bf81e0452a30f1ce3a8c0e0f44cd1378c"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-uslci/environmental-data-uslci-win32-x64.tar.gz",
-              "sha256": "d2376a1caac0ebdb65b22a119c8986b457761f04117f2e4c7fc1725c2485e4c3"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-uslci/environmental-data-uslci-win32-x64.tar.gz",
+              "sha256": "ea40db9bebb53daf07a0abdc676c85d62de8a75adf97bedf222fc49536e12488"
             }
           }
         }
@@ -968,7 +968,7 @@
       "name": "Worldsteel",
       "description": "Worldsteel 环境过程数据查询与匹配；CLI 固定来源 worldsteel，保留版本、系统模型、单位及访问限制。",
       "description_en": "Search and match published Worldsteel environmental process datasets using the compiled worldsteel source scope, preserving coordinates and access limitations.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -977,8 +977,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-worldsteel",
-      "requirements": "独立原生 CLI environmental-data-worldsteel 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-worldsteel 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-worldsteel 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-worldsteel 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -989,28 +989,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-worldsteel",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-worldsteel",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-worldsteel/environmental-data-worldsteel-darwin-arm64.tar.gz",
-              "sha256": "80262f4200c149c3b43c8c17ec3cfcdb719b52f9ba19bc1a8648cf3ef3eed5e0"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-darwin-arm64.tar.gz",
+              "sha256": "2992534f83aa0b1ededb26e0cf2b2bbf0b178eb36f6cba00538fb8a9c4629163"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-worldsteel/environmental-data-worldsteel-darwin-x64.tar.gz",
-              "sha256": "20dec9f665ed533b9f14db39b7c9a6a154d9b9bd8ed6dca2c00d03eead22b264"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-darwin-x64.tar.gz",
+              "sha256": "6d6d95c6d129824cd0bac6431c646afe1c32c7e79fa5b88cfd6049d839360d8e"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-worldsteel/environmental-data-worldsteel-linux-arm64.tar.gz",
-              "sha256": "87c9bdf094bb6b06c1ab4b82b5687f32d60d7e89413847e407d03619e2b0b5f9"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-linux-arm64.tar.gz",
+              "sha256": "7203210470aa5d7e89cd09993d919842200257fc8afc8840200cc6a3a2a537e5"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-worldsteel/environmental-data-worldsteel-linux-x64.tar.gz",
-              "sha256": "98086a790b496d97b3710c6a083b85fd03bad4982cbbf095f4b021ae9aa14a2f"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-linux-x64.tar.gz",
+              "sha256": "4c7e38b4b845a368881d101a65d147fa24bf9dd84468f6f1db3a0c165af8bfe2"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-worldsteel/environmental-data-worldsteel-win32-x64.tar.gz",
-              "sha256": "9f36d1986147a5bcd15eaeddd4a62549f16282b2bee1083446153eecbd2e9b6a"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-worldsteel/environmental-data-worldsteel-win32-x64.tar.gz",
+              "sha256": "b8d60fb5ea248e781aabb21a079c0fc7138737c0f8b83bb628008a4d005696d4"
             }
           }
         }
@@ -1024,7 +1024,7 @@
       "name": "Published EPD Data",
       "description": "已发布 EPD 声明查询：保留发布机构、声明单位、方法/模块、有效期、访问限制与分页；不执行审核或认证。",
       "description_en": "Search published EPD declarations with traceable publishers, declared units, methods/modules, validity, access restrictions and cursor pagination. This is data retrieval, not EPD audit or certification.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -1033,8 +1033,8 @@
         "published-declarations"
       ],
       "path": "plugins/environmental-data-epd",
-      "requirements": "独立原生 CLI environmental-data-epd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-epd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-epd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-epd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -1045,28 +1045,28 @@
         "agents": [],
         "cli": {
           "name": "environmental-data-epd",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data-epd",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-epd/environmental-data-epd-darwin-arm64.tar.gz",
-              "sha256": "9372471b142629320d84cb74172075d5082d1540a689a7fb1eb08ead1ff13676"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-epd/environmental-data-epd-darwin-arm64.tar.gz",
+              "sha256": "993b5c07ab300da7ac6afd3aa438a66af7f1a6e785c28a7bc8ca235333493b53"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-epd/environmental-data-epd-darwin-x64.tar.gz",
-              "sha256": "cce9f59e790779a4090f58350e9c4e31638205ded6d122e57c9cf26773aaaec7"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-epd/environmental-data-epd-darwin-x64.tar.gz",
+              "sha256": "ac98dad1149594cd753ea16227570c4744b9867da1bdbdadc3dfc6690a2e846f"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-epd/environmental-data-epd-linux-arm64.tar.gz",
-              "sha256": "6312cb0cc3101c08439d83d049a48d5763bf6b676e479f2406c6aa551e500325"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-epd/environmental-data-epd-linux-arm64.tar.gz",
+              "sha256": "9040c9503cc099202a79a7f631075930b3b368e9062bc143592fb85f8e9da817"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-epd/environmental-data-epd-linux-x64.tar.gz",
-              "sha256": "6cab1810422b8244017543570cbd4df0738b4d07214c0913c5741c63c7f5057d"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-epd/environmental-data-epd-linux-x64.tar.gz",
+              "sha256": "03658634a1cee9142cfde5a75fbc2d091df8cc51dfde1f74fbd7997a4f84e0f8"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data-epd/environmental-data-epd-win32-x64.tar.gz",
-              "sha256": "e04c9025463a6c40d0cf5d43b9422f18a45481da1ba48464fe1377cb1b16595b"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data-epd/environmental-data-epd-win32-x64.tar.gz",
+              "sha256": "a65f2218520e449435e51d14f204ce1c3ce84e395e6716412d769f6f89858283"
             }
           }
         }
@@ -1080,7 +1080,7 @@
       "name": "Environmental Data (Aggregate)",
       "description": "跨来源查询与匹配环境数据，保留各数据库和 EPD 声明的来源、单位、访问限制与覆盖缺口。",
       "description_en": "Query and match environmental data across published background sources and EPD declarations, preserving provenance, units, access limits and coverage gaps.",
-      "version": "0.7.0",
+      "version": "0.7.4",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -1091,8 +1091,8 @@
         "matching"
       ],
       "path": "plugins/querying-lca-datasets-expert",
-      "requirements": "独立原生 CLI environmental-data 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -1116,28 +1116,28 @@
         ],
         "cli": {
           "name": "environmental-data",
-          "version": "0.7.0",
+          "version": "0.7.4",
           "executable": "bin/environmental-data",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data/environmental-data-darwin-arm64.tar.gz",
-              "sha256": "1c3b782a7601477e74ce030971d8b18a318a669f4fd6ae8f243fd794612db07b"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data/environmental-data-darwin-arm64.tar.gz",
+              "sha256": "7d54ac00f92def71386a215804c4b78a09f5f42410cafd4c876d6f1881e6283f"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data/environmental-data-darwin-x64.tar.gz",
-              "sha256": "3c089e1a0854b26c12c5c40d2710e93c70b3be1ba2b4cac5c18e5c2474673cd7"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data/environmental-data-darwin-x64.tar.gz",
+              "sha256": "bff16b7d340d3cdcf4b9e8a44f2f0d944d91e6efa787e766501f8fdb59905560"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data/environmental-data-linux-arm64.tar.gz",
-              "sha256": "f7325843dc585a94d3a986d9ee698b356b82a102c0f5fd5bce3a044ec07e0395"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data/environmental-data-linux-arm64.tar.gz",
+              "sha256": "83c9b12c9347a9f0c357e192bd715002aab7b2301c905fd26906393159eefab5"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data/environmental-data-linux-x64.tar.gz",
-              "sha256": "bb9d37cafcfb481e8a34e1a6eb721cdcc084a9839aff4c164f06674515eb896e"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data/environmental-data-linux-x64.tar.gz",
+              "sha256": "97b5a2e8e290bfd94937c8314d1dbd32996b197dc4fc9327b0b9c946cc1e2a16"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.0/environmental-data/environmental-data-win32-x64.tar.gz",
-              "sha256": "2580ab8baffdf06421ba050175cc7a8075ccf863c4e98a45ac7ed1355c111d83"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.4/environmental-data/environmental-data-win32-x64.tar.gz",
+              "sha256": "40120bf72374757ac4a8238a47cbc3177beac79c319a47da73b9b69b9053a5a8"
             }
           }
         }

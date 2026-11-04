@@ -1,11 +1,12 @@
 {
   "name": "environmental-data-ecoinvent",
   "displayName": "Ecoinvent",
-  "version": "0.7.0",
+  "version": "0.7.4",
   "description": "Search and match published Ecoinvent environmental process datasets using the compiled ecoinvent source scope, preserving coordinates and access limitations.",
   "repository": "https://github.com/HiQ-AI/environmental-data",
   "license": "MIT",
   "author": {
     "name": "HiQ"
-  }
+  },
+  "skills": "./skills/"
 }

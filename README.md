@@ -9,6 +9,13 @@ database, the published-EPD query plugin for declarations, or the aggregate
 plugin when the question calls for multiple sources. This marketplace contains
 no editor, modeling tool or audit expert.
 
+## CLI 0.7.4 update
+
+All twenty pins now reference the sealed 0.7.4 release. Business commands are
+`search` and `lookup`; read the bundled skill and [migration and verification
+limits](docs/RELEASE_0.7.4.md). Windows native checks passed, but its separate
+automated installer verification did not. This is not full product acceptance.
+
 ## Install
 
 Add the marketplace in Claude Code:
@@ -33,8 +40,8 @@ Choose the plugin you need, for example:
 
 Codex CLI 0.161.0 also accepts the native marketplace. Use its own plugin manager;
 see [installation and migration](docs/INSTALLATION.md). Native plugin installation
-loads skills and declared roles, not the business CLI or credentials. Prepare
-the selected independent native CLI **0.7.0** separately using its pinned archive
+loads skills, not the business CLI or credentials. Claude supports declared roles; Codex 0.161.0 does not register bundled agent Markdown as roles. Prepare
+the selected independent native CLI **0.7.4** separately using its pinned archive
 and full SHA256. One private core produces distinct, compiled-scope executables;
 this public repository contains only metadata and operating instructions.
 
@@ -74,8 +81,7 @@ The [live background-source directory](https://x.hiqlcd.com/api/relic/sources)
 provides published versions and system models. The aggregate's [dated source
 inventory](plugins/querying-lca-datasets-expert/SOURCES.md) records observed
 coverage, not permanent account rights. Single-source plugins use separately compiled commands, not a `scoped` selector.
-The aggregate has a compiled closed set; remote additions cannot expand it. Source conflicts, unsupported opaque-key tools and
-cross-source responses fail rather than silently broadening the query.
+The aggregate has a compiled closed set; remote additions cannot expand it. Source conflicts and cross-source responses fail rather than silently broadening the query.
 
 Published EPD declarations use their existing separate query service and retain
 publisher, declared unit, method/module, validity, restrictions and pagination.
@@ -92,7 +98,7 @@ indicator. Preserve missing or restricted values and unresolved needs.
 Send only authorized fields needed for the query, not an entire workbook when
 selected inputs suffice. Keep credentials out of conversations and do not borrow
 another application's tokens. Public metadata and EPD search need no local login;
-background business queries and MCP tools retain the CLI's existing authentication.
+background `search` and `lookup` use this product family's normal authentication.
 
 Queries do not bind/import data, edit models, calculate a footprint, submit
 business records, notify people or certify results. Preserve source coordinates,
