@@ -1,7 +1,7 @@
 {
   "name": "environmental-data-epd",
   "displayName": "Published EPD Data",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Search published EPD declarations with traceable publishers, declared units, methods/modules, validity, access restrictions and cursor pagination. This is data retrieval, not EPD audit or certification.",
   "repository": "https://github.com/HiQ-AI/environmental-data",
   "license": "MIT",

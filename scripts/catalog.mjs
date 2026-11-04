@@ -15,6 +15,10 @@ const checkComponent = (plugin, relative) => {
   }
 };
 const catalog = JSON.parse(read('marketplace.json'));
+const release = JSON.parse(read('cli-release.json'));
+assert.equal(release.schemaVersion, 1);
+assert.equal(new Set(release.plugins.map(plugin => plugin.cli.name)).size, release.plugins.length, 'Each plugin must have a distinct compiled command');
+assert.deepEqual(catalog.plugins.map(plugin => plugin.id).sort(), release.plugins.map(plugin => plugin.id).sort(), 'Catalog must match the sealed release projection');
 const ids = catalog.plugins.map(plugin => plugin.id);
 assert.ok(ids.length, 'The catalog must contain plugins');
 assert.equal(new Set(ids).size, ids.length, 'Plugin IDs must be unique');
@@ -39,8 +43,10 @@ const native = {
       checkComponent(plugin, `agents/${agent.id}.md`);
     }
     const cli = plugin.components.cli;
-    assert.equal(cli.name, 'querying-lca-datasets');
-    assert.deepEqual(cli, catalog.plugins[0].components.cli, 'Source plugins must share the same CLI release and archive pins');
+    const published = release.plugins.find(entry => entry.id === plugin.id);
+    assert.deepEqual(cli, published.cli, 'CLI pins must match this plugin in the sealed release projection');
+    assert.equal(cli.executable, `bin/${cli.name}`);
+    assert.equal(cli.version, release.version);
     assert.ok(cli.name && cli.version && cli.executable);
     assert.ok(Object.keys(cli.releases).length);
     for (const [platform, release] of Object.entries(cli.releases)) {

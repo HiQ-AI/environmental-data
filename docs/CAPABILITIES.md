@@ -28,10 +28,10 @@ Spreadsheet editing is a separate optional host capability. No general Office/PD
 
 ## Source-specific entrypoints
 
-Single-source plugins use the shared CLI runtime scope, which rejects source
+Single-source plugins use independent executables with a compiled source boundary, which rejects source
 conflicts, cross-source output and tools without a verifiable source contract.
 Opaque-key lookup/statistics/hotspot remain aggregate capabilities rather than
 guessed source-specific operations. The aggregate is selected explicitly, not as
-a recovery route after denied access. Runtime scopes are not OS shell sandboxes.
+a recovery route after denied access. Compiled scope is not an OS shell sandbox or a narrower OAuth token. The aggregate also has a fixed supported-source/publisher set; remote additions cannot expand it.
 Public metadata and EPD search are intentionally read-only public endpoints;
 other queries retain their existing authentication. See [distribution](DISTRIBUTION.md).
