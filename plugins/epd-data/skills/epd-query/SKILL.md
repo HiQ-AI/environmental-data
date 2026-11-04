@@ -15,7 +15,33 @@ Native plugin installation installs these instructions, not necessarily the exec
 2. If present, first establish that the entry belongs to this program using its versioned release manifest, binary hash and source/publisher scope. Do not execute an unknown same-name program to identify it. If ownership cannot be established, preserve that entry and use the pinned installer with an independent install/bin directory, then invoke the verified absolute path. Once ownership is established, run its actual `version` and `info --json`; compare name, version and scope with the record. An old program or a different plugin's program does not satisfy preparation.
 3. If missing/outdated, use the recorded installer for this OS. Download it into a new empty temporary directory. Verify its complete SHA256 against the record with `shasum -a 256` / `sha256sum` or `Get-FileHash -Algorithm SHA256`. Read the verified script before execution. Run POSIX scripts using `sh <absolute-script-path>`; Windows uses `powershell.exe -NoProfile -File <absolute-script-path>`. Do not pipe downloads into a shell, change execution policy, bypass host permission decisions or copy credentials. Keep your current working directory outside the download directory.
 4. Perform allowed preparation using the host’s existing permissions; ask only when a necessary action is not authorized. Do not edit global shell profiles, security settings or another product’s configuration. Use the verified absolute executable path, or add its directory to PATH for this session only. Run `version`, `info --json` and `search --help` through that entry. Confirm the shell can actually execute it; do not claim installation from a download alone.
-5. Resume the original request using that verified command. If credentials are required, run `epd-data login` through the same entry and continue after normal device authorization. If user interaction is required, identify that exact step and retain the query; never borrow Desktop or another client token. Do not expose credentials in output.
+5. Resume the original request using that verified command. Follow the authentication section below when the requested operation requires login; retain the pending query throughout browser approval.
+
+## Authentication / 登录与继续查询
+
+After preparing the checksum-verified program as described above, use the same trusted executable for diagnosis, login and the pending query. Replace the bare command below with its verified absolute path when it is not on this session's PATH.
+
+```bash
+epd-data doctor
+```
+
+Doctor prints JSON even without --json: exit 0 means a credential was found locally; exit 2 means none was found. A local credential is not proof of current server authorization. If already authorized, continue the original query without logging in again. Published EPD search is public: a missing credential does not block it. Use login only when the requested operation actually requires authentication.
+
+When the pending operation requires authentication and no credential is available, actively start the product login instead of merely reporting “not logged in”:
+
+```bash
+epd-data login --json
+```
+
+Keep this one process running using the host's background execution facility, retain its task/process ID, and read both output streams. --json does not make login nonblocking: the QR code, real authorization link, user code and waiting message appear on stderr while stdout is reserved for the final success JSON. Show the actual link and user code from that process and ask the user to approve this data-client login in their browser. This is not an official Claude account login. The current CLI does not print an expiry duration; do not invent one. If a future response supplies an expiry, preserve it accurately. Never expose the device code, access token or credential-file contents, and never ask the user to paste a token.
+
+Preserve the original query, selected source/model/kind and any returned lookup keys while browser approval is pending. Do not launch another login while this process is waiting. Pending authorization is handled by the CLI itself. On exit 0 and final {ok:true}, resume the original search or lookup through the same executable; do not stop at “login succeeded”. For example, after required login completes:
+
+```bash
+epd-data search 'concrete production in China' --json
+```
+
+On timeout/expiry, denial or network failure, report the actual error, retain the pending request and stop that attempt. Start a fresh login only after the previous process has ended and a retry is appropriate; never loop or create repeated authorization sessions. An authenticated result marked restricted/access denied is an entitlement decision, not a reason to repeatedly log in, change identity or purchase access. Local doctor success does not override that decision. Credentials stay in this product's existing store; do not copy credentials from Desktop, Claude or another client.
 
 ## Understand, clarify and search
 
