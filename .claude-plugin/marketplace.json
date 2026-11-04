@@ -1,0 +1,18 @@
+{
+  "name": "environmental-data",
+  "owner": {
+    "name": "HiQ"
+  },
+  "metadata": {
+    "description": "Environmental Data: multi-source environmental data discovery and matching."
+  },
+  "plugins": [
+    {
+      "name": "querying-lca-datasets-expert",
+      "displayName": "Environmental Data",
+      "source": "./plugins/querying-lca-datasets-expert",
+      "description": "Environmental Data: search and match environmental process data across published database sources, preserving source, version, system model, units and applicability evidence. Access depends on source and account entitlements.",
+      "version": "0.5.3"
+    }
+  ]
+}
