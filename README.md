@@ -81,8 +81,7 @@ The [live background-source directory](https://x.hiqlcd.com/api/relic/sources)
 provides published versions and system models. The aggregate's [dated source
 inventory](plugins/querying-lca-datasets-expert/SOURCES.md) records observed
 coverage, not permanent account rights. Single-source plugins use separately compiled commands, not a `scoped` selector.
-The aggregate has a compiled closed set; remote additions cannot expand it. Source conflicts, unsupported opaque-key tools and
-cross-source responses fail rather than silently broadening the query.
+The aggregate has a compiled closed set; remote additions cannot expand it. Source conflicts and cross-source responses fail rather than silently broadening the query.
 
 Published EPD declarations use their existing separate query service and retain
 publisher, declared unit, method/module, validity, restrictions and pagination.

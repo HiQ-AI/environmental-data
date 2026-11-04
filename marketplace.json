@@ -25,8 +25,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-hiqlcd",
-      "requirements": "独立原生 CLI environmental-data-hiqlcd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-hiqlcd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-hiqlcd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-hiqlcd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -81,8 +81,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-hiqlcd-al",
-      "requirements": "独立原生 CLI environmental-data-hiqlcd-al 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-hiqlcd-al 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-hiqlcd-al 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-hiqlcd-al 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -137,8 +137,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-calcd",
-      "requirements": "独立原生 CLI environmental-data-calcd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-calcd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-calcd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-calcd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -193,8 +193,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-hiq-cesi",
-      "requirements": "独立原生 CLI environmental-data-hiq-cesi 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-hiq-cesi 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-hiq-cesi 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-hiq-cesi 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -249,8 +249,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-ecoinvent",
-      "requirements": "独立原生 CLI environmental-data-ecoinvent 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-ecoinvent 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-ecoinvent 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-ecoinvent 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -305,8 +305,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-carbonminds",
-      "requirements": "独立原生 CLI environmental-data-carbonminds 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-carbonminds 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-carbonminds 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-carbonminds 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -361,8 +361,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-agrifootprint",
-      "requirements": "独立原生 CLI environmental-data-agrifootprint 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-agrifootprint 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-agrifootprint 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-agrifootprint 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -417,8 +417,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-ef",
-      "requirements": "独立原生 CLI environmental-data-ef 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-ef 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-ef 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-ef 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -473,8 +473,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-auslci",
-      "requirements": "独立原生 CLI environmental-data-auslci 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-auslci 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-auslci 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-auslci 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -529,8 +529,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-bafu",
-      "requirements": "独立原生 CLI environmental-data-bafu 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-bafu 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-bafu 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-bafu 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -585,8 +585,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-bioenergiedat",
-      "requirements": "独立原生 CLI environmental-data-bioenergiedat 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-bioenergiedat 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-bioenergiedat 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-bioenergiedat 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -641,8 +641,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-elcd",
-      "requirements": "独立原生 CLI environmental-data-elcd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-elcd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-elcd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-elcd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -697,8 +697,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-needs",
-      "requirements": "独立原生 CLI environmental-data-needs 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-needs 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-needs 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-needs 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -753,8 +753,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-ozlci",
-      "requirements": "独立原生 CLI environmental-data-ozlci 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-ozlci 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-ozlci 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-ozlci 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -809,8 +809,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-recycledplastics",
-      "requirements": "独立原生 CLI environmental-data-recycledplastics 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-recycledplastics 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-recycledplastics 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-recycledplastics 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -865,8 +865,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-usda",
-      "requirements": "独立原生 CLI environmental-data-usda 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-usda 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-usda 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-usda 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -921,8 +921,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-uslci",
-      "requirements": "独立原生 CLI environmental-data-uslci 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-uslci 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-uslci 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-uslci 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -977,8 +977,8 @@
         "source-scoped"
       ],
       "path": "plugins/environmental-data-worldsteel",
-      "requirements": "独立原生 CLI environmental-data-worldsteel 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-worldsteel 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-worldsteel 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-worldsteel 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -1033,8 +1033,8 @@
         "published-declarations"
       ],
       "path": "plugins/environmental-data-epd",
-      "requirements": "独立原生 CLI environmental-data-epd 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data-epd 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data-epd 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data-epd 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
@@ -1091,8 +1091,8 @@
         "matching"
       ],
       "path": "plugins/querying-lca-datasets-expert",
-      "requirements": "独立原生 CLI environmental-data 0.7.0，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
-      "requirements_en": "Independent native environmental-data 0.7.0 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
+      "requirements": "独立原生 CLI environmental-data 0.7.4，固定版本 CDN 归档及完整 SHA256；程序编译绑定来源，插件管理器仅加载技能，不安装程序或授予许可。认证复用现有数据客户端产品族身份，服务端权益仍为权威。",
+      "requirements_en": "Independent native environmental-data 0.7.4 executable from pinned CDN archives; source coverage is compiled in. Plugin managers load instructions, not binaries or licenses. Authentication reuses the existing data-client product identity; server entitlements remain authoritative.",
       "components": {
         "skills": [
           {
