@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "version": "0.7.5",
-  "sourceCommit": "925d51978c6e1b1a32ffc3453455471a45b8e83c",
-  "channelsSha256": "a3ecc4c0a14353a2e720e257aa413389ab121f089096e55b59fd8a4c8b95a8ef",
+  "version": "0.8.3",
+  "sourceCommit": "2d49c2d84e7cf6c68a99ec7ef3f3f81cf9bd1ad8",
+  "channelsSha256": "b61f87d98032c21c46118b7db19d5e3834f730375af40995c77da2683a015d43",
   "plugins": [
     {
-      "id": "hiqlcd",
-      "name": "HiQLCD",
+      "id": "environmental-data",
+      "name": "Environmental Data",
       "scope": {
-        "executable": "hiqlcd",
-        "pluginId": "hiqlcd",
-        "name": "HiQLCD",
+        "executable": "environmental-data",
+        "pluginId": "environmental-data",
+        "name": "Environmental Data",
         "protocol": "relic-datasets",
         "sources": [
           {
@@ -21,70 +21,7 @@
               "HiQLCD",
               "海科LCD数据库"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "hiqlcd",
-        "previousPluginId": "environmental-data-hiqlcd",
-        "skillId": "hiqlcd-query",
-        "skillTitle": "HiQLCD Data Querying",
-        "skillTitleZh": "HiQLCD 数据查询",
-        "displayName": "HiQLCD 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "hiqlcd",
-        "version": "0.7.5",
-        "executable": "bin/hiqlcd",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-darwin-arm64.tar.gz",
-            "sha256": "3210bfe8bd8ae44d8fcf02d7df6c8c87dd45f77f84e2ea6f6a4ae437e1b0cddd"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-darwin-x64.tar.gz",
-            "sha256": "74b1cb774b1b432a43735f7e5043db99f2afe29252240ac06b14f9a35e1672bd"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-linux-arm64.tar.gz",
-            "sha256": "007d4a139cc111773b67d33cff043f1204c8a350cc4f26f2a5c20880c06753ba"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-linux-x64.tar.gz",
-            "sha256": "8e3bbc96b506822b53302298d5274c3343c6a0015794be34136e9a3898cebff7"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-win32-x64.tar.gz",
-            "sha256": "64598a50d44371de2e52f70e2ccc7c39b5095ec868d7f4b5f9c837d51fa97f55"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/checksums.txt",
-        "sha256": "b70cd4663fb6bf0aa0205f7d53d666394567b04de32bd830e75e1306491d42e3"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/install.sh",
-          "sha256": "a9529d7e6ce13ecafab283c1fc0e1b6e29324728f2932d9e6472cf062285867f"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/install.ps1",
-          "sha256": "72a37697bade1fc509384afa9ce245770bce1751635c0b4375725d766fc4332f"
-        }
-      }
-    },
-    {
-      "id": "hiqlcd-al",
-      "name": "HiQLCD-AL",
-      "scope": {
-        "executable": "hiqlcd-al",
-        "pluginId": "hiqlcd-al",
-        "name": "HiQLCD-AL",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "hiqlcd-al",
             "name": "HiQLCD-AL",
@@ -93,70 +30,7 @@
               "HiQLCD-AL",
               "海科LCD数据库(铝)"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "hiqlcd-al",
-        "previousPluginId": "environmental-data-hiqlcd-al",
-        "skillId": "hiqlcd-al-query",
-        "skillTitle": "HiQLCD-AL Data Querying",
-        "skillTitleZh": "HiQLCD-AL 数据查询",
-        "displayName": "HiQLCD-AL 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "hiqlcd-al",
-        "version": "0.7.5",
-        "executable": "bin/hiqlcd-al",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-darwin-arm64.tar.gz",
-            "sha256": "99f461f96599d83a57c64ab371a6789acf2363eccf18d95b076a6a5019e6d235"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-darwin-x64.tar.gz",
-            "sha256": "a56f94f8cd5bc6b736b13a5f60e647f3ef38aeb20e2f2c5a486abbac48cbfaef"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-linux-arm64.tar.gz",
-            "sha256": "d9c7ae4ecf98d977e5e3e3c7af3aa624e1b3b4fd3a94a744af8a638d3c18158d"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-linux-x64.tar.gz",
-            "sha256": "fc1c86683e6ff1eab9b18000bf9bef5896e1f6d0ba9841c5ed5e740a2f5f89c9"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-win32-x64.tar.gz",
-            "sha256": "f44256263d549fefcc2321346d49e1296968c9d3c43a6d159b80f3e3bfddba4f"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/checksums.txt",
-        "sha256": "19d46923448173b6923fc9ddc4b688586201249b8e96962914c08df62aa70ac5"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/install.sh",
-          "sha256": "0b90e1bb0841ea146620621c7a8fab324d8d8ea5075916316fb3220d1d47a622"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/install.ps1",
-          "sha256": "e9d8bac46e2902a3f614252c13535ae49717be304fe9cc26ffe7b6d71064c234"
-        }
-      }
-    },
-    {
-      "id": "calcd",
-      "name": "CALCD",
-      "scope": {
-        "executable": "calcd",
-        "pluginId": "calcd",
-        "name": "CALCD",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "calcd",
             "name": "CALCD",
@@ -165,70 +39,7 @@
               "CALCD",
               "CALCD 数据库"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "calcd",
-        "previousPluginId": "environmental-data-calcd",
-        "skillId": "calcd-query",
-        "skillTitle": "CALCD Data Querying",
-        "skillTitleZh": "CALCD 数据查询",
-        "displayName": "CALCD 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "calcd",
-        "version": "0.7.5",
-        "executable": "bin/calcd",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-darwin-arm64.tar.gz",
-            "sha256": "d95e9dcd4201bd022080d79c68b358729f3144a36004ba2f9de48338225424c4"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-darwin-x64.tar.gz",
-            "sha256": "b5a0eee97dcc0e685619ddda77ceeecb9e13d8a5a298a6b30c4f15a5da2b0e09"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-linux-arm64.tar.gz",
-            "sha256": "eca424da29c9fdcf67ed56b72b2f16a794f935775e4ae44e0bf73a31cdb9414f"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-linux-x64.tar.gz",
-            "sha256": "92abd10857007b6bb196751bc6d41801ff78ab6c1a424be48438b0d3db1167ca"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-win32-x64.tar.gz",
-            "sha256": "2bcb17e3a883b144d229ded7b080b2bbc5a408496071da6599ec58dc5f83515e"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/checksums.txt",
-        "sha256": "8d7c1852e26f4c9f9da394f5ff1d0039f7477cdbae1264b7bba660525c410c7e"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/install.sh",
-          "sha256": "f98b65552ff703729872983e939e0aac149e477c836c621d71a366abd22a03dc"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/install.ps1",
-          "sha256": "dd40302eba5b897f82b6b76d168b024713d6b4ed4d0906691aa0612071ef12d0"
-        }
-      }
-    },
-    {
-      "id": "cesi",
-      "name": "China Li-ion Battery Carbon Footprint Database (CESI)",
-      "scope": {
-        "executable": "cesi",
-        "pluginId": "cesi",
-        "name": "China Li-ion Battery Carbon Footprint Database (CESI)",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "hiq-cesi",
             "name": "China Li-ion Battery Carbon Footprint Database (CESI)",
@@ -237,70 +48,7 @@
               "China Li-ion Battery Carbon Footprint Database (CESI)",
               "中国锂电池碳足迹数据库"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "cesi",
-        "previousPluginId": "environmental-data-hiq-cesi",
-        "skillId": "cesi-query",
-        "skillTitle": "CESI Data Querying",
-        "skillTitleZh": "CESI 数据查询",
-        "displayName": "中国锂电池碳足迹数据查询（CESI）",
-        "agents": []
-      },
-      "cli": {
-        "name": "cesi",
-        "version": "0.7.5",
-        "executable": "bin/cesi",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-darwin-arm64.tar.gz",
-            "sha256": "6dd43e45b73324b72e8797a192ca1c887cc9d757b835f7d6f38ce4efe8259ebd"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-darwin-x64.tar.gz",
-            "sha256": "ede8ab51f27822a6d66c3764d514c15b00ff9bd23a7fcf4cde9626f433afc8f4"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-linux-arm64.tar.gz",
-            "sha256": "3fea3cb36c66f5637dc187389e6a4ac7806961b872d199137c0e54cba7f46fe6"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-linux-x64.tar.gz",
-            "sha256": "c44dc399abf6500f7ead7101c7a765a09120d7dd5e4c21d042e7f1ef82570bdf"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-win32-x64.tar.gz",
-            "sha256": "1f368c060a2bbe9864abe34ac5f663c3410621ee17fb0d1aa5a270b8c72fb1c0"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/checksums.txt",
-        "sha256": "f00a4f77542a70314150d4f0e902967b7baa9a0bca0aee2818b60c2793c7d35e"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/install.sh",
-          "sha256": "acfb1c6573b5231b5ea4e3cc6486996175a4da1de93441ca3981a50c749a9496"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/install.ps1",
-          "sha256": "12a58369946351666ad903ec10c1e949a0b7ad61bda1f301d42e2ddef78c8ba9"
-        }
-      }
-    },
-    {
-      "id": "ecoinvent",
-      "name": "Ecoinvent",
-      "scope": {
-        "executable": "ecoinvent",
-        "pluginId": "ecoinvent",
-        "name": "Ecoinvent",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "ecoinvent",
             "name": "Ecoinvent",
@@ -309,70 +57,7 @@
               "Ecoinvent",
               "Ecoinvent 数据库"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "ecoinvent",
-        "previousPluginId": "environmental-data-ecoinvent",
-        "skillId": "ecoinvent-query",
-        "skillTitle": "ecoinvent Data Querying",
-        "skillTitleZh": "ecoinvent 数据查询",
-        "displayName": "ecoinvent 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "ecoinvent",
-        "version": "0.7.5",
-        "executable": "bin/ecoinvent",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-darwin-arm64.tar.gz",
-            "sha256": "a979e875b15f877b6054bf00df4c0d928a421ec486d38ac3f4db59e7b4daf958"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-darwin-x64.tar.gz",
-            "sha256": "94ab742ae95bc06c248dd920d7560efa82c2a39d4503d1cb4611c3c15d769c79"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-linux-arm64.tar.gz",
-            "sha256": "a8f906e440a5e370525fcc9521946888c067913bdbcfcc6ef3a4307400881fbc"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-linux-x64.tar.gz",
-            "sha256": "433ad9884b1dff7bf324e681bfd8e0ad94e9f2112b2bb46d73be9a815931d503"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-win32-x64.tar.gz",
-            "sha256": "f3ae566cf17ee8c1ed86a3079fcdd976270018b446b074238c9dc26315aa9eb8"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/checksums.txt",
-        "sha256": "443e1e616569437289b5304232bb739b5605de1f596b7cb83aa364fe62364deb"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/install.sh",
-          "sha256": "ff853cb9de3477cad98063ca48d871a4836c3aa338b1e1e6010fc3dc2be25358"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/install.ps1",
-          "sha256": "1380034fe2662f9b070b68e7bb945497c8da4386bbb04608bd62330e1573752b"
-        }
-      }
-    },
-    {
-      "id": "carbonminds",
-      "name": "CarbonMinds",
-      "scope": {
-        "executable": "carbonminds",
-        "pluginId": "carbonminds",
-        "name": "CarbonMinds",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "carbonminds",
             "name": "CarbonMinds",
@@ -381,70 +66,7 @@
               "CarbonMinds",
               "CarbonMinds 化学品数据库"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "carbonminds",
-        "previousPluginId": "environmental-data-carbonminds",
-        "skillId": "carbonminds-query",
-        "skillTitle": "CarbonMinds Data Querying",
-        "skillTitleZh": "CarbonMinds 数据查询",
-        "displayName": "CarbonMinds 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "carbonminds",
-        "version": "0.7.5",
-        "executable": "bin/carbonminds",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-darwin-arm64.tar.gz",
-            "sha256": "dfce26c286872a6daf83755b0234239368dc541a6c25129c82dd8715b0aa84c4"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-darwin-x64.tar.gz",
-            "sha256": "30a80a49439a29da7b32a037b410cef30f4c6c33ff6bbbb6b4303340b778b30d"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-linux-arm64.tar.gz",
-            "sha256": "b9b750e01f00c33c237a1cc141959640558c43512d1cf0ffd8103c8b3aeea0c0"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-linux-x64.tar.gz",
-            "sha256": "664d42972e2c977141ee50a15e33ce845219622e604ca1fa71bfd89589fda939"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-win32-x64.tar.gz",
-            "sha256": "f0b4ca71505cf3e57bc4a9c0da41e0074c013320e99f878b9a4ae311a6ba37a5"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/checksums.txt",
-        "sha256": "0e60e65813cb6a4a734e488194e302baba9a597ef465ac18ce8719ddcfc04397"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/install.sh",
-          "sha256": "67eb564ca8b3ecccebc7a163b97c6fb5324aa6c88747c98253345201ac884fac"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/install.ps1",
-          "sha256": "32f0367fc5af57a5aeebf0a1bb793607b83c053db0b8d55f438f271fe936f615"
-        }
-      }
-    },
-    {
-      "id": "agrifootprint",
-      "name": "Agri-footprint",
-      "scope": {
-        "executable": "agrifootprint",
-        "pluginId": "agrifootprint",
-        "name": "Agri-footprint",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "agrifootprint",
             "name": "Agri-footprint",
@@ -453,70 +75,7 @@
               "Agri-footprint",
               "Agri-footprint 农业数据库"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "agrifootprint",
-        "previousPluginId": "environmental-data-agrifootprint",
-        "skillId": "agrifootprint-query",
-        "skillTitle": "Agri-footprint Data Querying",
-        "skillTitleZh": "Agri-footprint 数据查询",
-        "displayName": "Agri-footprint 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "agrifootprint",
-        "version": "0.7.5",
-        "executable": "bin/agrifootprint",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-darwin-arm64.tar.gz",
-            "sha256": "2da8dc8e4571398d5167c43820e5170634e49acdaf9b8ea0ef66a05a8d99fdee"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-darwin-x64.tar.gz",
-            "sha256": "9794c53d637dd72d3a380a4c06aaf36b85ca92649f5b3ff5ec7a214b27ce004d"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-linux-arm64.tar.gz",
-            "sha256": "537423b4ef0216cf30e48aaf06508f3c9f467adefe2761572f68ea01fca4053a"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-linux-x64.tar.gz",
-            "sha256": "82427da2bdedbbe10d92776641b586150b36e8c7c59aaf2d10e5751c0bb80ed3"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-win32-x64.tar.gz",
-            "sha256": "ff7535916d309954aa68aaff9e016e7bf022c0061dc88e6f72b1d10bb9da540d"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/checksums.txt",
-        "sha256": "11d8d3079012a42e5fe3cf33c7e45783273b11c271db426272e8ba4ed1e24e23"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/install.sh",
-          "sha256": "e147ad2baaf7810d39dc7700e3eae3dc0ba5e01bac9f1aa3989b68949ebcde34"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/install.ps1",
-          "sha256": "733053eaa636db7f0030ab2600bc86154f659c4f37b891931612c6b27b81f1d3"
-        }
-      }
-    },
-    {
-      "id": "ef",
-      "name": "EF",
-      "scope": {
-        "executable": "ef",
-        "pluginId": "ef",
-        "name": "EF",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "ef",
             "name": "EF",
@@ -525,70 +84,7 @@
               "EF",
               "欧盟环境足迹(EF)"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "ef",
-        "previousPluginId": "environmental-data-ef",
-        "skillId": "ef-query",
-        "skillTitle": "EF Data Querying",
-        "skillTitleZh": "EF 数据查询",
-        "displayName": "EF 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "ef",
-        "version": "0.7.5",
-        "executable": "bin/ef",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-darwin-arm64.tar.gz",
-            "sha256": "03afd285ec512179f50a36944126d62051accc1d53dfe04b5371880b9a3ef6e6"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-darwin-x64.tar.gz",
-            "sha256": "b95d4a6db514c2dff88af526f6a962857e228ed8267795a3aa203f907a98999c"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-linux-arm64.tar.gz",
-            "sha256": "acd6c3879412498f62dc32c14adc0cbf30e93d9d1cf7c7edd7943d6cbbc5a301"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-linux-x64.tar.gz",
-            "sha256": "e9cd2e3897701797549c410b092bc9118028b8cf0f111781345ee1ec03f61e04"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-win32-x64.tar.gz",
-            "sha256": "fcfdfa4ed77e67ac583a63a9e36cf0aa16115d834c18d9c49752fa3988417097"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/checksums.txt",
-        "sha256": "49412c5eca69a6b1825c63a4a30c06f77bd11f42b40565b4b0dc05145133c91d"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/install.sh",
-          "sha256": "5f6c8eef01e775a2f6ff445f6cf25605ec9fa4d0b0c49627ee1ed6924a3d3cf1"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/install.ps1",
-          "sha256": "fe54b9a59e19c94c69f6ed9d89b99dd95991db6f17f6c46cc2ccc1775bc18266"
-        }
-      }
-    },
-    {
-      "id": "auslci",
-      "name": "AusLCI",
-      "scope": {
-        "executable": "auslci",
-        "pluginId": "auslci",
-        "name": "AusLCI",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "auslci",
             "name": "AusLCI",
@@ -597,70 +93,7 @@
               "AusLCI",
               "澳大利亚 AusLCI"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "auslci",
-        "previousPluginId": "environmental-data-auslci",
-        "skillId": "auslci-query",
-        "skillTitle": "AusLCI Data Querying",
-        "skillTitleZh": "AusLCI 数据查询",
-        "displayName": "AusLCI 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "auslci",
-        "version": "0.7.5",
-        "executable": "bin/auslci",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-darwin-arm64.tar.gz",
-            "sha256": "612897ee4e9469198afa93c8caf9714a84cab163859109618b4e9d1606f9614a"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-darwin-x64.tar.gz",
-            "sha256": "b7c7d1d05579c5bae39f9367441cb56e2a87fb13a25b6c9404c52770b55e6f0b"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-linux-arm64.tar.gz",
-            "sha256": "4638502d92ea25fa18ab9fe67b22abac42c1eb431a102490bb7a6a5b570876a8"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-linux-x64.tar.gz",
-            "sha256": "effe996ed31c7d34652534bdb80660b9b07e666c42bbea763e9ee5f54fb58f98"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-win32-x64.tar.gz",
-            "sha256": "29f6f26cbf883d458e10a094fec157c894f9bfdb7469e53127ed9b85a97d28ec"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/checksums.txt",
-        "sha256": "0a406470e27193b0a7ce28f5239ae35302427baa5dc5b637455ca68550384410"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/install.sh",
-          "sha256": "eb400df905df91326ba012149b9be8bfc6bedf3ce13064a33ca83e9d0e991ea6"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/install.ps1",
-          "sha256": "45a08eab94a9da7e387d0c4e82ad1fa134adae0c08563641f5ebe82c1347125c"
-        }
-      }
-    },
-    {
-      "id": "bafu",
-      "name": "BAFU",
-      "scope": {
-        "executable": "bafu",
-        "pluginId": "bafu",
-        "name": "BAFU",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "bafu",
             "name": "BAFU",
@@ -669,70 +102,7 @@
               "BAFU",
               "瑞士联邦环境局(BAFU)"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "bafu",
-        "previousPluginId": "environmental-data-bafu",
-        "skillId": "bafu-query",
-        "skillTitle": "BAFU Data Querying",
-        "skillTitleZh": "BAFU 数据查询",
-        "displayName": "BAFU 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "bafu",
-        "version": "0.7.5",
-        "executable": "bin/bafu",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-darwin-arm64.tar.gz",
-            "sha256": "01654a569793d36f8dfa3d20a6f6489970c5ebcc54cbf8041dd5ac6e8ef89a0f"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-darwin-x64.tar.gz",
-            "sha256": "c78bc3256b0e08fd67548f16fdbc57898be2c15109851f1e9b933d42fa45961d"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-linux-arm64.tar.gz",
-            "sha256": "278b03c04907842c4ada6bf099547fb988a2e0fbe4a67e5faa02abf1d28cad64"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-linux-x64.tar.gz",
-            "sha256": "22cb63884c9365ea7956b477a740757392f22260b7a185a60ef1c252725ef7ff"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-win32-x64.tar.gz",
-            "sha256": "178e7435d1d1660dfd61c5fff6e6f13b5c4e3fd2abf2b9bd64578725bef958fc"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/checksums.txt",
-        "sha256": "430ae5cbe6d75a62e3ee3820fc324d8220612188ce9384bc34a230181af29197"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/install.sh",
-          "sha256": "424a74058b0e6209692e9bbe9b00235e4b791f5888615880ca4139413214f6c1"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/install.ps1",
-          "sha256": "19bc18aa867f0adfb4d5701b5c00775aee71bd11d41ebb22b2243ca258dca166"
-        }
-      }
-    },
-    {
-      "id": "bioenergiedat",
-      "name": "BioEnergieDat",
-      "scope": {
-        "executable": "bioenergiedat",
-        "pluginId": "bioenergiedat",
-        "name": "BioEnergieDat",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "bioenergiedat",
             "name": "BioEnergieDat",
@@ -741,70 +111,7 @@
               "BioEnergieDat",
               "德国生物能源数据库(BioEnergieDat)"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "bioenergiedat",
-        "previousPluginId": "environmental-data-bioenergiedat",
-        "skillId": "bioenergiedat-query",
-        "skillTitle": "BioEnergieDat Data Querying",
-        "skillTitleZh": "BioEnergieDat 数据查询",
-        "displayName": "BioEnergieDat 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "bioenergiedat",
-        "version": "0.7.5",
-        "executable": "bin/bioenergiedat",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-darwin-arm64.tar.gz",
-            "sha256": "402090d95f435cdc1e4547713546d4b0fdea57cdff224247f967f4b4d59dfc45"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-darwin-x64.tar.gz",
-            "sha256": "e215839ebc1a8228d88bf0e68e0b55fbf3a276998861c966879f7a880bfe42ea"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-linux-arm64.tar.gz",
-            "sha256": "67d0f773d8e511a9a230f82b01b57fef46a47061e362a5b593edfa0dd66d5b2d"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-linux-x64.tar.gz",
-            "sha256": "0ba922abb467ce6b48417e67eeec020e7e97cfa5159885927da5594a99d32857"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-win32-x64.tar.gz",
-            "sha256": "1d76019df57bfe72c8fdf80cbc9c2d4c3040bac238e45f3269872687a3a16d21"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/checksums.txt",
-        "sha256": "25ef0a5b71cae8365d84372406c025a79d30a96eee59df74b75844598019c14f"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/install.sh",
-          "sha256": "df13672f8272eba523e4d181688d6473356fde7d396ce2dae22cfbb89dc67463"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/install.ps1",
-          "sha256": "1f9927901c7c863c72eff995bddc526eb8a71c9a6267792d102b9a9e42b27219"
-        }
-      }
-    },
-    {
-      "id": "elcd",
-      "name": "ELCD",
-      "scope": {
-        "executable": "elcd",
-        "pluginId": "elcd",
-        "name": "ELCD",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "elcd",
             "name": "ELCD",
@@ -813,70 +120,7 @@
               "ELCD",
               "欧盟 ELCD"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "elcd",
-        "previousPluginId": "environmental-data-elcd",
-        "skillId": "elcd-query",
-        "skillTitle": "ELCD Data Querying",
-        "skillTitleZh": "ELCD 数据查询",
-        "displayName": "ELCD 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "elcd",
-        "version": "0.7.5",
-        "executable": "bin/elcd",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-darwin-arm64.tar.gz",
-            "sha256": "2d69e7f3860a5e6cb402a2db86ad49b3c2515e71e031d8a3f737953005e210e4"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-darwin-x64.tar.gz",
-            "sha256": "11be3fd9800b0c332375eb6dde684a8114617a7eb46bd10b193042b79dd09315"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-linux-arm64.tar.gz",
-            "sha256": "f2a55509d4481d5c1d5828db003078885436c45c349572d598089ac85161ccd6"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-linux-x64.tar.gz",
-            "sha256": "587fe18e2c6e50f02f2fb1f32c707e676b68d54f18a1359f96056ef6d5dc13c0"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-win32-x64.tar.gz",
-            "sha256": "cd6862abf6f0614ec857fa94aabb81e22db984bda5ef2216880443ab25c0262b"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/checksums.txt",
-        "sha256": "66fb8acfb769248412bbbc2f0b618fe2d8cfa37cee0f231b6d4da48b846d62f9"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/install.sh",
-          "sha256": "3b00172102c7b1b6d0061aabfd2c763b68907257e9fe5728a08453968e734302"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/install.ps1",
-          "sha256": "a3dab840af01d379085c7c5bb8472217d805b7e56225759c08330119d2be9112"
-        }
-      }
-    },
-    {
-      "id": "needs",
-      "name": "NEEDS",
-      "scope": {
-        "executable": "needs",
-        "pluginId": "needs",
-        "name": "NEEDS",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "needs",
             "name": "NEEDS",
@@ -885,70 +129,7 @@
               "NEEDS",
               "欧盟 NEEDS"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "needs",
-        "previousPluginId": "environmental-data-needs",
-        "skillId": "needs-query",
-        "skillTitle": "NEEDS Data Querying",
-        "skillTitleZh": "NEEDS 数据查询",
-        "displayName": "NEEDS 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "needs",
-        "version": "0.7.5",
-        "executable": "bin/needs",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-darwin-arm64.tar.gz",
-            "sha256": "30de03981755f60d43f86b091c23f32e8a22ed9c3b30af05c8ae9781ca41d15d"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-darwin-x64.tar.gz",
-            "sha256": "794e8d936fb69c3642a9eeaf63afa2533506ab9e98b07f9faf9e8ad3288881b4"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-linux-arm64.tar.gz",
-            "sha256": "d963c328c01f3229ba7ba1585c2fd2a186a61b240ff8ec7ecf843f0616516fc0"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-linux-x64.tar.gz",
-            "sha256": "1654e89c33e17b17f9b4519c5a5a3f6aef7cda21afa53300d72e9b1b15dffb78"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-win32-x64.tar.gz",
-            "sha256": "f284612dd37649c6bd605b0958410dc1ad9b4de7147c2dbed215b6a79d02743f"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/checksums.txt",
-        "sha256": "c81c8445a36596d39fe68150a3763c8a10f026e80120934d2d82f138bc49044c"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/install.sh",
-          "sha256": "38d02086c2af19ad0fc5c91052312084467147ad721b81cbbdf917c0eda7b6ed"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/install.ps1",
-          "sha256": "2e77542ccec6691b3b35df6405cce81fddff4205b7e6fd1a3d576ae56b2cf67c"
-        }
-      }
-    },
-    {
-      "id": "ozlci",
-      "name": "OzLCI",
-      "scope": {
-        "executable": "ozlci",
-        "pluginId": "ozlci",
-        "name": "OzLCI",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "ozlci",
             "name": "OzLCI",
@@ -957,70 +138,7 @@
               "OzLCI",
               "澳大利亚 OzLCI"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "ozlci",
-        "previousPluginId": "environmental-data-ozlci",
-        "skillId": "ozlci-query",
-        "skillTitle": "OzLCI Data Querying",
-        "skillTitleZh": "OzLCI 数据查询",
-        "displayName": "OzLCI 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "ozlci",
-        "version": "0.7.5",
-        "executable": "bin/ozlci",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-darwin-arm64.tar.gz",
-            "sha256": "8f6c77356e2f21458ef280926e2a365caac0a02be614e58ed50265bdcb1eb766"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-darwin-x64.tar.gz",
-            "sha256": "08a631f83a180f94c65b6657b6ae612faa416585963b7a4e75fb6d9562ad6475"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-linux-arm64.tar.gz",
-            "sha256": "4cb911e879fc56faaee16a973d8531f2ee6c546c6482be0a2006d77cbf67e613"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-linux-x64.tar.gz",
-            "sha256": "6e9c6054f04a76197824445803f14ed3e054d37a3f375f7a74f683c9f9a1d016"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-win32-x64.tar.gz",
-            "sha256": "649854a61071cc5d3caa1987926490ab4dc2bd0b7b6672a97c0211576347738e"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/checksums.txt",
-        "sha256": "dac57e7d051d2fe7c42d474b48def83ef5677b4fdd3ba5a498421cc702585bb8"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/install.sh",
-          "sha256": "816afb93ef211a789705e42c933fa0a2b80b1616a4d37dd44fe38d8ec725ce4f"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/install.ps1",
-          "sha256": "631deac3aa159b5bfd3b82ca995acc38bbc33a967fb2fd60f9da76c1dc556d40"
-        }
-      }
-    },
-    {
-      "id": "recycledplastics",
-      "name": "Recycled Plastics",
-      "scope": {
-        "executable": "recycledplastics",
-        "pluginId": "recycledplastics",
-        "name": "Recycled Plastics",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "recycledplastics",
             "name": "Recycled Plastics",
@@ -1029,70 +147,7 @@
               "Recycled Plastics",
               "再生塑料数据库"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "recycledplastics",
-        "previousPluginId": "environmental-data-recycledplastics",
-        "skillId": "recycledplastics-query",
-        "skillTitle": "Recycled Plastics Data Querying",
-        "skillTitleZh": "Recycled Plastics 数据查询",
-        "displayName": "Recycled Plastics 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "recycledplastics",
-        "version": "0.7.5",
-        "executable": "bin/recycledplastics",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-darwin-arm64.tar.gz",
-            "sha256": "56ac28dcd52781307d3d66cc0e5f9e09bff858ade69736b47c1f77feba9ffb10"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-darwin-x64.tar.gz",
-            "sha256": "948e604be230ec67899657f928ae44cba96c5217b043e4b5b7ffdb7de7dc3603"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-linux-arm64.tar.gz",
-            "sha256": "79bcf14ef1997186ae5e744fd51b3f4bc133d34569d0a88f65472b0cc6bb58fd"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-linux-x64.tar.gz",
-            "sha256": "6a9d2714ea197cd47fce68378f8d34dc1c7a0ee1fb1b062f61140f6dd0c175d7"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-win32-x64.tar.gz",
-            "sha256": "a4c83d4b6214cd628a8fb3bae9de8b8461e0d2a49fdfe32787c51d7813afceaa"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/checksums.txt",
-        "sha256": "3955292bf3a4de5491d1ef1467a411761e280cbe9506868343b5b3b75f2080fe"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/install.sh",
-          "sha256": "83b83fc750e1778da94869eb41b2418294761f3530ea766357cbcab675660b39"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/install.ps1",
-          "sha256": "fa2d522f204641f9613de80f52d0184a196ae2d5eb7c8b84be33c0a6222c56fd"
-        }
-      }
-    },
-    {
-      "id": "usda",
-      "name": "USDA Crop Data",
-      "scope": {
-        "executable": "usda",
-        "pluginId": "usda",
-        "name": "USDA Crop Data",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "usda",
             "name": "USDA Crop Data",
@@ -1101,70 +156,7 @@
               "USDA Crop Data",
               "美国农业部作物数据"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "usda",
-        "previousPluginId": "environmental-data-usda",
-        "skillId": "usda-query",
-        "skillTitle": "USDA Crop Data Querying",
-        "skillTitleZh": "USDA Crop Data 数据查询",
-        "displayName": "USDA Crop Data 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "usda",
-        "version": "0.7.5",
-        "executable": "bin/usda",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-darwin-arm64.tar.gz",
-            "sha256": "740393d2ea309b7d903138a3029139cd9ba578cb1c5eddb19d6f4c3a42e6c7c8"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-darwin-x64.tar.gz",
-            "sha256": "97fb67ad2245b46a3523691207b8a7b3e4b9a71dfa259f537dbbcea30c9d9858"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-linux-arm64.tar.gz",
-            "sha256": "18981648bede335162f1bf937e2699ab46afdaf03cd5e2123a737710dbcb0f56"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-linux-x64.tar.gz",
-            "sha256": "05638be02ea66b1edb5449d76fd3fcbc48e0b18c79cd3690d6f223ea4d48b4f7"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-win32-x64.tar.gz",
-            "sha256": "e74dc06efdd43a3d9aefb750aa7effe211a4f5410df61bea353063dc688996c9"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/checksums.txt",
-        "sha256": "7e024b21f9b8b9ad288be235a8e7e3355d96ee18691fb2e339da25f6bc48922c"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/install.sh",
-          "sha256": "9a412426c10b4ccc6ee48ffed67600b7a911789f7e46176fd0bed9836548f509"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/install.ps1",
-          "sha256": "0ba796fc5f2097c211fefa62015a3670ceb956309e74ac66a1a9ca6cb96e00e8"
-        }
-      }
-    },
-    {
-      "id": "uslci",
-      "name": "USLCI",
-      "scope": {
-        "executable": "uslci",
-        "pluginId": "uslci",
-        "name": "USLCI",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "uslci",
             "name": "USLCI",
@@ -1173,70 +165,7 @@
               "USLCI",
               "美国 USLCI"
             ]
-          }
-        ],
-        "publishers": []
-      },
-      "consumer": {
-        "pluginId": "uslci",
-        "previousPluginId": "environmental-data-uslci",
-        "skillId": "uslci-query",
-        "skillTitle": "USLCI Data Querying",
-        "skillTitleZh": "USLCI 数据查询",
-        "displayName": "USLCI 数据查询",
-        "agents": []
-      },
-      "cli": {
-        "name": "uslci",
-        "version": "0.7.5",
-        "executable": "bin/uslci",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-darwin-arm64.tar.gz",
-            "sha256": "dea8a828358fe0cd447fa9f7e50bea657eb9899569d100829216f0dd62f2a41e"
           },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-darwin-x64.tar.gz",
-            "sha256": "df09141d165f8a0524819e210e6c71bd7d52cfe632ebe56a1bd677bc26205922"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-linux-arm64.tar.gz",
-            "sha256": "9e9b0ca72de97275a0dd2d4e0425a644fa40e81736690c46a17ce6b218daa0a7"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-linux-x64.tar.gz",
-            "sha256": "52d08381fab40befdbd0f86e78ac03e72b63b120032db65d4b49b1d3f3ab4e35"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-win32-x64.tar.gz",
-            "sha256": "ca0ae4f1abbc5daf44ec5b19180a093c072580f1aa7f88b5604c271bbda6130f"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/checksums.txt",
-        "sha256": "b9e21186025e3294ae2957e480c3cd97b2e9a5f4096601381259cd2314c3c942"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/install.sh",
-          "sha256": "1c64276ee3b35d462d40c937a4acdb0ee9058256c2c09005cc8241786930263e"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/install.ps1",
-          "sha256": "9fe356fbfbdfa72a63e40f5e9c8206a86b6709e15ea186d0e0d7e05b900effc0"
-        }
-      }
-    },
-    {
-      "id": "worldsteel",
-      "name": "Worldsteel",
-      "scope": {
-        "executable": "worldsteel",
-        "pluginId": "worldsteel",
-        "name": "Worldsteel",
-        "protocol": "relic-datasets",
-        "sources": [
           {
             "code": "worldsteel",
             "name": "Worldsteel",
@@ -1250,53 +179,66 @@
         "publishers": []
       },
       "consumer": {
-        "pluginId": "worldsteel",
-        "previousPluginId": "environmental-data-worldsteel",
-        "skillId": "worldsteel-query",
-        "skillTitle": "Worldsteel Data Querying",
-        "skillTitleZh": "Worldsteel 数据查询",
-        "displayName": "Worldsteel 数据查询",
-        "agents": []
+        "pluginId": "environmental-data",
+        "previousPluginId": "environmental-data",
+        "skillId": "environmental-data-query",
+        "skillTitle": "Environmental Data Querying",
+        "skillTitleZh": "环境数据查询",
+        "displayName": "Environmental Data",
+        "agents": [
+          {
+            "id": "data-searcher",
+            "description": "查找符合需求的环境数据候选，获取必要详情，说明来源与证据缺口。"
+          },
+          {
+            "id": "data-matcher",
+            "description": "将单项或清单需求逐项匹配到可辩护的环境数据候选，保留行身份、代理与未匹配项。"
+          },
+          {
+            "id": "data-reviewer",
+            "description": "只读复核时间、地域、技术、单位、模型与证据适用性，不作审核认证。"
+          }
+        ]
       },
       "cli": {
-        "name": "worldsteel",
-        "version": "0.7.5",
-        "executable": "bin/worldsteel",
+        "name": "environmental-data",
+        "version": "0.8.3",
+        "executable": "bin/environmental-data",
         "releases": {
           "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-darwin-arm64.tar.gz",
-            "sha256": "7d7356cd5458631880c7338294ded7992b8d5c502f13b2a3afccb1b7ac9c31e4"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-darwin-arm64.tar.gz",
+            "sha256": "5b8a8ff475ba19df1c699b8be5148d909d793a99186c3bf13894d54ccca17257"
           },
           "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-darwin-x64.tar.gz",
-            "sha256": "87fc4ffdbdf7ae509ae0bc5b387eb87272ad1a959797fb615340e31d013ad6e4"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-darwin-x64.tar.gz",
+            "sha256": "ab6f2b9cc1c063e2e58c47852de0b6e04b36a76e8d45867c7cbf6c47af84347f"
           },
           "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-linux-arm64.tar.gz",
-            "sha256": "eb1a139d87ac7c4cdea9533c01b1b8e110e46b8bf956f3142a1f125037eba2a3"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-linux-arm64.tar.gz",
+            "sha256": "6f829a0111e75f8ab316cecc2e16283b9d58636977fef305e64a4cc3a3f92dbc"
           },
           "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-linux-x64.tar.gz",
-            "sha256": "cdb895978a074b82608675c11e7954fc3626dd12ab111f1d3d959f4c62a92e34"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-linux-x64.tar.gz",
+            "sha256": "feb38e9dc16c63604e7470639e1ee18e18cd79b7e6ce94e4f819442ba35f842e"
           },
           "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-win32-x64.tar.gz",
-            "sha256": "ae671526f4fa542b576e501389763caf9ce8de114c8691faec62538ef04232ea"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-win32-x64.tar.gz",
+            "sha256": "92b1129f2f84f8b316921a563edc9d36026a23366235907a48911693cfa50b17"
           }
         }
       },
       "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/checksums.txt",
-        "sha256": "596f17e77dc67ffc4664d639ffe1dee2f93dc45411476f49c3d0de7b0e648b03"
+        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/checksums.txt",
+        "sha256": "07ea8e3c9df12c549022c3e108cb6c71a66641b45b4ffb22cdf1ed7b38cbdb28"
       },
       "installers": {
         "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/install.sh",
-          "sha256": "83e040d53ed7008d7e430cba623e2d74241a7612323905a160d2d10cc1b7cdd6"
+          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/install.sh",
+          "sha256": "dc1ddc6785340ca08f78ead25010b02b8dd4db0929890830ef1d9100d073a4ad"
         },
         "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/install.ps1",
-          "sha256": "8e08282ea4f808f9f84a64e6ca65b595d04dda63931008a1f12fd86ce1174129"
+          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/install.ps1",
+          "sha256": "70e6cac1d6e938636879c52aa5ab578a490abb1f6c19c0d088bc9c3c5822b6d4"
         }
       }
     },
@@ -1317,7 +259,7 @@
       },
       "consumer": {
         "pluginId": "epd-data",
-        "previousPluginId": "environmental-data-epd",
+        "previousPluginId": "epd-data",
         "skillId": "epd-query",
         "skillTitle": "EPD Data Querying",
         "skillTitleZh": "EPD声明查询",
@@ -1326,1949 +268,213 @@
       },
       "cli": {
         "name": "epd-data",
-        "version": "0.7.5",
+        "version": "0.8.3",
         "executable": "bin/epd-data",
         "releases": {
           "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-darwin-arm64.tar.gz",
-            "sha256": "276813de11277c9fbb5260f65dd8fb378067b21a9d8068d07475764eb55e9127"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-darwin-arm64.tar.gz",
+            "sha256": "b346a213b5825e66a9d99b9e7cf9af0b9878cffe1b9d8fe1770439dbc42d8fb0"
           },
           "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-darwin-x64.tar.gz",
-            "sha256": "8e349f7ebb4fdf0d1716693fc8f6940e74873cc82bbaa42c0669a0fcd58cb8c1"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-darwin-x64.tar.gz",
+            "sha256": "daddd53d5ed2b72956df0b9e7306c44850e56d6af9d325127118e9f07b51fdde"
           },
           "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-linux-arm64.tar.gz",
-            "sha256": "86a79a081facae1669213dcc86e3170e92c0403ad48d3ad75c93eb71d74c6a3c"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-linux-arm64.tar.gz",
+            "sha256": "bf33aa510a8e32b53796d2dbf749a955fb9452e60efc3a843ce427e24b8c8002"
           },
           "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-linux-x64.tar.gz",
-            "sha256": "2b013b3280c3e2a0b754f22b361e3bff5234d1d03e76350397bd5202909b95d1"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-linux-x64.tar.gz",
+            "sha256": "554354c1bd71a23caf2a51c5f153a22ab5e6855a98e007c9f13bdb3c99c97f09"
           },
           "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-win32-x64.tar.gz",
-            "sha256": "a1b312496f3507ae523f1636ef010587ae1fc6047a0b0aadcedde29e4e8048db"
+            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-win32-x64.tar.gz",
+            "sha256": "9f67de363279a7e2412565f1370676e33eeaefbd2a6995ba610cdc2e15fc16d1"
           }
         }
       },
       "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/checksums.txt",
-        "sha256": "68cc94e32113232afa5d7c392497a2e0bf7f6e62767d8782c2f403cf8b88fdd2"
+        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/checksums.txt",
+        "sha256": "1cb7ad82c090e34a205a2777f349168a5c579ee15ffe07debb62bd78307a7385"
       },
       "installers": {
         "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/install.sh",
-          "sha256": "8aae4880b3fe8e0f9f40c3aa6efcc1e049d2d995ea17483fed586e31330d5b1d"
+          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/install.sh",
+          "sha256": "195df237b268dcabc77b5464d6923ca76ac8ab988ee65ee2bb00170a48753286"
         },
         "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/install.ps1",
-          "sha256": "c746433d4ac454d41955a6daca4e7da8d856d09623030dde057da8913a95e2ea"
-        }
-      }
-    },
-    {
-      "id": "environmental-data",
-      "name": "Environmental Data (Aggregate)",
-      "scope": {
-        "executable": "environmental-data",
-        "pluginId": "environmental-data",
-        "name": "Environmental Data (Aggregate)",
-        "protocol": "aggregate",
-        "sources": [
-          {
-            "code": "hiqlcd",
-            "name": "HiQLCD",
-            "aliases": [
-              "hiqlcd",
-              "HiQLCD",
-              "海科LCD数据库"
-            ]
-          },
-          {
-            "code": "hiqlcd-al",
-            "name": "HiQLCD-AL",
-            "aliases": [
-              "hiqlcd-al",
-              "HiQLCD-AL",
-              "海科LCD数据库(铝)"
-            ]
-          },
-          {
-            "code": "calcd",
-            "name": "CALCD",
-            "aliases": [
-              "calcd",
-              "CALCD",
-              "CALCD 数据库"
-            ]
-          },
-          {
-            "code": "hiq-cesi",
-            "name": "China Li-ion Battery Carbon Footprint Database (CESI)",
-            "aliases": [
-              "hiq-cesi",
-              "China Li-ion Battery Carbon Footprint Database (CESI)",
-              "中国锂电池碳足迹数据库"
-            ]
-          },
-          {
-            "code": "ecoinvent",
-            "name": "Ecoinvent",
-            "aliases": [
-              "ecoinvent",
-              "Ecoinvent",
-              "Ecoinvent 数据库"
-            ]
-          },
-          {
-            "code": "carbonminds",
-            "name": "CarbonMinds",
-            "aliases": [
-              "carbonminds",
-              "CarbonMinds",
-              "CarbonMinds 化学品数据库"
-            ]
-          },
-          {
-            "code": "agrifootprint",
-            "name": "Agri-footprint",
-            "aliases": [
-              "agrifootprint",
-              "Agri-footprint",
-              "Agri-footprint 农业数据库"
-            ]
-          },
-          {
-            "code": "ef",
-            "name": "EF",
-            "aliases": [
-              "ef",
-              "EF",
-              "欧盟环境足迹(EF)"
-            ]
-          },
-          {
-            "code": "auslci",
-            "name": "AusLCI",
-            "aliases": [
-              "auslci",
-              "AusLCI",
-              "澳大利亚 AusLCI"
-            ]
-          },
-          {
-            "code": "bafu",
-            "name": "BAFU",
-            "aliases": [
-              "bafu",
-              "BAFU",
-              "瑞士联邦环境局(BAFU)"
-            ]
-          },
-          {
-            "code": "bioenergiedat",
-            "name": "BioEnergieDat",
-            "aliases": [
-              "bioenergiedat",
-              "BioEnergieDat",
-              "德国生物能源数据库(BioEnergieDat)"
-            ]
-          },
-          {
-            "code": "elcd",
-            "name": "ELCD",
-            "aliases": [
-              "elcd",
-              "ELCD",
-              "欧盟 ELCD"
-            ]
-          },
-          {
-            "code": "needs",
-            "name": "NEEDS",
-            "aliases": [
-              "needs",
-              "NEEDS",
-              "欧盟 NEEDS"
-            ]
-          },
-          {
-            "code": "ozlci",
-            "name": "OzLCI",
-            "aliases": [
-              "ozlci",
-              "OzLCI",
-              "澳大利亚 OzLCI"
-            ]
-          },
-          {
-            "code": "recycledplastics",
-            "name": "Recycled Plastics",
-            "aliases": [
-              "recycledplastics",
-              "Recycled Plastics",
-              "再生塑料数据库"
-            ]
-          },
-          {
-            "code": "usda",
-            "name": "USDA Crop Data",
-            "aliases": [
-              "usda",
-              "USDA Crop Data",
-              "美国农业部作物数据"
-            ]
-          },
-          {
-            "code": "uslci",
-            "name": "USLCI",
-            "aliases": [
-              "uslci",
-              "USLCI",
-              "美国 USLCI"
-            ]
-          },
-          {
-            "code": "worldsteel",
-            "name": "Worldsteel",
-            "aliases": [
-              "worldsteel",
-              "Worldsteel",
-              "世界钢铁协会"
-            ]
-          }
-        ],
-        "publishers": [
-          "eco",
-          "epditaly",
-          "epdnorge"
-        ]
-      },
-      "consumer": {
-        "pluginId": "environmental-data",
-        "previousPluginId": "querying-lca-datasets-expert",
-        "skillId": "environmental-data-query",
-        "skillTitle": "Environmental Data Querying",
-        "skillTitleZh": "环境数据查询",
-        "displayName": "环境数据跨库查询",
-        "agents": [
-          {
-            "id": "data-searcher",
-            "description": "查找符合需求的环境数据候选，获取必要详情，说明来源与证据缺口。"
-          },
-          {
-            "id": "data-matcher",
-            "description": "将单项或清单需求逐项匹配到可辩护的环境数据候选，保留行身份、代理与未匹配项。"
-          },
-          {
-            "id": "data-reviewer",
-            "description": "只读复核时间、地域、技术、单位、模型与证据适用性，不作审核认证。"
-          }
-        ]
-      },
-      "cli": {
-        "name": "environmental-data",
-        "version": "0.7.5",
-        "executable": "bin/environmental-data",
-        "releases": {
-          "darwin-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-darwin-arm64.tar.gz",
-            "sha256": "9e36b510dd2737ecaaac8f120eaa490d734e2408aa283cce9674eace54db0113"
-          },
-          "darwin-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-darwin-x64.tar.gz",
-            "sha256": "70cdd950f4d8ae6e7d18103da725887fb63b9cc28bacc99c3b0fa704babc737f"
-          },
-          "linux-arm64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-linux-arm64.tar.gz",
-            "sha256": "a5c8831a6c0626ebb9e541fb2ac4b94b7b5a0d526061eff9ec9d35c8e2393322"
-          },
-          "linux-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-linux-x64.tar.gz",
-            "sha256": "7aa8737d29167d3f0193aaa1b01a867e8dae91b36e003cdd5b78ebf2ba55f264"
-          },
-          "win32-x64": {
-            "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-win32-x64.tar.gz",
-            "sha256": "516cc2bb4feb5df50643d8148606ad872e5b9941ea537fe97fb11b97718a681a"
-          }
-        }
-      },
-      "checksums": {
-        "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/checksums.txt",
-        "sha256": "2abfd161ae155ec335d87b05e418f8158164beef690ae2a977e594c734daa85f"
-      },
-      "installers": {
-        "sh": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/install.sh",
-          "sha256": "3864e64f9cb0e26078c1961035ea756c283e5f93820d02cab77a60a179f25893"
-        },
-        "ps1": {
-          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/install.ps1",
-          "sha256": "57825172d3f3eeb857bacf646094794f302e9652dad4d933a4380cbbb764f400"
+          "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/install.ps1",
+          "sha256": "4c9a9f4baf587c2593303dbe8d0482a5641d378d61087a08379d9f9e036cb18e"
         }
       }
     }
   ],
   "releases": [
     {
-      "name": "hiqlcd",
-      "pluginId": "hiqlcd",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "hiqlcd-darwin-arm64.tar.gz",
-      "sha256": "3210bfe8bd8ae44d8fcf02d7df6c8c87dd45f77f84e2ea6f6a4ae437e1b0cddd",
-      "bytes": 21913969,
-      "scopeSha256": "2007fec03b292f16840e03d3d485731e0fa8010dc21fef23ac7d65102c82629d",
-      "binarySha256": "6fd0f6b8be7d66898e19b91b19810c46f780de5d20ae5871786f4afa54c8f425",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "hiqlcd-al",
-      "pluginId": "hiqlcd-al",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "hiqlcd-al-darwin-arm64.tar.gz",
-      "sha256": "99f461f96599d83a57c64ab371a6789acf2363eccf18d95b076a6a5019e6d235",
-      "bytes": 21914018,
-      "scopeSha256": "900c8a4d793fc8eacdadf2a00209cda96fbefe222004d6f37472d5162d2f21b1",
-      "binarySha256": "458d71747bede94b74394cdd8bb2d551ce1e2105f8ae8dd85d1f9e4aa2dce452",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "calcd",
-      "pluginId": "calcd",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "calcd-darwin-arm64.tar.gz",
-      "sha256": "d95e9dcd4201bd022080d79c68b358729f3144a36004ba2f9de48338225424c4",
-      "bytes": 21913972,
-      "scopeSha256": "d55345b8df2a0f2656f367208d9f03901be28d2a5ba7d5a1db3044ef92076c85",
-      "binarySha256": "1ef636685ef85b2e9d006e2987d8632626f4dd060c964c3ae8dce75d5e448d58",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "cesi",
-      "pluginId": "cesi",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "cesi-darwin-arm64.tar.gz",
-      "sha256": "6dd43e45b73324b72e8797a192ca1c887cc9d757b835f7d6f38ce4efe8259ebd",
-      "bytes": 21914012,
-      "scopeSha256": "c985ab57483d3c0f664a4c21c9c007669b351c9c52a4d6f420cbe1bcb4d8d1c7",
-      "binarySha256": "0fd117f8af329384fa21e51e94f25f05b020a0fbd1589fc9fff6bd98c5b90ae6",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "ecoinvent",
-      "pluginId": "ecoinvent",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "ecoinvent-darwin-arm64.tar.gz",
-      "sha256": "a979e875b15f877b6054bf00df4c0d928a421ec486d38ac3f4db59e7b4daf958",
-      "bytes": 21914000,
-      "scopeSha256": "7681e76fbd42a84b6295a2dd4f6b6f541165a8087be3152dc012a3f6f5a63d1b",
-      "binarySha256": "e8a53b65a5d87893502e1b007ddbf2f0e0379c4db9408c38169e8e63964a45b1",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "carbonminds",
-      "pluginId": "carbonminds",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "carbonminds-darwin-arm64.tar.gz",
-      "sha256": "dfce26c286872a6daf83755b0234239368dc541a6c25129c82dd8715b0aa84c4",
-      "bytes": 21914002,
-      "scopeSha256": "9b8ded213d8ae054d7d8d2e1bea7edb8b7dd5772c146a3eaefe3e05fb9b841e1",
-      "binarySha256": "bd60ad1d890b1108f128bdd4f54fb5b59fdd78994ec5b3dbba698ee973aa000b",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "agrifootprint",
-      "pluginId": "agrifootprint",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "agrifootprint-darwin-arm64.tar.gz",
-      "sha256": "2da8dc8e4571398d5167c43820e5170634e49acdaf9b8ea0ef66a05a8d99fdee",
-      "bytes": 21914020,
-      "scopeSha256": "3fbe0d5fd5c3d6db7cc700a77ffc1d77accd4f86db614a9d8a19cf1844d312f0",
-      "binarySha256": "7ba39a370d17496e8dd4054c8749276c41a997eea7c0866cb5bbba91ec14a9ad",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "ef",
-      "pluginId": "ef",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "ef-darwin-arm64.tar.gz",
-      "sha256": "03afd285ec512179f50a36944126d62051accc1d53dfe04b5371880b9a3ef6e6",
-      "bytes": 21913989,
-      "scopeSha256": "6de3506638ecced10c4db8c9869d10913b3766bc2b38f7e0e900473257c8ea45",
-      "binarySha256": "269b19c9b2d1544a600b42ebe417c81e3a9260506a68a2e56b4e83e101bfa034",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "auslci",
-      "pluginId": "auslci",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "auslci-darwin-arm64.tar.gz",
-      "sha256": "612897ee4e9469198afa93c8caf9714a84cab163859109618b4e9d1606f9614a",
-      "bytes": 21913971,
-      "scopeSha256": "6173c03e77731976190a00dc9ad6d633bb6e1aef77ab62e596b6430a9af67c3e",
-      "binarySha256": "0bc601d0b70b7f697a8355b85375bb005711fd0be43cce98e12512f93b732398",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "bafu",
-      "pluginId": "bafu",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "bafu-darwin-arm64.tar.gz",
-      "sha256": "01654a569793d36f8dfa3d20a6f6489970c5ebcc54cbf8041dd5ac6e8ef89a0f",
-      "bytes": 21914008,
-      "scopeSha256": "ee1bf4a2fbdab02202f3abbdefaa637ed4862553c501de0eb357ec5f45455cb1",
-      "binarySha256": "495e9dba64ebdf24d010c008d2549806fc80771f5cc02196f0b8353f164e7411",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "bioenergiedat",
-      "pluginId": "bioenergiedat",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "bioenergiedat-darwin-arm64.tar.gz",
-      "sha256": "402090d95f435cdc1e4547713546d4b0fdea57cdff224247f967f4b4d59dfc45",
-      "bytes": 21914020,
-      "scopeSha256": "f9075e481fa4c4d6a08167f4393bb62c0c66e38a9625a2756b41c09bb3377bd3",
-      "binarySha256": "e14c6c165c93eb40919619b7cace97b0f47924068023a68adddc8853a8fa06d1",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "elcd",
-      "pluginId": "elcd",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "elcd-darwin-arm64.tar.gz",
-      "sha256": "2d69e7f3860a5e6cb402a2db86ad49b3c2515e71e031d8a3f737953005e210e4",
-      "bytes": 21913973,
-      "scopeSha256": "bd76ccb118ebbd90ad161acbcb4ae1ff3c12fd97086e8414873aae5ba4958e48",
-      "binarySha256": "209288fa082579cf4b2ba494eb0e9ed5421bf8c120e8086337341bc096117828",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "needs",
-      "pluginId": "needs",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "needs-darwin-arm64.tar.gz",
-      "sha256": "30de03981755f60d43f86b091c23f32e8a22ed9c3b30af05c8ae9781ca41d15d",
-      "bytes": 21913961,
-      "scopeSha256": "8ba4c9969f850b0694d294e2dfd072ab683e129179b17d0230ae96faf0b2b5d6",
-      "binarySha256": "93d32e82f7ff795c857c7e1c29276092c24bd2f6cca8fc46c2aee476cfcb4014",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "ozlci",
-      "pluginId": "ozlci",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "ozlci-darwin-arm64.tar.gz",
-      "sha256": "8f6c77356e2f21458ef280926e2a365caac0a02be614e58ed50265bdcb1eb766",
-      "bytes": 21913962,
-      "scopeSha256": "f2a705678f2f7b490ed87a21ac0338c805c772660595f171de1c8c4cd952b279",
-      "binarySha256": "f8b66a58f114bb5273452706e67bd3fea145cad28d66765329488def4c35f045",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "recycledplastics",
-      "pluginId": "recycledplastics",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "recycledplastics-darwin-arm64.tar.gz",
-      "sha256": "56ac28dcd52781307d3d66cc0e5f9e09bff858ade69736b47c1f77feba9ffb10",
-      "bytes": 21914042,
-      "scopeSha256": "5acc32c195e820c6337c815d04d407e30462713cfd046405021e6185e2a9e72d",
-      "binarySha256": "55a48c9e6ab689854913fc3ad7fb52edbac0ed9cfb0438e003f298be373f66d2",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "usda",
-      "pluginId": "usda",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "usda-darwin-arm64.tar.gz",
-      "sha256": "740393d2ea309b7d903138a3029139cd9ba578cb1c5eddb19d6f4c3a42e6c7c8",
-      "bytes": 21914021,
-      "scopeSha256": "e8f8e7fa3f3515234345a2e8685e0092dc52cce6ec437f12d14667a5fe557b1c",
-      "binarySha256": "219e64005d5b3febb6857278c8e61e53332599d93246f77b000218126fcb5dc9",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "uslci",
-      "pluginId": "uslci",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "uslci-darwin-arm64.tar.gz",
-      "sha256": "dea8a828358fe0cd447fa9f7e50bea657eb9899569d100829216f0dd62f2a41e",
-      "bytes": 21913975,
-      "scopeSha256": "9a8dc226ae0b3b2f3a4ec8d60b8e903f083ed0e0e4ac4637aff5e39cd4f6e0ba",
-      "binarySha256": "fc7482dfa2871ff28945c477bf43b21f6b33207351d2e5da59d78e8d43356b68",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "worldsteel",
-      "pluginId": "worldsteel",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "worldsteel-darwin-arm64.tar.gz",
-      "sha256": "7d7356cd5458631880c7338294ded7992b8d5c502f13b2a3afccb1b7ac9c31e4",
-      "bytes": 21913985,
-      "scopeSha256": "adb3303b3a86ab3ecfca9eb2b7aaf514e5676b12ee80b1f973fe506bf753a0cc",
-      "binarySha256": "1d63c4f55449755f2eff8fc0169d3e86b6c1181d13e5186bb259023af89d2ea5",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "epd-data",
-      "pluginId": "epd-data",
-      "version": "0.7.5",
-      "platform": "darwin-arm64",
-      "archive": "epd-data-darwin-arm64.tar.gz",
-      "sha256": "276813de11277c9fbb5260f65dd8fb378067b21a9d8068d07475764eb55e9127",
-      "bytes": 21913961,
-      "scopeSha256": "3e73529ad8fa2ac39d340b8c5777e906c226a977e6403762828a7353111efcde",
-      "binarySha256": "cde4231fa29fcc48c71c1855bce66c25d1c9c1f88ca96e454141447c11740598",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-darwin-arm64.tar.gz"
-    },
-    {
       "name": "environmental-data",
       "pluginId": "environmental-data",
-      "version": "0.7.5",
+      "version": "0.8.3",
       "platform": "darwin-arm64",
       "archive": "environmental-data-darwin-arm64.tar.gz",
-      "sha256": "9e36b510dd2737ecaaac8f120eaa490d734e2408aa283cce9674eace54db0113",
-      "bytes": 21914386,
-      "scopeSha256": "c083eb632cb678e13e0351c0f26b933621b79a08d85b3e887e43769f230f43c6",
-      "binarySha256": "ce7a3ade8842079b27f7186f8544a3ce277ba67ee54637a3cda79032dfe154c9",
+      "sha256": "5b8a8ff475ba19df1c699b8be5148d909d793a99186c3bf13894d54ccca17257",
+      "bytes": 21914496,
+      "scopeSha256": "c564043ac64058b01929e658c73c7c6e959af581d23e603ef04e2599e3c6ce1a",
+      "binarySha256": "7418df9f42ef8e7cf769248af04ade56e2298c9aea8a1d5e1a849a2bf45b53d6",
       "signing": {
         "status": "developer-id-notarized",
         "notarization": {
-          "id": "37c3460b-28ee-403b-92d9-f1f4e68c6b48",
+          "id": "7f25eafd-541f-4fee-900b-682de45dde57",
           "status": "Accepted"
         }
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-darwin-arm64.tar.gz"
-    },
-    {
-      "name": "hiqlcd",
-      "pluginId": "hiqlcd",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "hiqlcd-darwin-x64.tar.gz",
-      "sha256": "74b1cb774b1b432a43735f7e5043db99f2afe29252240ac06b14f9a35e1672bd",
-      "bytes": 24802162,
-      "scopeSha256": "2007fec03b292f16840e03d3d485731e0fa8010dc21fef23ac7d65102c82629d",
-      "binarySha256": "850cdcaff728151e5e08f73b9ff0b162e9d117cc5cb3aa97f6293210da857dfe",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-darwin-x64.tar.gz"
-    },
-    {
-      "name": "hiqlcd-al",
-      "pluginId": "hiqlcd-al",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "hiqlcd-al-darwin-x64.tar.gz",
-      "sha256": "a56f94f8cd5bc6b736b13a5f60e647f3ef38aeb20e2f2c5a486abbac48cbfaef",
-      "bytes": 24802204,
-      "scopeSha256": "900c8a4d793fc8eacdadf2a00209cda96fbefe222004d6f37472d5162d2f21b1",
-      "binarySha256": "5c96fc0245be4ea647ea55b6d5f9ee240a8ac75e60e6844953bb50ea4371a2f6",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-darwin-x64.tar.gz"
-    },
-    {
-      "name": "calcd",
-      "pluginId": "calcd",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "calcd-darwin-x64.tar.gz",
-      "sha256": "b5a0eee97dcc0e685619ddda77ceeecb9e13d8a5a298a6b30c4f15a5da2b0e09",
-      "bytes": 24802144,
-      "scopeSha256": "d55345b8df2a0f2656f367208d9f03901be28d2a5ba7d5a1db3044ef92076c85",
-      "binarySha256": "4be08d4f4d863b8703a883620acb8bc096bf029158345a17003fb41b0f2c4f97",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-darwin-x64.tar.gz"
-    },
-    {
-      "name": "cesi",
-      "pluginId": "cesi",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "cesi-darwin-x64.tar.gz",
-      "sha256": "ede8ab51f27822a6d66c3764d514c15b00ff9bd23a7fcf4cde9626f433afc8f4",
-      "bytes": 24802306,
-      "scopeSha256": "c985ab57483d3c0f664a4c21c9c007669b351c9c52a4d6f420cbe1bcb4d8d1c7",
-      "binarySha256": "6c21ed537aba76d1703e3dfcf55b29c4deb03fd36045b01c2ba9e98f0d2f2ed3",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-darwin-x64.tar.gz"
-    },
-    {
-      "name": "ecoinvent",
-      "pluginId": "ecoinvent",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "ecoinvent-darwin-x64.tar.gz",
-      "sha256": "94ab742ae95bc06c248dd920d7560efa82c2a39d4503d1cb4611c3c15d769c79",
-      "bytes": 24802153,
-      "scopeSha256": "7681e76fbd42a84b6295a2dd4f6b6f541165a8087be3152dc012a3f6f5a63d1b",
-      "binarySha256": "91bd12681797dad43f4dcb8866a3851cbb23916d950bb08c21dfdb7951355975",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-darwin-x64.tar.gz"
-    },
-    {
-      "name": "carbonminds",
-      "pluginId": "carbonminds",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "carbonminds-darwin-x64.tar.gz",
-      "sha256": "30a80a49439a29da7b32a037b410cef30f4c6c33ff6bbbb6b4303340b778b30d",
-      "bytes": 24802210,
-      "scopeSha256": "9b8ded213d8ae054d7d8d2e1bea7edb8b7dd5772c146a3eaefe3e05fb9b841e1",
-      "binarySha256": "d9d638a93b9175b2a1f12eb0a721e3789a75c5ca88cb7330d2d45c7617ab940c",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-darwin-x64.tar.gz"
-    },
-    {
-      "name": "agrifootprint",
-      "pluginId": "agrifootprint",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "agrifootprint-darwin-x64.tar.gz",
-      "sha256": "9794c53d637dd72d3a380a4c06aaf36b85ca92649f5b3ff5ec7a214b27ce004d",
-      "bytes": 24802174,
-      "scopeSha256": "3fbe0d5fd5c3d6db7cc700a77ffc1d77accd4f86db614a9d8a19cf1844d312f0",
-      "binarySha256": "54d82105d7773734c4c5c2f530813f92356a74719985695c4422f699b7febd52",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-darwin-x64.tar.gz"
-    },
-    {
-      "name": "ef",
-      "pluginId": "ef",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "ef-darwin-x64.tar.gz",
-      "sha256": "b95d4a6db514c2dff88af526f6a962857e228ed8267795a3aa203f907a98999c",
-      "bytes": 24802143,
-      "scopeSha256": "6de3506638ecced10c4db8c9869d10913b3766bc2b38f7e0e900473257c8ea45",
-      "binarySha256": "70546c45295a99544ae467b0f5ddf8d2ae460660e97fda35180d2d279b0b6950",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-darwin-x64.tar.gz"
-    },
-    {
-      "name": "auslci",
-      "pluginId": "auslci",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "auslci-darwin-x64.tar.gz",
-      "sha256": "b7c7d1d05579c5bae39f9367441cb56e2a87fb13a25b6c9404c52770b55e6f0b",
-      "bytes": 24802141,
-      "scopeSha256": "6173c03e77731976190a00dc9ad6d633bb6e1aef77ab62e596b6430a9af67c3e",
-      "binarySha256": "0704e5b50a10b9cbc614a1b5dbaf52a2628b167304d93c5c7bbf1b8e5a808236",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-darwin-x64.tar.gz"
-    },
-    {
-      "name": "bafu",
-      "pluginId": "bafu",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "bafu-darwin-x64.tar.gz",
-      "sha256": "c78bc3256b0e08fd67548f16fdbc57898be2c15109851f1e9b933d42fa45961d",
-      "bytes": 24802141,
-      "scopeSha256": "ee1bf4a2fbdab02202f3abbdefaa637ed4862553c501de0eb357ec5f45455cb1",
-      "binarySha256": "781f703e6d601f4c362077adb5dc782d36da96657b70a9c53731d9895f5d14cc",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-darwin-x64.tar.gz"
-    },
-    {
-      "name": "bioenergiedat",
-      "pluginId": "bioenergiedat",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "bioenergiedat-darwin-x64.tar.gz",
-      "sha256": "e215839ebc1a8228d88bf0e68e0b55fbf3a276998861c966879f7a880bfe42ea",
-      "bytes": 24802216,
-      "scopeSha256": "f9075e481fa4c4d6a08167f4393bb62c0c66e38a9625a2756b41c09bb3377bd3",
-      "binarySha256": "c0c1ed4ef7f9b85b3405c97110a1e82240a9f0cbf6a0a741385336a2e77d748b",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-darwin-x64.tar.gz"
-    },
-    {
-      "name": "elcd",
-      "pluginId": "elcd",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "elcd-darwin-x64.tar.gz",
-      "sha256": "11be3fd9800b0c332375eb6dde684a8114617a7eb46bd10b193042b79dd09315",
-      "bytes": 24802137,
-      "scopeSha256": "bd76ccb118ebbd90ad161acbcb4ae1ff3c12fd97086e8414873aae5ba4958e48",
-      "binarySha256": "2185f70eadb8f8fd55b226b909758bf8979472cc89c021505169a038ebf8e0fe",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-darwin-x64.tar.gz"
-    },
-    {
-      "name": "needs",
-      "pluginId": "needs",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "needs-darwin-x64.tar.gz",
-      "sha256": "794e8d936fb69c3642a9eeaf63afa2533506ab9e98b07f9faf9e8ad3288881b4",
-      "bytes": 24802125,
-      "scopeSha256": "8ba4c9969f850b0694d294e2dfd072ab683e129179b17d0230ae96faf0b2b5d6",
-      "binarySha256": "e4ee37aa8556ab7847fc77d33fb76154adce5d55ede4a29bd479f2b2e788f338",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-darwin-x64.tar.gz"
-    },
-    {
-      "name": "ozlci",
-      "pluginId": "ozlci",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "ozlci-darwin-x64.tar.gz",
-      "sha256": "08a631f83a180f94c65b6657b6ae612faa416585963b7a4e75fb6d9562ad6475",
-      "bytes": 24802146,
-      "scopeSha256": "f2a705678f2f7b490ed87a21ac0338c805c772660595f171de1c8c4cd952b279",
-      "binarySha256": "3b6078d2831a9d937f84205e6233be6567a37fdbc9bfae38efccd25b2beac297",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-darwin-x64.tar.gz"
-    },
-    {
-      "name": "recycledplastics",
-      "pluginId": "recycledplastics",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "recycledplastics-darwin-x64.tar.gz",
-      "sha256": "948e604be230ec67899657f928ae44cba96c5217b043e4b5b7ffdb7de7dc3603",
-      "bytes": 24802206,
-      "scopeSha256": "5acc32c195e820c6337c815d04d407e30462713cfd046405021e6185e2a9e72d",
-      "binarySha256": "d9618d0c779c50916861351e55501d717bda79018f1817c8f361748595274411",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-darwin-x64.tar.gz"
-    },
-    {
-      "name": "usda",
-      "pluginId": "usda",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "usda-darwin-x64.tar.gz",
-      "sha256": "97fb67ad2245b46a3523691207b8a7b3e4b9a71dfa259f537dbbcea30c9d9858",
-      "bytes": 24802165,
-      "scopeSha256": "e8f8e7fa3f3515234345a2e8685e0092dc52cce6ec437f12d14667a5fe557b1c",
-      "binarySha256": "79ad64a66d80ee1316216adf00a77b12dae362892c3e9e990480b90490f7a9fb",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-darwin-x64.tar.gz"
-    },
-    {
-      "name": "uslci",
-      "pluginId": "uslci",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "uslci-darwin-x64.tar.gz",
-      "sha256": "df09141d165f8a0524819e210e6c71bd7d52cfe632ebe56a1bd677bc26205922",
-      "bytes": 24802124,
-      "scopeSha256": "9a8dc226ae0b3b2f3a4ec8d60b8e903f083ed0e0e4ac4637aff5e39cd4f6e0ba",
-      "binarySha256": "0517a84566f697edec6034fe9cdc5249879aa2c24e4ac28e8cf6542718b46d6d",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-darwin-x64.tar.gz"
-    },
-    {
-      "name": "worldsteel",
-      "pluginId": "worldsteel",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "worldsteel-darwin-x64.tar.gz",
-      "sha256": "87fc4ffdbdf7ae509ae0bc5b387eb87272ad1a959797fb615340e31d013ad6e4",
-      "bytes": 24802200,
-      "scopeSha256": "adb3303b3a86ab3ecfca9eb2b7aaf514e5676b12ee80b1f973fe506bf753a0cc",
-      "binarySha256": "7a6342616c31d775580f1ded9b800ae2a37f2d565f97026ed2cab7dfc9abc3fe",
-      "signing": {
-        "status": "developer-id-notarized",
-        "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
-          "status": "Accepted"
-        }
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-darwin-x64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-darwin-arm64.tar.gz"
     },
     {
       "name": "epd-data",
       "pluginId": "epd-data",
-      "version": "0.7.5",
-      "platform": "darwin-x64",
-      "archive": "epd-data-darwin-x64.tar.gz",
-      "sha256": "8e349f7ebb4fdf0d1716693fc8f6940e74873cc82bbaa42c0669a0fcd58cb8c1",
-      "bytes": 24802087,
+      "version": "0.8.3",
+      "platform": "darwin-arm64",
+      "archive": "epd-data-darwin-arm64.tar.gz",
+      "sha256": "b346a213b5825e66a9d99b9e7cf9af0b9878cffe1b9d8fe1770439dbc42d8fb0",
+      "bytes": 21913947,
       "scopeSha256": "3e73529ad8fa2ac39d340b8c5777e906c226a977e6403762828a7353111efcde",
-      "binarySha256": "e6a1743a311705801d51ffbe20b4b438459034673cad398228410fff4d8c2330",
+      "binarySha256": "5847f5a6e1262bfcc66a14af24bc51df20f35e6c2be78a733b16df6fcfb29c7e",
       "signing": {
         "status": "developer-id-notarized",
         "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
+          "id": "7f25eafd-541f-4fee-900b-682de45dde57",
           "status": "Accepted"
         }
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-darwin-x64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-darwin-arm64.tar.gz"
     },
     {
       "name": "environmental-data",
       "pluginId": "environmental-data",
-      "version": "0.7.5",
+      "version": "0.8.3",
       "platform": "darwin-x64",
       "archive": "environmental-data-darwin-x64.tar.gz",
-      "sha256": "70cdd950f4d8ae6e7d18103da725887fb63b9cc28bacc99c3b0fa704babc737f",
-      "bytes": 24804972,
-      "scopeSha256": "c083eb632cb678e13e0351c0f26b933621b79a08d85b3e887e43769f230f43c6",
-      "binarySha256": "4001badb5de9bb45d1578f2b782daf105c6c526b9522ee08824b50f0b546b9c2",
+      "sha256": "ab6f2b9cc1c063e2e58c47852de0b6e04b36a76e8d45867c7cbf6c47af84347f",
+      "bytes": 24804824,
+      "scopeSha256": "c564043ac64058b01929e658c73c7c6e959af581d23e603ef04e2599e3c6ce1a",
+      "binarySha256": "6b05fda36c7668e5d3538278e8128a20c884540332584acf25642b99d7710df0",
       "signing": {
         "status": "developer-id-notarized",
         "notarization": {
-          "id": "43b8dfc9-f8b7-47f0-a062-549c2e9589e0",
+          "id": "2db55261-e482-48e2-bd41-537dff4e83e1",
           "status": "Accepted"
         }
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-darwin-x64.tar.gz"
-    },
-    {
-      "name": "hiqlcd",
-      "pluginId": "hiqlcd",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "hiqlcd-linux-arm64.tar.gz",
-      "sha256": "007d4a139cc111773b67d33cff043f1204c8a350cc4f26f2a5c20880c06753ba",
-      "bytes": 37892583,
-      "scopeSha256": "2007fec03b292f16840e03d3d485731e0fa8010dc21fef23ac7d65102c82629d",
-      "binarySha256": "61a1fcfc09a5fedbd9ae01e2d52523dc4ff27cd228c6b0ebd453dbe76aa6db99",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-linux-arm64.tar.gz"
-    },
-    {
-      "name": "hiqlcd-al",
-      "pluginId": "hiqlcd-al",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "hiqlcd-al-linux-arm64.tar.gz",
-      "sha256": "d9c7ae4ecf98d977e5e3e3c7af3aa624e1b3b4fd3a94a744af8a638d3c18158d",
-      "bytes": 37892650,
-      "scopeSha256": "900c8a4d793fc8eacdadf2a00209cda96fbefe222004d6f37472d5162d2f21b1",
-      "binarySha256": "b4674b101bfef52fbb15977e1be2a4582c71013e414e58bbf909058f6edec86b",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-linux-arm64.tar.gz"
-    },
-    {
-      "name": "calcd",
-      "pluginId": "calcd",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "calcd-linux-arm64.tar.gz",
-      "sha256": "eca424da29c9fdcf67ed56b72b2f16a794f935775e4ae44e0bf73a31cdb9414f",
-      "bytes": 37892548,
-      "scopeSha256": "d55345b8df2a0f2656f367208d9f03901be28d2a5ba7d5a1db3044ef92076c85",
-      "binarySha256": "b9d62ab80e97232b0ff84b63588251a0538a8b44966ab6debe39b9705b1925e8",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-linux-arm64.tar.gz"
-    },
-    {
-      "name": "cesi",
-      "pluginId": "cesi",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "cesi-linux-arm64.tar.gz",
-      "sha256": "3fea3cb36c66f5637dc187389e6a4ac7806961b872d199137c0e54cba7f46fe6",
-      "bytes": 37892914,
-      "scopeSha256": "c985ab57483d3c0f664a4c21c9c007669b351c9c52a4d6f420cbe1bcb4d8d1c7",
-      "binarySha256": "9fe9d95eb52a5ab33010d0c6f681823d0d6350f4d11ea16ff62d2f655520729d",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-linux-arm64.tar.gz"
-    },
-    {
-      "name": "ecoinvent",
-      "pluginId": "ecoinvent",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "ecoinvent-linux-arm64.tar.gz",
-      "sha256": "a8f906e440a5e370525fcc9521946888c067913bdbcfcc6ef3a4307400881fbc",
-      "bytes": 37892602,
-      "scopeSha256": "7681e76fbd42a84b6295a2dd4f6b6f541165a8087be3152dc012a3f6f5a63d1b",
-      "binarySha256": "f3a2aa27e3e8a736b7afa610226e34cd8a8fae0365da18f6c67b288d2797b2f5",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-linux-arm64.tar.gz"
-    },
-    {
-      "name": "carbonminds",
-      "pluginId": "carbonminds",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "carbonminds-linux-arm64.tar.gz",
-      "sha256": "b9b750e01f00c33c237a1cc141959640558c43512d1cf0ffd8103c8b3aeea0c0",
-      "bytes": 37892588,
-      "scopeSha256": "9b8ded213d8ae054d7d8d2e1bea7edb8b7dd5772c146a3eaefe3e05fb9b841e1",
-      "binarySha256": "2f4339b454bb5d9e0c87a28d29c82c8c74ae0b1e4ca9b0736d00462bca2cae28",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-linux-arm64.tar.gz"
-    },
-    {
-      "name": "agrifootprint",
-      "pluginId": "agrifootprint",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "agrifootprint-linux-arm64.tar.gz",
-      "sha256": "537423b4ef0216cf30e48aaf06508f3c9f467adefe2761572f68ea01fca4053a",
-      "bytes": 37892736,
-      "scopeSha256": "3fbe0d5fd5c3d6db7cc700a77ffc1d77accd4f86db614a9d8a19cf1844d312f0",
-      "binarySha256": "8653bf20b4edca9c256552979e25489cf67ca3dc592572b1976264a85b7d5fca",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-linux-arm64.tar.gz"
-    },
-    {
-      "name": "ef",
-      "pluginId": "ef",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "ef-linux-arm64.tar.gz",
-      "sha256": "acd6c3879412498f62dc32c14adc0cbf30e93d9d1cf7c7edd7943d6cbbc5a301",
-      "bytes": 37892688,
-      "scopeSha256": "6de3506638ecced10c4db8c9869d10913b3766bc2b38f7e0e900473257c8ea45",
-      "binarySha256": "e5bde570a7a4af97ed378991817b88fee3350d480c5be386874e0a1eb0a88b51",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-linux-arm64.tar.gz"
-    },
-    {
-      "name": "auslci",
-      "pluginId": "auslci",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "auslci-linux-arm64.tar.gz",
-      "sha256": "4638502d92ea25fa18ab9fe67b22abac42c1eb431a102490bb7a6a5b570876a8",
-      "bytes": 37892769,
-      "scopeSha256": "6173c03e77731976190a00dc9ad6d633bb6e1aef77ab62e596b6430a9af67c3e",
-      "binarySha256": "5a02635a834f6ca2f1be0dbc7b2c8564a2eba1fe327fed84f4d1336019bd2327",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-linux-arm64.tar.gz"
-    },
-    {
-      "name": "bafu",
-      "pluginId": "bafu",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "bafu-linux-arm64.tar.gz",
-      "sha256": "278b03c04907842c4ada6bf099547fb988a2e0fbe4a67e5faa02abf1d28cad64",
-      "bytes": 37892801,
-      "scopeSha256": "ee1bf4a2fbdab02202f3abbdefaa637ed4862553c501de0eb357ec5f45455cb1",
-      "binarySha256": "518ae2ee0a0d7ac6ffd74c2259f72ae5580d40dde955e30d151d42d849df42c0",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-linux-arm64.tar.gz"
-    },
-    {
-      "name": "bioenergiedat",
-      "pluginId": "bioenergiedat",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "bioenergiedat-linux-arm64.tar.gz",
-      "sha256": "67d0f773d8e511a9a230f82b01b57fef46a47061e362a5b593edfa0dd66d5b2d",
-      "bytes": 37892750,
-      "scopeSha256": "f9075e481fa4c4d6a08167f4393bb62c0c66e38a9625a2756b41c09bb3377bd3",
-      "binarySha256": "f1a5219a8544086721447bbc8b831c37381b9fa5f354d67afaa9cbdf5b62956c",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-linux-arm64.tar.gz"
-    },
-    {
-      "name": "elcd",
-      "pluginId": "elcd",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "elcd-linux-arm64.tar.gz",
-      "sha256": "f2a55509d4481d5c1d5828db003078885436c45c349572d598089ac85161ccd6",
-      "bytes": 37892957,
-      "scopeSha256": "bd76ccb118ebbd90ad161acbcb4ae1ff3c12fd97086e8414873aae5ba4958e48",
-      "binarySha256": "585f5d13b63f3dfdf27b2249fbe2cd4d0e2479ffcf18401960479298d13dde34",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-linux-arm64.tar.gz"
-    },
-    {
-      "name": "needs",
-      "pluginId": "needs",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "needs-linux-arm64.tar.gz",
-      "sha256": "d963c328c01f3229ba7ba1585c2fd2a186a61b240ff8ec7ecf843f0616516fc0",
-      "bytes": 37892545,
-      "scopeSha256": "8ba4c9969f850b0694d294e2dfd072ab683e129179b17d0230ae96faf0b2b5d6",
-      "binarySha256": "423bbda28b7addff42229e623f45cc506a4cb239c29d406108a9734925507dd6",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-linux-arm64.tar.gz"
-    },
-    {
-      "name": "ozlci",
-      "pluginId": "ozlci",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "ozlci-linux-arm64.tar.gz",
-      "sha256": "4cb911e879fc56faaee16a973d8531f2ee6c546c6482be0a2006d77cbf67e613",
-      "bytes": 37892570,
-      "scopeSha256": "f2a705678f2f7b490ed87a21ac0338c805c772660595f171de1c8c4cd952b279",
-      "binarySha256": "5a953c439f7a1d015e8373e7ac8a7a915a3b2f2e5f2e850f721155c3ebbc72bc",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-linux-arm64.tar.gz"
-    },
-    {
-      "name": "recycledplastics",
-      "pluginId": "recycledplastics",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "recycledplastics-linux-arm64.tar.gz",
-      "sha256": "79bcf14ef1997186ae5e744fd51b3f4bc133d34569d0a88f65472b0cc6bb58fd",
-      "bytes": 37892713,
-      "scopeSha256": "5acc32c195e820c6337c815d04d407e30462713cfd046405021e6185e2a9e72d",
-      "binarySha256": "8ac5478560ee28a67ea42c6240184d147bb3e878045cd3a9e246d4fe9349d3ab",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-linux-arm64.tar.gz"
-    },
-    {
-      "name": "usda",
-      "pluginId": "usda",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "usda-linux-arm64.tar.gz",
-      "sha256": "18981648bede335162f1bf937e2699ab46afdaf03cd5e2123a737710dbcb0f56",
-      "bytes": 37892588,
-      "scopeSha256": "e8f8e7fa3f3515234345a2e8685e0092dc52cce6ec437f12d14667a5fe557b1c",
-      "binarySha256": "78753a2c76d4943d4bcdfd453d71d21ef8093898b5dc8707fb8bf7b5cd187999",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-linux-arm64.tar.gz"
-    },
-    {
-      "name": "uslci",
-      "pluginId": "uslci",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "uslci-linux-arm64.tar.gz",
-      "sha256": "9e9b0ca72de97275a0dd2d4e0425a644fa40e81736690c46a17ce6b218daa0a7",
-      "bytes": 37892552,
-      "scopeSha256": "9a8dc226ae0b3b2f3a4ec8d60b8e903f083ed0e0e4ac4637aff5e39cd4f6e0ba",
-      "binarySha256": "ba13cdf4cfcdadb3529314eaf270e632caeb8173343ce2823fc2c3549c119272",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-linux-arm64.tar.gz"
-    },
-    {
-      "name": "worldsteel",
-      "pluginId": "worldsteel",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "worldsteel-linux-arm64.tar.gz",
-      "sha256": "eb1a139d87ac7c4cdea9533c01b1b8e110e46b8bf956f3142a1f125037eba2a3",
-      "bytes": 37892570,
-      "scopeSha256": "adb3303b3a86ab3ecfca9eb2b7aaf514e5676b12ee80b1f973fe506bf753a0cc",
-      "binarySha256": "64795dbc3002a5a0a7c741fbb6f61e2c2380bbc0b517870e5efdb953852a38b3",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-linux-arm64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-darwin-x64.tar.gz"
     },
     {
       "name": "epd-data",
       "pluginId": "epd-data",
-      "version": "0.7.5",
-      "platform": "linux-arm64",
-      "archive": "epd-data-linux-arm64.tar.gz",
-      "sha256": "86a79a081facae1669213dcc86e3170e92c0403ad48d3ad75c93eb71d74c6a3c",
-      "bytes": 37892502,
+      "version": "0.8.3",
+      "platform": "darwin-x64",
+      "archive": "epd-data-darwin-x64.tar.gz",
+      "sha256": "daddd53d5ed2b72956df0b9e7306c44850e56d6af9d325127118e9f07b51fdde",
+      "bytes": 24802105,
       "scopeSha256": "3e73529ad8fa2ac39d340b8c5777e906c226a977e6403762828a7353111efcde",
-      "binarySha256": "ef47d976bd2cda09378b4240ba1503ec306619cc23d3ad8f36a6a4ded3049184",
+      "binarySha256": "646373fbca476d5330520d6870182f766d6bcbcfb16aaf49fbba7bceaa1eb99b",
       "signing": {
-        "status": "not-applicable"
+        "status": "developer-id-notarized",
+        "notarization": {
+          "id": "2db55261-e482-48e2-bd41-537dff4e83e1",
+          "status": "Accepted"
+        }
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-linux-arm64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-darwin-x64.tar.gz"
     },
     {
       "name": "environmental-data",
       "pluginId": "environmental-data",
-      "version": "0.7.5",
+      "version": "0.8.3",
       "platform": "linux-arm64",
       "archive": "environmental-data-linux-arm64.tar.gz",
-      "sha256": "a5c8831a6c0626ebb9e541fb2ac4b94b7b5a0d526061eff9ec9d35c8e2393322",
-      "bytes": 37894375,
-      "scopeSha256": "c083eb632cb678e13e0351c0f26b933621b79a08d85b3e887e43769f230f43c6",
-      "binarySha256": "4397f69287cdb98aa31c84fce95eec6c7050a517dd93b090e270f4640c0691b0",
+      "sha256": "6f829a0111e75f8ab316cecc2e16283b9d58636977fef305e64a4cc3a3f92dbc",
+      "bytes": 37894241,
+      "scopeSha256": "c564043ac64058b01929e658c73c7c6e959af581d23e603ef04e2599e3c6ce1a",
+      "binarySha256": "3380791d1490add3a0eda6c71fc26afc4c7507484fbc3ff66156c72252c76f54",
       "signing": {
         "status": "not-applicable"
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-linux-arm64.tar.gz"
-    },
-    {
-      "name": "hiqlcd",
-      "pluginId": "hiqlcd",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "hiqlcd-linux-x64.tar.gz",
-      "sha256": "8e3bbc96b506822b53302298d5274c3343c6a0015794be34136e9a3898cebff7",
-      "bytes": 39352870,
-      "scopeSha256": "2007fec03b292f16840e03d3d485731e0fa8010dc21fef23ac7d65102c82629d",
-      "binarySha256": "96070b3895d5002f36b6b81e1d827aa2d21af775ee00b9f0521bc797ba50244b",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-linux-x64.tar.gz"
-    },
-    {
-      "name": "hiqlcd-al",
-      "pluginId": "hiqlcd-al",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "hiqlcd-al-linux-x64.tar.gz",
-      "sha256": "fc1c86683e6ff1eab9b18000bf9bef5896e1f6d0ba9841c5ed5e740a2f5f89c9",
-      "bytes": 39352974,
-      "scopeSha256": "900c8a4d793fc8eacdadf2a00209cda96fbefe222004d6f37472d5162d2f21b1",
-      "binarySha256": "c271759b51348fed7b42878ed5edf718ba8d3e2ec9e21b8b921b0ed2f45ca506",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-linux-x64.tar.gz"
-    },
-    {
-      "name": "calcd",
-      "pluginId": "calcd",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "calcd-linux-x64.tar.gz",
-      "sha256": "92abd10857007b6bb196751bc6d41801ff78ab6c1a424be48438b0d3db1167ca",
-      "bytes": 39352880,
-      "scopeSha256": "d55345b8df2a0f2656f367208d9f03901be28d2a5ba7d5a1db3044ef92076c85",
-      "binarySha256": "4aaafc45e438a62591fcf39df04f6ebde53d1d0895be626fe2bfb6c6188f9ccd",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-linux-x64.tar.gz"
-    },
-    {
-      "name": "cesi",
-      "pluginId": "cesi",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "cesi-linux-x64.tar.gz",
-      "sha256": "c44dc399abf6500f7ead7101c7a765a09120d7dd5e4c21d042e7f1ef82570bdf",
-      "bytes": 39353193,
-      "scopeSha256": "c985ab57483d3c0f664a4c21c9c007669b351c9c52a4d6f420cbe1bcb4d8d1c7",
-      "binarySha256": "814eed12711b05fe10bda84da9e0882ee9c5a75d42e2ad4d243a307c2d8c2467",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-linux-x64.tar.gz"
-    },
-    {
-      "name": "ecoinvent",
-      "pluginId": "ecoinvent",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "ecoinvent-linux-x64.tar.gz",
-      "sha256": "433ad9884b1dff7bf324e681bfd8e0ad94e9f2112b2bb46d73be9a815931d503",
-      "bytes": 39352798,
-      "scopeSha256": "7681e76fbd42a84b6295a2dd4f6b6f541165a8087be3152dc012a3f6f5a63d1b",
-      "binarySha256": "8b29fdb78a497978863086d4731be50de59d3c60702249ca4fb8b89385e39f67",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-linux-x64.tar.gz"
-    },
-    {
-      "name": "carbonminds",
-      "pluginId": "carbonminds",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "carbonminds-linux-x64.tar.gz",
-      "sha256": "664d42972e2c977141ee50a15e33ce845219622e604ca1fa71bfd89589fda939",
-      "bytes": 39353039,
-      "scopeSha256": "9b8ded213d8ae054d7d8d2e1bea7edb8b7dd5772c146a3eaefe3e05fb9b841e1",
-      "binarySha256": "6dca7c30e4d36dae71868d13287e3692702d2828b323ac714cde30c08a756b62",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-linux-x64.tar.gz"
-    },
-    {
-      "name": "agrifootprint",
-      "pluginId": "agrifootprint",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "agrifootprint-linux-x64.tar.gz",
-      "sha256": "82427da2bdedbbe10d92776641b586150b36e8c7c59aaf2d10e5751c0bb80ed3",
-      "bytes": 39352780,
-      "scopeSha256": "3fbe0d5fd5c3d6db7cc700a77ffc1d77accd4f86db614a9d8a19cf1844d312f0",
-      "binarySha256": "632850f51d13ddbc35105d9e6d52c7f3dedfa45a3d09549f51c4174c3f61216c",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-linux-x64.tar.gz"
-    },
-    {
-      "name": "ef",
-      "pluginId": "ef",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "ef-linux-x64.tar.gz",
-      "sha256": "e9cd2e3897701797549c410b092bc9118028b8cf0f111781345ee1ec03f61e04",
-      "bytes": 39352921,
-      "scopeSha256": "6de3506638ecced10c4db8c9869d10913b3766bc2b38f7e0e900473257c8ea45",
-      "binarySha256": "ace69c5778306b18c49d713bc11d0bc4c83819e659f3007091fad52b9c385c00",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-linux-x64.tar.gz"
-    },
-    {
-      "name": "auslci",
-      "pluginId": "auslci",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "auslci-linux-x64.tar.gz",
-      "sha256": "effe996ed31c7d34652534bdb80660b9b07e666c42bbea763e9ee5f54fb58f98",
-      "bytes": 39352900,
-      "scopeSha256": "6173c03e77731976190a00dc9ad6d633bb6e1aef77ab62e596b6430a9af67c3e",
-      "binarySha256": "9f2c212eb7f12e12c61f3130d77182b5624a8ac6be8ad711ed7f76f5bc7970e7",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-linux-x64.tar.gz"
-    },
-    {
-      "name": "bafu",
-      "pluginId": "bafu",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "bafu-linux-x64.tar.gz",
-      "sha256": "22cb63884c9365ea7956b477a740757392f22260b7a185a60ef1c252725ef7ff",
-      "bytes": 39353078,
-      "scopeSha256": "ee1bf4a2fbdab02202f3abbdefaa637ed4862553c501de0eb357ec5f45455cb1",
-      "binarySha256": "0289b255ff94a3b77e6e929820075fa0623f60d3ddbba0e9dfb1fbd4702b9839",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-linux-x64.tar.gz"
-    },
-    {
-      "name": "bioenergiedat",
-      "pluginId": "bioenergiedat",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "bioenergiedat-linux-x64.tar.gz",
-      "sha256": "0ba922abb467ce6b48417e67eeec020e7e97cfa5159885927da5594a99d32857",
-      "bytes": 39352830,
-      "scopeSha256": "f9075e481fa4c4d6a08167f4393bb62c0c66e38a9625a2756b41c09bb3377bd3",
-      "binarySha256": "5c0977349d7b1b8c5648a96bb6b315069bbd592f672a2964acc50cd290be08dc",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-linux-x64.tar.gz"
-    },
-    {
-      "name": "elcd",
-      "pluginId": "elcd",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "elcd-linux-x64.tar.gz",
-      "sha256": "587fe18e2c6e50f02f2fb1f32c707e676b68d54f18a1359f96056ef6d5dc13c0",
-      "bytes": 39352993,
-      "scopeSha256": "bd76ccb118ebbd90ad161acbcb4ae1ff3c12fd97086e8414873aae5ba4958e48",
-      "binarySha256": "19fc9db71e593cc2004bc7ad6526867952bfeacb6247704b0145c7175efe0d18",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-linux-x64.tar.gz"
-    },
-    {
-      "name": "needs",
-      "pluginId": "needs",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "needs-linux-x64.tar.gz",
-      "sha256": "1654e89c33e17b17f9b4519c5a5a3f6aef7cda21afa53300d72e9b1b15dffb78",
-      "bytes": 39352878,
-      "scopeSha256": "8ba4c9969f850b0694d294e2dfd072ab683e129179b17d0230ae96faf0b2b5d6",
-      "binarySha256": "c64c2b742ca67e65698ac572ca6a429a1493e146885a44fec77672c01b14121c",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-linux-x64.tar.gz"
-    },
-    {
-      "name": "ozlci",
-      "pluginId": "ozlci",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "ozlci-linux-x64.tar.gz",
-      "sha256": "6e9c6054f04a76197824445803f14ed3e054d37a3f375f7a74f683c9f9a1d016",
-      "bytes": 39352899,
-      "scopeSha256": "f2a705678f2f7b490ed87a21ac0338c805c772660595f171de1c8c4cd952b279",
-      "binarySha256": "188ebfe1f2c1e6f76a60551fb92a6b7b3b556ca653ca36f4bbfe841dbcce36fc",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-linux-x64.tar.gz"
-    },
-    {
-      "name": "recycledplastics",
-      "pluginId": "recycledplastics",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "recycledplastics-linux-x64.tar.gz",
-      "sha256": "6a9d2714ea197cd47fce68378f8d34dc1c7a0ee1fb1b062f61140f6dd0c175d7",
-      "bytes": 39352320,
-      "scopeSha256": "5acc32c195e820c6337c815d04d407e30462713cfd046405021e6185e2a9e72d",
-      "binarySha256": "afd5cbe6bd96649a6b7319995cbeeb22dc1f284d9af2cab21a74e4f7205469d2",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-linux-x64.tar.gz"
-    },
-    {
-      "name": "usda",
-      "pluginId": "usda",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "usda-linux-x64.tar.gz",
-      "sha256": "05638be02ea66b1edb5449d76fd3fcbc48e0b18c79cd3690d6f223ea4d48b4f7",
-      "bytes": 39352956,
-      "scopeSha256": "e8f8e7fa3f3515234345a2e8685e0092dc52cce6ec437f12d14667a5fe557b1c",
-      "binarySha256": "dcf882e6b50e8c48929454861cec663a4b684ed2d4d9f0334f5a19b276f4e002",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-linux-x64.tar.gz"
-    },
-    {
-      "name": "uslci",
-      "pluginId": "uslci",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "uslci-linux-x64.tar.gz",
-      "sha256": "52d08381fab40befdbd0f86e78ac03e72b63b120032db65d4b49b1d3f3ab4e35",
-      "bytes": 39352873,
-      "scopeSha256": "9a8dc226ae0b3b2f3a4ec8d60b8e903f083ed0e0e4ac4637aff5e39cd4f6e0ba",
-      "binarySha256": "9dee006957ef50b5f8af29fac9ed81a48809ee589a2ca76e08e8d34296dcdafd",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-linux-x64.tar.gz"
-    },
-    {
-      "name": "worldsteel",
-      "pluginId": "worldsteel",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "worldsteel-linux-x64.tar.gz",
-      "sha256": "cdb895978a074b82608675c11e7954fc3626dd12ab111f1d3d959f4c62a92e34",
-      "bytes": 39352760,
-      "scopeSha256": "adb3303b3a86ab3ecfca9eb2b7aaf514e5676b12ee80b1f973fe506bf753a0cc",
-      "binarySha256": "c75477831fee1a93d9c5de42d0dc235d01d365592ec14bdc43bfd1b87cb74edc",
-      "signing": {
-        "status": "not-applicable"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-linux-x64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-linux-arm64.tar.gz"
     },
     {
       "name": "epd-data",
       "pluginId": "epd-data",
-      "version": "0.7.5",
-      "platform": "linux-x64",
-      "archive": "epd-data-linux-x64.tar.gz",
-      "sha256": "2b013b3280c3e2a0b754f22b361e3bff5234d1d03e76350397bd5202909b95d1",
-      "bytes": 39352790,
+      "version": "0.8.3",
+      "platform": "linux-arm64",
+      "archive": "epd-data-linux-arm64.tar.gz",
+      "sha256": "bf33aa510a8e32b53796d2dbf749a955fb9452e60efc3a843ce427e24b8c8002",
+      "bytes": 37892499,
       "scopeSha256": "3e73529ad8fa2ac39d340b8c5777e906c226a977e6403762828a7353111efcde",
-      "binarySha256": "db821cdc18cd86c7c54592edd3a9ff963a8a601e1bab7d7ec768af32029bb9f6",
+      "binarySha256": "ad56aa6e40048f61d2f239793c7b355570457fccfa202e7c88574d3fa71a7892",
       "signing": {
         "status": "not-applicable"
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-linux-x64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-linux-arm64.tar.gz"
     },
     {
       "name": "environmental-data",
       "pluginId": "environmental-data",
-      "version": "0.7.5",
+      "version": "0.8.3",
       "platform": "linux-x64",
       "archive": "environmental-data-linux-x64.tar.gz",
-      "sha256": "7aa8737d29167d3f0193aaa1b01a867e8dae91b36e003cdd5b78ebf2ba55f264",
-      "bytes": 39354296,
-      "scopeSha256": "c083eb632cb678e13e0351c0f26b933621b79a08d85b3e887e43769f230f43c6",
-      "binarySha256": "8a398cb7332b5fc4c9197130017cbb5976c2c321c956c086097f41929ea78a4d",
+      "sha256": "feb38e9dc16c63604e7470639e1ee18e18cd79b7e6ce94e4f819442ba35f842e",
+      "bytes": 39354243,
+      "scopeSha256": "c564043ac64058b01929e658c73c7c6e959af581d23e603ef04e2599e3c6ce1a",
+      "binarySha256": "7face401b9fea938b91f0114f5c0e4ffc10f4b666f1ae88c5782ae2de3f459a6",
       "signing": {
         "status": "not-applicable"
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-linux-x64.tar.gz"
-    },
-    {
-      "name": "hiqlcd",
-      "pluginId": "hiqlcd",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "hiqlcd-win32-x64.tar.gz",
-      "sha256": "64598a50d44371de2e52f70e2ccc7c39b5095ec868d7f4b5f9c837d51fa97f55",
-      "bytes": 41574850,
-      "scopeSha256": "2007fec03b292f16840e03d3d485731e0fa8010dc21fef23ac7d65102c82629d",
-      "binarySha256": "c6b06cad4cc80e9edba63be08cc542ca6b33f7401ecb4e1eb0d0c3cd96329e81",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd/hiqlcd-win32-x64.tar.gz"
-    },
-    {
-      "name": "hiqlcd-al",
-      "pluginId": "hiqlcd-al",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "hiqlcd-al-win32-x64.tar.gz",
-      "sha256": "f44256263d549fefcc2321346d49e1296968c9d3c43a6d159b80f3e3bfddba4f",
-      "bytes": 41574756,
-      "scopeSha256": "900c8a4d793fc8eacdadf2a00209cda96fbefe222004d6f37472d5162d2f21b1",
-      "binarySha256": "0cf87726b46496386ed649fc3bb27fbbf3338ed33a0af912fcc2ad983a33b891",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/hiqlcd-al/hiqlcd-al-win32-x64.tar.gz"
-    },
-    {
-      "name": "calcd",
-      "pluginId": "calcd",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "calcd-win32-x64.tar.gz",
-      "sha256": "2bcb17e3a883b144d229ded7b080b2bbc5a408496071da6599ec58dc5f83515e",
-      "bytes": 41574814,
-      "scopeSha256": "d55345b8df2a0f2656f367208d9f03901be28d2a5ba7d5a1db3044ef92076c85",
-      "binarySha256": "43f49b1e06f59b2de01b1774b48f2c00166e72124a328a65c2ea58e2b00a35d2",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/calcd/calcd-win32-x64.tar.gz"
-    },
-    {
-      "name": "cesi",
-      "pluginId": "cesi",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "cesi-win32-x64.tar.gz",
-      "sha256": "1f368c060a2bbe9864abe34ac5f663c3410621ee17fb0d1aa5a270b8c72fb1c0",
-      "bytes": 41575005,
-      "scopeSha256": "c985ab57483d3c0f664a4c21c9c007669b351c9c52a4d6f420cbe1bcb4d8d1c7",
-      "binarySha256": "39a8ead5bdd51a88cbd1fea23c1017a89ebed0a1ce2e9e6ebaaf2498bb8420a4",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/cesi/cesi-win32-x64.tar.gz"
-    },
-    {
-      "name": "ecoinvent",
-      "pluginId": "ecoinvent",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "ecoinvent-win32-x64.tar.gz",
-      "sha256": "f3ae566cf17ee8c1ed86a3079fcdd976270018b446b074238c9dc26315aa9eb8",
-      "bytes": 41574771,
-      "scopeSha256": "7681e76fbd42a84b6295a2dd4f6b6f541165a8087be3152dc012a3f6f5a63d1b",
-      "binarySha256": "dd144588fc8ab7a217738d2355ecf6781ee945340870abe5b411e02c374e9bf7",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ecoinvent/ecoinvent-win32-x64.tar.gz"
-    },
-    {
-      "name": "carbonminds",
-      "pluginId": "carbonminds",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "carbonminds-win32-x64.tar.gz",
-      "sha256": "f0b4ca71505cf3e57bc4a9c0da41e0074c013320e99f878b9a4ae311a6ba37a5",
-      "bytes": 41574779,
-      "scopeSha256": "9b8ded213d8ae054d7d8d2e1bea7edb8b7dd5772c146a3eaefe3e05fb9b841e1",
-      "binarySha256": "51273170969299580b51e18151615fd844a498c90ceb49c1f0e4278c84538e63",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/carbonminds/carbonminds-win32-x64.tar.gz"
-    },
-    {
-      "name": "agrifootprint",
-      "pluginId": "agrifootprint",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "agrifootprint-win32-x64.tar.gz",
-      "sha256": "ff7535916d309954aa68aaff9e016e7bf022c0061dc88e6f72b1d10bb9da540d",
-      "bytes": 41574799,
-      "scopeSha256": "3fbe0d5fd5c3d6db7cc700a77ffc1d77accd4f86db614a9d8a19cf1844d312f0",
-      "binarySha256": "69c961b5b243f22375ecc987cd642c3d461acb9851797f6b1ef508c3a3fbb7a5",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/agrifootprint/agrifootprint-win32-x64.tar.gz"
-    },
-    {
-      "name": "ef",
-      "pluginId": "ef",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "ef-win32-x64.tar.gz",
-      "sha256": "fcfdfa4ed77e67ac583a63a9e36cf0aa16115d834c18d9c49752fa3988417097",
-      "bytes": 41574576,
-      "scopeSha256": "6de3506638ecced10c4db8c9869d10913b3766bc2b38f7e0e900473257c8ea45",
-      "binarySha256": "f0d62f20077e6a9d516d2dbb95346b78ec43f9258a60c24cc819e97de74b015a",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ef/ef-win32-x64.tar.gz"
-    },
-    {
-      "name": "auslci",
-      "pluginId": "auslci",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "auslci-win32-x64.tar.gz",
-      "sha256": "29f6f26cbf883d458e10a094fec157c894f9bfdb7469e53127ed9b85a97d28ec",
-      "bytes": 41574833,
-      "scopeSha256": "6173c03e77731976190a00dc9ad6d633bb6e1aef77ab62e596b6430a9af67c3e",
-      "binarySha256": "10b7aca2213c97767a48598f69b92ee8a43d67438022c55d890095795ca8177e",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/auslci/auslci-win32-x64.tar.gz"
-    },
-    {
-      "name": "bafu",
-      "pluginId": "bafu",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "bafu-win32-x64.tar.gz",
-      "sha256": "178e7435d1d1660dfd61c5fff6e6f13b5c4e3fd2abf2b9bd64578725bef958fc",
-      "bytes": 41574600,
-      "scopeSha256": "ee1bf4a2fbdab02202f3abbdefaa637ed4862553c501de0eb357ec5f45455cb1",
-      "binarySha256": "f70e07b615a383b8bce04190f827499c06e600188899ca45a594dc7c438e7181",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bafu/bafu-win32-x64.tar.gz"
-    },
-    {
-      "name": "bioenergiedat",
-      "pluginId": "bioenergiedat",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "bioenergiedat-win32-x64.tar.gz",
-      "sha256": "1d76019df57bfe72c8fdf80cbc9c2d4c3040bac238e45f3269872687a3a16d21",
-      "bytes": 41574940,
-      "scopeSha256": "f9075e481fa4c4d6a08167f4393bb62c0c66e38a9625a2756b41c09bb3377bd3",
-      "binarySha256": "b5b7fee0141a6886b0139ff590aa6725b6ea02b43eee69de826bc7f52cd4b8be",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/bioenergiedat/bioenergiedat-win32-x64.tar.gz"
-    },
-    {
-      "name": "elcd",
-      "pluginId": "elcd",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "elcd-win32-x64.tar.gz",
-      "sha256": "cd6862abf6f0614ec857fa94aabb81e22db984bda5ef2216880443ab25c0262b",
-      "bytes": 41574807,
-      "scopeSha256": "bd76ccb118ebbd90ad161acbcb4ae1ff3c12fd97086e8414873aae5ba4958e48",
-      "binarySha256": "7763a084aa649294ad76634e38cee722ce6579851b4c51ba679452400052877a",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/elcd/elcd-win32-x64.tar.gz"
-    },
-    {
-      "name": "needs",
-      "pluginId": "needs",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "needs-win32-x64.tar.gz",
-      "sha256": "f284612dd37649c6bd605b0958410dc1ad9b4de7147c2dbed215b6a79d02743f",
-      "bytes": 41574718,
-      "scopeSha256": "8ba4c9969f850b0694d294e2dfd072ab683e129179b17d0230ae96faf0b2b5d6",
-      "binarySha256": "bea4db7b3e5aee466bfd7a483a152d4b664e0cfa4762c05d9e75d5559ce900ef",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/needs/needs-win32-x64.tar.gz"
-    },
-    {
-      "name": "ozlci",
-      "pluginId": "ozlci",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "ozlci-win32-x64.tar.gz",
-      "sha256": "649854a61071cc5d3caa1987926490ab4dc2bd0b7b6672a97c0211576347738e",
-      "bytes": 41574795,
-      "scopeSha256": "f2a705678f2f7b490ed87a21ac0338c805c772660595f171de1c8c4cd952b279",
-      "binarySha256": "7e88a51fc392fae43ea030680d1653209c5b9ad4000fe3aaf5ed1aa00b276a94",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/ozlci/ozlci-win32-x64.tar.gz"
-    },
-    {
-      "name": "recycledplastics",
-      "pluginId": "recycledplastics",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "recycledplastics-win32-x64.tar.gz",
-      "sha256": "a4c83d4b6214cd628a8fb3bae9de8b8461e0d2a49fdfe32787c51d7813afceaa",
-      "bytes": 41575094,
-      "scopeSha256": "5acc32c195e820c6337c815d04d407e30462713cfd046405021e6185e2a9e72d",
-      "binarySha256": "afc7a86324607049701c231262fb30a308e4d6cf4f6fb6d7c7bf1cbfc6f8ecef",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/recycledplastics/recycledplastics-win32-x64.tar.gz"
-    },
-    {
-      "name": "usda",
-      "pluginId": "usda",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "usda-win32-x64.tar.gz",
-      "sha256": "e74dc06efdd43a3d9aefb750aa7effe211a4f5410df61bea353063dc688996c9",
-      "bytes": 41574799,
-      "scopeSha256": "e8f8e7fa3f3515234345a2e8685e0092dc52cce6ec437f12d14667a5fe557b1c",
-      "binarySha256": "9f838eef5254d8c837750fd14752bb694c3a80792328c66dc4e5f96bac7de557",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/usda/usda-win32-x64.tar.gz"
-    },
-    {
-      "name": "uslci",
-      "pluginId": "uslci",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "uslci-win32-x64.tar.gz",
-      "sha256": "ca0ae4f1abbc5daf44ec5b19180a093c072580f1aa7f88b5604c271bbda6130f",
-      "bytes": 41574772,
-      "scopeSha256": "9a8dc226ae0b3b2f3a4ec8d60b8e903f083ed0e0e4ac4637aff5e39cd4f6e0ba",
-      "binarySha256": "43207d635b4742af65ea83d89f5ce5cb10f9ca8190042e8938155a89f25d3b2c",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/uslci/uslci-win32-x64.tar.gz"
-    },
-    {
-      "name": "worldsteel",
-      "pluginId": "worldsteel",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "worldsteel-win32-x64.tar.gz",
-      "sha256": "ae671526f4fa542b576e501389763caf9ce8de114c8691faec62538ef04232ea",
-      "bytes": 41574864,
-      "scopeSha256": "adb3303b3a86ab3ecfca9eb2b7aaf514e5676b12ee80b1f973fe506bf753a0cc",
-      "binarySha256": "2df2acfa6808c827c7aecc670524fc6f9ebfffeb7aa3eab79bcc5d9fa78177aa",
-      "signing": {
-        "status": "unsigned"
-      },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/worldsteel/worldsteel-win32-x64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-linux-x64.tar.gz"
     },
     {
       "name": "epd-data",
       "pluginId": "epd-data",
-      "version": "0.7.5",
-      "platform": "win32-x64",
-      "archive": "epd-data-win32-x64.tar.gz",
-      "sha256": "a1b312496f3507ae523f1636ef010587ae1fc6047a0b0aadcedde29e4e8048db",
-      "bytes": 41574504,
+      "version": "0.8.3",
+      "platform": "linux-x64",
+      "archive": "epd-data-linux-x64.tar.gz",
+      "sha256": "554354c1bd71a23caf2a51c5f153a22ab5e6855a98e007c9f13bdb3c99c97f09",
+      "bytes": 39352828,
       "scopeSha256": "3e73529ad8fa2ac39d340b8c5777e906c226a977e6403762828a7353111efcde",
-      "binarySha256": "aa7f77672035a5e710f4320a174366ca30d0219b277da1eee3edc54eadbceb0c",
+      "binarySha256": "1625b653a979698346533ceddb5b180e80e9899f0b5638f1c9ce153cae14cbaa",
       "signing": {
-        "status": "unsigned"
+        "status": "not-applicable"
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/epd-data/epd-data-win32-x64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-linux-x64.tar.gz"
     },
     {
       "name": "environmental-data",
       "pluginId": "environmental-data",
-      "version": "0.7.5",
+      "version": "0.8.3",
       "platform": "win32-x64",
       "archive": "environmental-data-win32-x64.tar.gz",
-      "sha256": "516cc2bb4feb5df50643d8148606ad872e5b9941ea537fe97fb11b97718a681a",
-      "bytes": 41576307,
-      "scopeSha256": "c083eb632cb678e13e0351c0f26b933621b79a08d85b3e887e43769f230f43c6",
-      "binarySha256": "b555b5814eddd05183c8c3e1500526fbcd7c4d5b4dfbef7ef7811e00c2c66f2e",
+      "sha256": "92b1129f2f84f8b316921a563edc9d36026a23366235907a48911693cfa50b17",
+      "bytes": 41576259,
+      "scopeSha256": "c564043ac64058b01929e658c73c7c6e959af581d23e603ef04e2599e3c6ce1a",
+      "binarySha256": "4881dee8d3703de7768c643cc04d01c5a995c5add634effff56675a1975ad52f",
       "signing": {
         "status": "unsigned"
       },
-      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/environmental-data/environmental-data-win32-x64.tar.gz"
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/environmental-data/environmental-data-win32-x64.tar.gz"
+    },
+    {
+      "name": "epd-data",
+      "pluginId": "epd-data",
+      "version": "0.8.3",
+      "platform": "win32-x64",
+      "archive": "epd-data-win32-x64.tar.gz",
+      "sha256": "9f67de363279a7e2412565f1370676e33eeaefbd2a6995ba610cdc2e15fc16d1",
+      "bytes": 41574504,
+      "scopeSha256": "3e73529ad8fa2ac39d340b8c5777e906c226a977e6403762828a7353111efcde",
+      "binarySha256": "9571c8967aad20eb8203fa6ff7560adf369004597393b3f99804b34fe6a9dc34",
+      "signing": {
+        "status": "unsigned"
+      },
+      "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/epd-data/epd-data-win32-x64.tar.gz"
     }
   ]
 }

@@ -2,22 +2,30 @@
 
 ## Supported distribution
 
-CLI 0.8.2 has two programs, `environmental-data` and `epd-data`, targeting macOS
+CLI 0.8.3 has two programs, `environmental-data` and `epd-data`, targeting macOS
 arm64/x64, Linux arm64/x64 and Windows x64. The
 [sealed projection](../cli-release.json) identifies the exact revision, scope,
 archives and hashes. macOS uses Developer ID, Hardened Runtime, timestamps and
 notarization. Windows binaries are unsigned; normal OS trust and SmartScreen
 controls remain applicable.
 
-The [0.8.2 release run](https://github.com/HiQ-AI/cortex/actions/runs/41955950509)
-is the authority for actual build, CDN native execution, sealing and Windows
-installer results. Those results are pending in this preparation branch.
-Version 0.8.0 failed Windows PowerShell 5.1 parsing of localized migration JSON;
-0.8.1 corrected that but installation observed an unset shell LASTEXITCODE.
-Both versions' sealed bytes are retained. Version 0.8.2 keeps ASCII-only scripts
-and reads the owned native archive process's ExitCode after waiting for exit,
-with nonzero status still refused. Source correction alone is not actual Windows
-installation acceptance.
+The [0.8.3 release run](https://github.com/HiQ-AI/cortex/actions/runs/41969079088)
+completed all five builds, native execution of all ten CDN program artifacts and
+sealing. The
+final default-mode job downloaded and verified the sealed installer SHA, then
+passed actual Windows installation/version/info/hash checks for both programs
+and all 22 entry-protection cases, including managed 0.7.4/0.7.5 migrations,
+unknown-scope refusal and corrupt-archive nonzero refusal. The sealed index SHA256
+is `746d329a87de6442f21c4965fcb38a3dc3754ce9166f378064bd27c2a267433f`.
+
+A separate [candidate run](https://github.com/HiQ-AI/cortex/actions/runs/41964434287)
+passed both installed programs and all 22 entry-protection cases on Windows
+PowerShell 5.1, including managed 0.7.4/0.7.5 migration and real damaged-archive
+nonzero refusal. It used unchanged 0.8.2 binaries with the proposed installer;
+that does not validate the previously published 0.8.2 installer. Versions
+0.8.0—0.8.2 remain immutable historical releases with incomplete Windows
+installation acceptance. The final 0.8.3 job uses the default published mode,
+downloads the sealed installer, verifies its SHA and executes that exact script.
 
 ## Native plugin hosts
 
@@ -50,14 +58,15 @@ checks cover old-channel/ID rejection, explicit root registration, sealed CLI pi
 binding, no-op, rollback/tampering and PR recovery.
 
 POSIX installer execution covers managed upgrades, repeat installation, corrupt
-archives, unrelated entries and links. The explicit 0.7.4/0.7.5 aggregate-to-0.8.2
-datasets migration passes for both old versions and rejects unknown source,
-publisher and protocol changes while retaining the old manifest. The old source
-and publisher sets were compared with their actual tagged declarations.
+archives, unrelated entries and links. The explicit aggregate-to-datasets-only
+migration logic passed for managed 0.7.4/0.7.5 installations and rejected unknown
+source, publisher and protocol changes while retaining the old manifest. Its old
+source/publisher sets were compared with the actual tagged declarations; the
+replacement release binds the same narrow contract to 0.8.3.
 
-Windows migration and entry-protection cases are present in the native release
-verifier; source review and POSIX execution do not prove those cases passed on
-Windows. Read the actual release job outcome separately.
+The Windows results above come from the actual final release verifier, not from
+source review or POSIX execution. They establish installer and migration behavior,
+not all-platform authenticated business queries.
 
 ## Real-account query evidence
 

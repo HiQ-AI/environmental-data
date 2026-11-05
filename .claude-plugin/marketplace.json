@@ -8,144 +8,18 @@
   },
   "plugins": [
     {
-      "name": "hiqlcd",
-      "displayName": "HiQLCD 数据查询",
-      "source": "./plugins/hiqlcd",
-      "description": "Find and match HiQLCD data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "hiqlcd-al",
-      "displayName": "HiQLCD-AL 数据查询",
-      "source": "./plugins/hiqlcd-al",
-      "description": "Find and match HiQLCD-AL data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "calcd",
-      "displayName": "CALCD 数据查询",
-      "source": "./plugins/calcd",
-      "description": "Find and match CALCD data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "cesi",
-      "displayName": "中国锂电池碳足迹数据查询（CESI）",
-      "source": "./plugins/cesi",
-      "description": "Find and match China Li-ion Battery Carbon Footprint Database (CESI) data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "ecoinvent",
-      "displayName": "ecoinvent 数据查询",
-      "source": "./plugins/ecoinvent",
-      "description": "Find and match Ecoinvent data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "carbonminds",
-      "displayName": "CarbonMinds 数据查询",
-      "source": "./plugins/carbonminds",
-      "description": "Find and match CarbonMinds data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "agrifootprint",
-      "displayName": "Agri-footprint 数据查询",
-      "source": "./plugins/agrifootprint",
-      "description": "Find and match Agri-footprint data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "ef",
-      "displayName": "EF 数据查询",
-      "source": "./plugins/ef",
-      "description": "Find and match EF data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "auslci",
-      "displayName": "AusLCI 数据查询",
-      "source": "./plugins/auslci",
-      "description": "Find and match AusLCI data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "bafu",
-      "displayName": "BAFU 数据查询",
-      "source": "./plugins/bafu",
-      "description": "Find and match BAFU data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "bioenergiedat",
-      "displayName": "BioEnergieDat 数据查询",
-      "source": "./plugins/bioenergiedat",
-      "description": "Find and match BioEnergieDat data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "elcd",
-      "displayName": "ELCD 数据查询",
-      "source": "./plugins/elcd",
-      "description": "Find and match ELCD data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "needs",
-      "displayName": "NEEDS 数据查询",
-      "source": "./plugins/needs",
-      "description": "Find and match NEEDS data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "ozlci",
-      "displayName": "OzLCI 数据查询",
-      "source": "./plugins/ozlci",
-      "description": "Find and match OzLCI data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "recycledplastics",
-      "displayName": "Recycled Plastics 数据查询",
-      "source": "./plugins/recycledplastics",
-      "description": "Find and match Recycled Plastics data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "usda",
-      "displayName": "USDA Crop Data 数据查询",
-      "source": "./plugins/usda",
-      "description": "Find and match USDA Crop Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "uslci",
-      "displayName": "USLCI 数据查询",
-      "source": "./plugins/uslci",
-      "description": "Find and match USLCI data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "worldsteel",
-      "displayName": "Worldsteel 数据查询",
-      "source": "./plugins/worldsteel",
-      "description": "Find and match Worldsteel data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
+      "name": "environmental-data",
+      "displayName": "Environmental Data",
+      "source": "./plugins/environmental-data",
+      "description": "Find and match Environmental Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
+      "version": "0.20261105.45006"
     },
     {
       "name": "epd-data",
       "displayName": "EPD声明查询",
       "source": "./plugins/epd-data",
       "description": "Find and match Published EPD Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
-    },
-    {
-      "name": "environmental-data",
-      "displayName": "环境数据跨库查询",
-      "source": "./plugins/environmental-data",
-      "description": "Find and match Environmental Data (Aggregate) data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.7.5"
+      "version": "0.20261105.45006"
     }
   ]
 }

@@ -16,9 +16,6 @@ Read status/summary and actual datasets. Check src/ver/model, loc, unit and ref_
 
 A complete response reports one of the evidence-supported outcomes: a match with citations; a conditional proxy with named gaps; or no supported match. Example answer structure (replace with actual facts, not invented records): “The returned evidence [supports/does not establish] C24, technical drying and planing. Geography is [returned evidence]; reference time remains [evidence or unknown]. [Retrieved value with method/unit/boundary, or reason it is unavailable]. [Exact returned links].” For zero candidates, report the query/scope and no match for this request; retain hard constraints and ask before any material relaxation.
 
-## EPD declaration workflow
-
-Search published declarations with --kind epd and an actual publisher subset if requested, --limit 1..100 and a complete query. Follow only a returned cursor with the same conditions. Before lookup, ensure product authentication; use exact epd_key values and --kind epd again. Present declaration identity/link, product, declared unit, validity and method/modules actually found. If the summary lacks a validity or requested module, retrieve available details or mark unknown; do not imply certification.
 
 ## Cross-source comparison
 
@@ -35,6 +32,7 @@ The quoted separator is part of the parameter, not a shell pipeline. Look up sel
 | Evidence | Next action |
 | --- | --- |
 | Missing/untrusted command | Read preparation.md and installation.json; install the checksum-verified pinned program within host permissions. Preserve unknown same-name entries. |
+| Permission-check unavailable / HTTP 503 / DATASET_PERMISSION_UNAVAILABLE | Report a service failure, preserve its actual error code/requestId, and do not interpret it as denied entitlement. The code alone does not identify which upstream directory, transport or permission stage failed. Do not relogin, change accounts or invent numerical results; one transient retry is enough before reporting the blocker. |
 | Missing credential or endpoint explicitly rejects credential | Manage one product login, browser/clickable link, original process result and query continuation; do not inspect credential files. |
 | Pending approval | Keep the original task ID/request; rely on CLI polling and host completion. User approval text alone is not final success. |
 | Login expired/denied/network error | Report actual error and keep pending request; retry only after original attempt ends and conditions warrant it. |

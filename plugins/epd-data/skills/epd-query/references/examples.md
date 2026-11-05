@@ -29,6 +29,7 @@ Compare only candidates returned within this program's compiled publisher scope.
 | Evidence | Next action |
 | --- | --- |
 | Missing/untrusted command | Read preparation.md and installation.json; install the checksum-verified pinned program within host permissions. Preserve unknown same-name entries. |
+| Permission-check unavailable / HTTP 503 / DATASET_PERMISSION_UNAVAILABLE | Report a service failure, preserve its actual error code/requestId, and do not interpret it as denied entitlement. The code alone does not identify which upstream directory, transport or permission stage failed. Do not relogin, change accounts or invent numerical results; one transient retry is enough before reporting the blocker. |
 | Missing credential or endpoint explicitly rejects credential | Manage one product login, browser/clickable link, original process result and query continuation; do not inspect credential files. |
 | Pending approval | Keep the original task ID/request; rely on CLI polling and host completion. User approval text alone is not final success. |
 | Login expired/denied/network error | Report actual error and keep pending request; retry only after original attempt ends and conditions warrant it. |

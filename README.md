@@ -40,6 +40,10 @@ as roles. See [installation and migration](docs/INSTALLATION.md).
 ## Plugins
 
 <!-- catalog:start -->
+| Plugin | Description |
+| --- | --- |
+| [Environmental Data](plugins/environmental-data/README.md) | Find and match Environmental Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits. |
+| [EPD声明查询](plugins/epd-data/README.md) | Find and match Published EPD Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits. |
 <!-- catalog:end -->
 
 `environmental-data-query` is the database skill; `epd-query` is the declaration
@@ -88,7 +92,7 @@ separate properly licensed [spreadsheet capability](docs/SPREADSHEETS.md).
 
 ## Distribution
 
-CLI 0.8.2 supplies two native programs on macOS arm64/x64, Linux arm64/x64 and
+CLI 0.8.3 supplies two native programs on macOS arm64/x64, Linux arm64/x64 and
 Windows x64. The [sealed projection](cli-release.json) pins every archive and
 installer. This repository contains public metadata and operating instructions,
 not private CLI implementation, binaries, database content or credentials.
