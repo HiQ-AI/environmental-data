@@ -1,6 +1,6 @@
 # Installation and migration
 
-## Choose a plugin
+## Install one of two plugins
 
 Add the marketplace in Claude Code:
 
@@ -8,109 +8,128 @@ Add the marketplace in Claude Code:
 /plugin marketplace add HiQ-AI/environmental-data
 ```
 
-Install the selected source:
+For environmental databases:
 
 ```text
-/plugin install hiqlcd@environmental-data
+/plugin install environmental-data@environmental-data
 ```
 
-Use `epd-data@environmental-data` for published declarations or
-`environmental-data@environmental-data` for cross-source queries. The
-[catalog](../README.md#plugins) lists all 18 database plugins.
+For published EPD declarations:
 
-These are host interface commands, not shell commands. Native installation loads
-skills and declared roles; it does not install the business CLI, sign in, call a
-model, grant data rights or download a licensed database.
+```text
+/plugin install epd-data@environmental-data
+```
 
-## Codex native installation
+These are host interface commands, not shell commands. Installation loads skills
+and declared roles; it does not install a CLI, sign in or grant data rights.
 
-Codex CLI 0.161.0 accepts the same native marketplace:
+Codex CLI 0.161.0 also accepts the native marketplace:
 
 ```bash
 codex plugin marketplace add HiQ-AI/environmental-data
 ```
 
 ```bash
-codex plugin add hiqlcd@environmental-data
+codex plugin add environmental-data@environmental-data
+```
+
+```bash
+codex plugin add epd-data@environmental-data
 ```
 
 ```bash
 codex plugin list --json
 ```
 
-Codex 0.161.0 loads plugin skills but does not register bundled agent Markdown as
-roles. Claude Code supports the aggregate's three declared roles.
+Claude Code supports the database product's three roles. Codex 0.161.0 loads
+plugin skills but does not register bundled agent Markdown as roles.
 
-## Prepare the selected CLI
+## Prepare the CLI
 
-Version 0.7.5 provides 20 independent commands on macOS arm64/x64, Linux arm64/x64
-and Windows x64. Plugin ID and program name are identical: `hiqlcd`, `cesi`,
-`epd-data`, `environmental-data`, and the other source names in the catalog.
+CLI 0.8.0 provides `environmental-data` and `epd-data` on macOS arm64/x64, Linux
+arm64/x64 and Windows x64. Read the chosen skill and bundled
+`references/installation.json`. It pins the archive, installer and complete
+SHA256 from [cli-release.json](../cli-release.json).
 
-Read the selected plugin's skill and its bundled `references/installation.json`.
-It pins the exact archive, installer and complete SHA256 for each platform from
-[the sealed producer projection](../cli-release.json). Download into a new empty
-directory, verify the full SHA256 before extraction or execution, and keep
-manifest, LICENSE, NOTICE and bin together. Inspect the checksum-verified
-installer before running it from outside the download directory; do not pipe an
-uninspected download into a shell.
+Download into a new empty directory and verify the full SHA256. Inspect the
+verified installer before running it from outside the download directory; do not
+pipe an uninspected download into a shell. Retain manifest, LICENSE, NOTICE and
+bin together. Follow host permissions and normal OS trust controls; Windows
+binaries are unsigned. The exact verification boundary is in
+[compatibility](COMPATIBILITY.md).
 
-Before using an existing same-name command, establish its ownership from the
-managed versioned manifest, binary hash and compiled scope. Do not execute an
-unknown same-name program to identify it. Installers refuse unrelated files,
-directories, external links and unverifiable entries without replacing them.
-If a name conflicts, retain the existing entry and choose an independent install
-and bin directory; invoke the verified program by its absolute path.
+Before executing an existing same-name program, establish its managed ownership,
+binary hash and scope. Never execute an unknown program to identify it. Installers
+refuse unrelated files, directories, external links and unverifiable entries.
+Keep conflicting entries and select independent install/bin directories when
+necessary, then use the verified absolute path. Installers retain versioned
+payloads, do not edit PATH or credentials, and do not stop other processes.
 
-Installers retain complete versioned releases, do not edit PATH or credentials,
-and do not stop running processes. Installation destination settings cannot
-change query scope. macOS uses Developer ID, Hardened Runtime, timestamp and
-notarization; Windows binaries are unsigned. Keep normal OS trust controls enabled.
+After installation, verify the actual program:
 
 ```bash
-hiqlcd version
+environmental-data version
 ```
 
 ```bash
-hiqlcd info --json
+environmental-data info --json
 ```
 
 ```bash
-epd-data search 'concrete' --limit 5 --json
+epd-data info --json
 ```
 
-The business commands are `search` and `lookup`. Use the full natural-language
-query for geography and other requirements; preserve opaque keys for lookup.
-Read the selected skill for supported `sources` and `system_model` options,
-preview coverage and `--full` semantics. Do not use retired tool-dispatch or
-`scoped` commands.
+Then read actual search/lookup help. Business commands are only `search` and
+`lookup`; retired tool-dispatch and `scoped` commands are not supported.
 
-Public metadata and published EPD search need no local login. Background queries
-use the data client's existing normal authentication and server entitlements.
-Migration does not rename its OAuth identity or credential location. Never copy
-credentials, borrow another product's tokens or change identity to evade denial.
-A compiled source boundary does not grant a database license.
+## Select the data domain
+
+Use `environmental-data-query` for background datasets. The program embeds the
+18 supported databases; `--sources 'hiqlcd|ecoinvent'` selects within that set,
+optionally with advertised `source:version` coordinates. CESI uses backend source
+`hiq-cesi`. `--model` accepts `cut_off`, `consequential` or `apos`. Put geography,
+technology, time and functional constraints in the complete natural-language
+query. Background search has no limit, cursor or publisher flags.
+
+Use `epd-query` and `epd-data` for published declarations. This domain has actual
+publisher selection, limit 1..100 and returned-cursor continuation. It does not
+accept background sources/models. `environmental-data --kind epd` is rejected;
+`epd-data --kind datasets` is rejected. Read the skill's parameter reference
+before choosing flags, and pass exact returned keys into lookup.
+
+## Authentication and continuation
+
+Both programs reuse the existing data-client product store and normal device
+flow. Public metadata and published EPD search require no local login; other
+operations retain service authorization. `doctor` shows local credential
+presence only, not account rights. Missing/rejected credentials require normal
+`login`; the command presents the actual authorization link and polls until
+completion. Keep one login task, its result and the original query, then continue
+that query after successful authorization. Do not copy tokens, borrow another
+product's credentials or switch identity to evade denial.
+
+Restricted values, missing records, authentication errors and service failures
+are separate facts. `DATASET_PERMISSION_UNAVAILABLE`/HTTP 503 does not establish
+that the account lacks entitlement; preserve the code/requestId for support
+without exposing keys, payloads or credentials.
 
 ## Migrate existing installations
 
-0.7.5 changes plugin, skill and role IDs as well as program names. Refresh the
-marketplace, install the desired new plugin ID through the host's native manager,
-and disable or uninstall the former plugin entry through that same manager.
-Subscriptions to old IDs do not automatically become subscriptions to new IDs.
+The eighteen single-database active plugins are retired. Refresh the marketplace,
+install `environmental-data`, and explicitly disable or uninstall former
+single-database subscriptions through the host manager when no longer needed.
+Select the original database inside the unified program with `--sources`; an old
+subscription does not rename itself. EPD stays a separate `epd-data` product.
 
-- Database plugin/program: `environmental-data-<source>` becomes `<source>`;
-  the former CESI entry becomes `cesi` (its backend source remains `hiq-cesi`).
-- EPD plugin/program: `environmental-data-epd` becomes `epd-data`.
-- Aggregate plugin: `querying-lca-datasets-expert` becomes `environmental-data`;
-  its program remains `environmental-data`.
-- Skills use `<source>-query`, `epd-query` and `environmental-data-query`.
-- Aggregate roles are `data-searcher`, `data-matcher` and `data-reviewer`.
+The 0.8.0 installer supports a narrow same-name managed upgrade from
+`environmental-data` 0.7.4 or 0.7.5: verified ownership, complete manifest/binary
+hash, unchanged dataset source set and exact known former publishers are required.
+It removes the aggregate's EPD domain, retains the old payload/manifest and
+credentials, and points the managed entry to the new datasets-only version.
+Unknown scope, program, source, publisher and unrelated ownership changes remain
+conflicts. It is not a generic compatibility or alias mechanism.
 
-There are no aliases or parallel legacy entries in the current catalog. Old
-immutable releases remain available as historical records. Migration does not
-automatically delete old programs, user settings, credentials or data. Updating
-a plugin alone does not upgrade its CLI. Reload the host when required.
-
-This publication does not switch production Desktop's catalog or release
-Desktop. Workbook handling remains an optional [capability](SPREADSHEETS.md).
-See [compatibility and evidence](COMPATIBILITY.md) for the tested boundaries.
+Old immutable releases remain available; migration does not automatically delete
+old binaries, settings, credentials or data. Updating a plugin alone does not
+upgrade its CLI. Reload the host when required. This publication does not release
+Desktop or switch its production catalog.

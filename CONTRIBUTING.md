@@ -24,10 +24,11 @@ No dependency installation is required for these checks.
 
 ## Names and components
 
-Plugin ID and CLI name are identical. Database skills use `<source>-query`;
-EPD uses `epd-query`, and the aggregate uses `environmental-data-query`.
-Skill titles use Data Querying. Only the aggregate declares the three roles
-`data-searcher`, `data-matcher` and `data-reviewer`.
+The active set is exactly `environmental-data` and `epd-data`; plugin ID and CLI
+name are identical. The database skill is `environmental-data-query`, and the
+published-declaration skill is `epd-query`. Only the database product declares
+`data-searcher`, `data-matcher` and `data-reviewer`. Do not restore retired
+single-database entries or an EPD domain inside the database program.
 
 A naming change must update IDs, directories, manifests, skill frontmatter,
 component references, installation metadata and both catalog formats together.

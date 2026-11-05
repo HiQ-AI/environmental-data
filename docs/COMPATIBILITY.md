@@ -2,68 +2,77 @@
 
 ## Supported distribution
 
-CLI 0.7.5 supplies 20 independent programs on macOS arm64/x64, Linux arm64/x64
-and Windows x64. The [sealed release projection](../cli-release.json) identifies
-the exact artifacts, hashes and source revision. macOS distribution uses
-Developer ID, Hardened Runtime, timestamp and notarization. Windows binaries are
-unsigned; OS trust and SmartScreen controls remain applicable.
+CLI 0.8.0 has two programs, `environmental-data` and `epd-data`, targeting macOS
+arm64/x64, Linux arm64/x64 and Windows x64. The
+[sealed projection](../cli-release.json) identifies the exact revision, scope,
+archives and hashes. macOS uses Developer ID, Hardened Runtime, timestamps and
+notarization. Windows binaries are unsigned; normal OS trust and SmartScreen
+controls remain applicable.
 
-The [release run](https://github.com/HiQ-AI/cortex/actions/runs/41822886153)
-completed all five builds, native execution checks for all 100 CDN programs and
-final sealing. Its Windows installer job failed during archive extraction with
-`Extraction failed`; installation and the subsequent 15 entry-protection cases
-did not pass. The native archive-runtime probes passed in both runner and isolated
-environments, which does not explain the extraction failure. Windows installer
-acceptance remains incomplete; do not treat this release as a fully verified
-Windows installation path.
+The [0.8.0 release run](https://github.com/HiQ-AI/cortex/actions/runs/41952299592)
+is the authority for actual build, CDN native execution, sealing and Windows
+installer results. At preparation of this migration those results are pending;
+this branch is not a claim that publication or Windows installation has passed.
+The old 0.7.5 Windows extraction failure is historical evidence, not a test result
+for 0.8.0.
 
 ## Native plugin hosts
 
-Claude Code supports the marketplace's skills and declared agent roles. Codex
-CLI 0.161.0 accepts the native marketplace and plugin skills, but does not register
-bundled agent Markdown as roles. Its plugin skill namespace is derived from the
-plugin manifest. The catalog still gives every skill its own distinct ID.
+Claude Code supports skills and the database product's three declared roles.
+Codex CLI 0.161.0 accepts native marketplace plugins and skills but does not
+register bundled agent Markdown as roles. Each plugin's skill has its distinct
+ID: `environmental-data-query` or `epd-query`.
 
-Both native plugin managers installed all 20 new plugin IDs in isolated
-configurations. All 40 installed skill files match the published source bytes;
-Claude's strict marketplace and plugin-manifest validation passed. This is native
-installation evidence, not a model-selected query evaluation.
+The two-product change retains the two program/plugin IDs from the former market
+and removes the eighteen single-database entries. Earlier twenty-plugin host
+installation evidence does not establish installation of these regenerated
+packages. Current catalog, manifest and installed-content evidence must be
+identified separately; no new model-selected query evaluation is claimed.
 
-Native plugin installation does not install the business CLI, create credentials
-or grant database rights. A plugin manager listing is not evidence that a model
-selected a skill or completed a query. See [installation](INSTALLATION.md) for
-program preparation and migration.
+Native installation does not install a business CLI, create credentials or grant
+data rights. A host listing does not prove a model chose a skill or completed a
+query. Follow [installation](INSTALLATION.md) for program preparation.
 
-## Local regression scope
+## Local producer regression
 
-The 0.7.5 producer changes passed targeted tests for consumer generation, native
-program scope, POSIX installation and Windows release-declaration validation.
-Consumer generation checks all 20 unique skill IDs, exact program references,
-installation metadata and the aggregate's three roles. CESI retains backend
-source `hiq-cesi`.
+The 0.8.0 implementation passed targeted native-development and HTTP checks for
+the two domains, all eighteen selectable database sources, model forwarding,
+unknown source refusal, EPD isolation, authorized lookup routing, preserved
+restriction fields and preview/full output. These HTTP fixtures do not establish
+real-account authorization.
 
-POSIX installation tests exercise managed upgrades, repeated installation,
-corrupt archives, unrelated entries and linked payloads. Rejected entries and
-external sentinel files remain unchanged; unknown same-name programs are not
-executed. Release-declaration tests compare the immutable Git blob digest while
-allowing equivalent LF/CRLF checkouts, and reject changed source or content.
+Consumer generation checks the two distinct skills, local reference reachability,
+installation projection, common references and three database roles. Synchronizer
+checks cover old-channel/ID rejection, explicit root registration, sealed CLI pin
+binding, no-op, rollback/tampering and PR recovery.
 
-These local tests do not substitute actual Windows installer execution. Native
-platform results and any remaining release limitation must be read separately
-from the release record.
+POSIX installer execution covers managed upgrades, repeat installation, corrupt
+archives, unrelated entries and links. The explicit 0.7.4/0.7.5 aggregate-to-0.8.0
+datasets migration passes for both old versions and rejects unknown source,
+publisher and protocol changes while retaining the old manifest. The old source
+and publisher sets were compared with their actual tagged declarations.
 
-## Business and professional boundaries
+Windows migration and entry-protection cases are present in the native release
+verifier; source review and POSIX execution do not prove those cases passed on
+Windows. Read the actual release job outcome separately.
 
-Naming changes do not modify `search` or `lookup` service contracts. Existing
-public-metadata and EPD evidence does not prove every account's background-data
-or restricted numerical access. A successful search does not establish data
-suitability, an industry-wide statistic, an audit or certification.
+## Real-account query evidence
 
-This release does not claim a new paid-model reasoning evaluation, all-platform
-business-query acceptance or production Desktop activation. Credentials are not
-borrowed from other products. Remaining product acceptance belongs to the
-[product Feature](https://github.com/HiQ-AI/environmental-data/issues/1), not to a
-plugin pin update.
+The 0.8.0 development CLI reused the normal product authentication and returned a
+real HiQLCD candidate. Formal lookup then returned HTTP 503 with
+`DATASET_PERMISSION_UNAVAILABLE`. This is service unavailability, not evidence of
+denied entitlement or a restricted numerical row. Current numerical retrieval
+acceptance remains blocked; no successful value is claimed from that request.
 
-Version-specific older evidence is preserved in the repository history and
-[0.7.4 release record](RELEASE_0.7.4.md); it is not current installation guidance.
+Earlier HiQLCD authorization success does not establish ecoinvent rights, another
+account's access or every source/model/version combination. Public metadata and
+EPD search likewise do not prove numerical entitlement. Preserve the service's
+actual accessDecision, errors and evidence; do not relogin or switch identity to
+work around an unavailable permission check.
+
+This release does not claim all-platform business queries, a new paid-model
+reasoning evaluation, EPD audit/certification or Desktop activation. Remaining
+acceptance belongs to the
+[product Feature](https://github.com/HiQ-AI/environmental-data/issues/1).
+Version-specific older evidence remains in Git history and the
+[0.7.4 record](RELEASE_0.7.4.md), not current installation guidance.

@@ -4,9 +4,9 @@ import { createHash } from 'node:crypto';
 export const origin = 'https://download.hiq.earth';
 export const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 export const encode = value => Buffer.from(JSON.stringify(value, null, 2) + '\n');
-export function allowedPath(file, ids) {
+export function allowedPath(file, ids, rootFiles = []) {
   if (typeof file !== 'string' || file.includes('\\') || file.split('/').some(part => !part || part === '.' || part === '..')) return false;
-  if (file === 'cli-release.json') return ids.length === 20;
+  if (file === 'cli-release.json') return rootFiles.includes(file);
   return ids.some(id => file === `plugins/${id}/README.md` || file === `plugins/${id}/.claude-plugin/plugin.json` ||
     new RegExp(`^plugins/${id}/(?:skills/[a-z0-9-]+/(?:SKILL\\.md|references/[a-z0-9-]+\\.(?:md|json))|agents/[a-z0-9-]+\\.md|SOURCES\\.md)$`).test(file));
 }
@@ -39,9 +39,20 @@ export function validateBundle(bundle, registration) {
   }
   assert(Object.keys(bundle.files).length > 0);
   for (const [file, entry] of Object.entries(bundle.files)) {
-    assert(allowedPath(file, registration.ids), `Disallowed consumer path: ${file}`);
+    assert(allowedPath(file, registration.ids, registration.rootFiles), `Disallowed consumer path: ${file}`);
     assert.equal(typeof entry.content, 'string');
     assert.equal(hash(entry.content), entry.sha256, `File digest mismatch: ${file}`);
+  }
+  if (registration.rootFiles?.includes('cli-release.json')) {
+    const release = JSON.parse(bundle.files['cli-release.json'].content);
+    assert.equal(release.schemaVersion, 1);
+    assert.deepEqual(release.plugins.map(plugin => plugin.id).sort(), [...registration.ids].sort(), 'Release product set mismatch');
+    for (const plugin of bundle.plugins) {
+      const published = release.plugins.find(entry => entry.id === plugin.id);
+      assert.deepEqual(plugin.components.cli, published.cli, 'Consumer pins differ from sealed release');
+      assert.equal(published.scope.executable, plugin.id);
+      assert.equal(published.scope.protocol, plugin.id === 'epd-data' ? 'relic-epd' : 'relic-datasets');
+    }
   }
   for (const plugin of bundle.plugins) {
     const manifest = JSON.parse(bundle.files[`${plugin.path}/.claude-plugin/plugin.json`].content);
