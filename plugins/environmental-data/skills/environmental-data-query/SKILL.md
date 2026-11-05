@@ -1,11 +1,11 @@
 ---
 name: environmental-data-query
-description: "Query Environmental Data (Aggregate) environmental data: clarify requirements, find candidates, match needs, compare applicability and retrieve authorized details with environmental-data. Use for data queries, source/model choices, result interpretation, access problems and first-use setup."
+description: "Query Environmental Data environmental data: clarify requirements, find candidates, match needs, compare applicability and retrieve authorized details with environmental-data. Use for data queries, source/model choices, result interpretation, access problems and first-use setup."
 ---
 
 # Environmental Data Querying
 
-Use this skill for environmental-data candidate discovery, requirement matching, evidence comparison and authorized detail retrieval. Use only the trusted `environmental-data` executable; no other program is a fallback after denied access. Choose datasets (default) or epd explicitly; keep the same kind for search and lookup.
+Use this skill for environmental-data candidate discovery, requirement matching, evidence comparison and authorized detail retrieval. Use only the trusted `environmental-data` executable; no other program is a fallback after denied access. Query the supported environmental databases through this one program; use --sources for database selection. EPD declarations belong to the separate epd-data plugin.
 
 ## Workflow and references
 
@@ -13,7 +13,7 @@ Use this skill for environmental-data candidate discovery, requirement matching,
 2. Before first execution, command-not-found, an unknown same-name entry or an authentication error, read [installation and authentication](references/preparation.md) and the exact [installation record](references/installation.json). Prepare the pinned program, manage one device-login process if needed, present the actual clickable authorization link and continue the original task after approval. Do not stop at installation or login success.
 3. Before selecting flags or a data domain, read [CLI parameters](references/cli.md). Check actual help when uncertain. Send a complete natural-language query, faithfully preserving constraints; do not invent geography, background pagination or statistics flags. Treat source/model selectors as request inputs, not proof every requirement was met.
 4. Inspect candidates against requirements. When descriptions, boundaries or numerical values are needed, use `environmental-data lookup` with exact returned keys. Before interpreting responses or comparing values, read [results and evidence](references/results.md). Recover omitted current-response details with --full when necessary; retain missing/restricted distinctions.
-5. Deliver a readable candidate table, evidence-based match/proxy/not-found conclusion, exact returned links and remaining unknowns. Read [worked examples and recovery](references/examples.md) for timber, EPD and cross-source workflows or failures. Keep unresolved original needs visible and continue any authorized pending step.
+5. Deliver a readable candidate table, evidence-based match/proxy/not-found conclusion, exact returned links and remaining unknowns. Read [worked examples and recovery](references/examples.md) for timber, cross-source workflows or failures. Keep unresolved original needs visible and continue any authorized pending step.
 
 ## Non-negotiable boundaries
 

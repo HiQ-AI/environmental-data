@@ -20,7 +20,12 @@ assert.equal(release.schemaVersion, 1);
 assert.equal(new Set(release.plugins.map(plugin => plugin.cli.name)).size, release.plugins.length, 'Each plugin must have a distinct compiled command');
 assert.deepEqual(catalog.plugins.map(plugin => plugin.id).sort(), release.plugins.map(plugin => plugin.id).sort(), 'Catalog must match the sealed release projection');
 const ids = catalog.plugins.map(plugin => plugin.id);
-assert.ok(ids.length, 'The catalog must contain plugins');
+assert.deepEqual([...ids].sort(), ['environmental-data', 'epd-data'].sort(), 'Only the two current products may be active');
+for (const plugin of release.plugins) {
+  assert.equal(plugin.scope.protocol, plugin.id === 'epd-data' ? 'relic-epd' : 'relic-datasets');
+  assert.equal(plugin.scope.executable, plugin.id);
+  assert.equal(plugin.id === 'epd-data' ? plugin.scope.sources.length : plugin.scope.publishers.length, 0, 'Product domains must not overlap');
+}
 assert.equal(new Set(ids).size, ids.length, 'Plugin IDs must be unique');
 assert.deepEqual(readdirSync(path.join(root, 'plugins')).sort(), [...ids].sort());
 const native = {

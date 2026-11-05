@@ -24,11 +24,12 @@ must not be described as a whole-database or industry statistic.
 
 ## Source and declaration scope
 
-Each database plugin uses its own independently compiled program. Conflicting
-sources and cross-source output fail rather than silently broadening the query.
-The aggregate is selected explicitly and has a compiled closed set. It is not a
-fallback after denied access. Remote source-directory changes cannot expand a
-program's supported set.
+`environmental-data` is the single background-database program. It embeds a
+closed source set and accepts one or several supported databases through
+`--sources`. Unknown sources and out-of-scope response identities are errors.
+`epd-data` is the separate published-declaration program. Neither program can
+cross its business domain or serve as a fallback after denied access. Remote
+source-directory changes cannot expand either compiled set.
 
 The [source inventory](../plugins/environmental-data/SOURCES.md) distinguishes
 published availability, advertised numerical coverage and access flags. A source

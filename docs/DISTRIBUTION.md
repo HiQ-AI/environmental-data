@@ -2,81 +2,85 @@
 
 ## Products and artifacts
 
-Environmental Data supplies 18 source-specific database programs, one published
-EPD program and one cross-source program. One private implementation and one
-channel declaration produce all 20 programs. This repository publishes the
-consumer catalog, native plugin manifests, skills, roles and sealed installation
-metadata. It contains no private CLI implementation, credentials or database
-content.
+One private implementation and one channel declaration produce two programs:
 
-Release 0.7.5 targets macOS arm64/x64, Linux arm64/x64 and Windows x64: 100 native
-archives in total. The immutable producer index is:
+| Plugin / program | Scope | Skill | Roles |
+| --- | --- | --- | --- |
+| environmental-data | Supported background databases, selected through --sources | environmental-data-query | data-searcher, data-matcher, data-reviewer |
+| epd-data | Published EPD declarations | epd-query | None |
 
-https://download.hiq.earth/cli/environmental-data/releases/v0.7.5/index.json
+CLI 0.8.3 targets macOS arm64/x64, Linux arm64/x64 and Windows x64: ten native
+archives. The immutable producer index is:
 
-The checked-in [cli-release.json](../cli-release.json) is the producer's sealed
-projection. It records the source revision, declaration digest, platform
-archives, installer digests and consumer names. It is not a second editable
-source list. Catalog CLI entries must match that projection exactly.
+https://download.hiq.earth/cli/environmental-data/releases/v0.8.3/index.json
 
-## Naming
+[cli-release.json](../cli-release.json) is the sealed consumer projection, not a
+second editable source declaration. Its revision, scope, archive/installer hashes
+and consumer names bind the catalog. Every CLI entry must match it exactly.
+This repository publishes metadata, manifests, skills, roles and installation
+resources, not private implementation, database content, binaries or credentials.
 
-Plugin ID and CLI name are identical. Database entries use their source names,
-such as `hiqlcd`, `ecoinvent` and `cesi`. Published declarations use `epd-data`;
-the aggregate uses `environmental-data`.
+## Domain and authorization
 
-Database skills use `<source>-query`. The EPD skill is `epd-query`; the aggregate
-skill is `environmental-data-query`. Skill titles use Data Querying. Only the
-aggregate declares roles: `data-searcher`, `data-matcher` and `data-reviewer`.
-Names do not add business capabilities or change database rights.
+The only business commands are `search` and `lookup`. Supporting commands provide
+help, version, info, authentication, diagnostics and source metadata.
+`environmental-data` is datasets-only; `epd-data` is declarations-only. The former
+aggregate's EPD path is retired. Database source codes are unchanged, including
+CESI's `hiq-cesi`. Names and installation settings do not confer rights or expand
+the compiled set.
 
-HiQLCD and HiQLCD-AL retain their official database names. CESI's external
-plugin/program ID is `cesi`; its service source code remains `hiq-cesi`.
+Server authorization and source terms remain authoritative. Both programs retain
+the existing product identity and credential store; neither copies another
+product's token or narrows the OAuth token. A public source directory or search
+hit does not prove numerical entitlement. Service unavailability is not denied
+entitlement. Search and lookup do not perform EPD audit, certification or business
+writes. The `cortex-epd` auditing expert is a separate, unchanged product.
 
-## Runtime and authorization
-
-The business commands are `search` and `lookup`. Search finds candidates through
-the existing intelligent-query service; lookup retrieves authorized details
-using the service's opaque keys. Supporting commands provide help, version,
-program information, authentication, diagnostics and source metadata.
-
-Each database program embeds its source boundary. EPD embeds its publisher set.
-The aggregate embeds a closed background-source and publisher set. Renaming a
-binary, adjacent configuration or a remote source-directory addition cannot
-expand those sets. Source conflicts and cross-source responses are errors.
-
-Server authorization and source terms remain authoritative. All programs retain
-the data client's existing product identity and credential location. Compiled
-scope neither grants a license nor narrows the OAuth token. Access failures do
-not authorize switching accounts, sources or products.
-
-Default output is a candidate preview with coverage information. `--full` means
-the complete current response, not the entire database. Skills may compare
-returned candidates but do not expose database-wide statistics or invent totals.
+Default output is a received-response preview with explicit omissions. `--full`
+means all of that response, not the entire database. Calculations or comparisons
+must retain candidate sample limits, compatible units/methods and access evidence.
+No database-wide statistics API is supplied.
 
 ## Installation and migration
 
-Every platform archive retains its manifest, binary, LICENSE and NOTICE.
-Installers verify pinned hashes and retain complete versioned releases. An
-existing entry may be replaced only when its managed origin and scope can be
-established. Unrelated files, directories, external links and unverifiable
-entries are preserved and reported as conflicts. Installers do not execute an
-unknown same-name program to identify it.
+Every archive retains manifest, binary, LICENSE and NOTICE. Verified installers
+preserve complete versioned releases and existing credentials. Existing entries
+are replaced only after managed ownership and integrity checks. Unknown files,
+external links, directories and unverifiable entries remain conflicts; unknown
+same-name programs are not executed to identify them.
 
-0.7.5 replaces the former plugin, skill and role IDs. The current catalog has no
-legacy aliases or duplicate release matrix. Users explicitly install the new
-plugin IDs through their host and remove old subscriptions through that host.
-No migration automatically deletes programs, credentials or user data. Older
-immutable releases are not rewritten. See [installation](INSTALLATION.md).
+The one-way managed migration from `environmental-data` 0.7.4/0.7.5 to 0.8.3 permits
+only the exact known aggregate-to-datasets scope reduction, with unchanged dataset
+sources and the known old publisher set. It does not rewrite the old manifest or
+delete its payload. Other scope changes remain rejected.
 
-## Verification and release boundaries
+The public active catalog has exactly two entries. Eighteen single-database
+entries are removed without aliases or a parallel matrix. Users explicitly
+replace old plugin subscriptions through their native host; no automatic deletion
+of programs, credentials or user data occurs. Old immutable archives remain
+unchanged. See [installation](INSTALLATION.md).
 
-[Compatibility](COMPATIBILITY.md) separates native packaging, installer execution,
-host discovery and business-query evidence. A successful build or native version
-check does not establish authenticated database access, professional suitability
-or acceptance on every host.
+## Consumer content and synchronization
+
+English skills and their complete local references are generated from shared
+producer sources and this sealed release. Each plugin is independently usable;
+no cross-plugin reference, aggregate installation or remote guide is required.
+Consumer plugin versions may advance independently of CLI versions without
+rewriting executable pins.
+
+The explicit `two-products` synchronization channel accepts only these two IDs
+and the registered root projection. Its validator binds CLI pins and domain scope
+to that projection. The retired twenty-plugin `published` feed cannot restore old
+active entries. Initial directory/registry/lock migration is a reviewed change,
+not a routine feed operation. See [consumer synchronization](CONSUMER_SYNC.md).
+
+## Evidence and release boundaries
+
+[Compatibility](COMPATIBILITY.md) distinguishes artifact packaging, installer
+execution, host discovery and real-account queries. Builds, signatures and native
+version probes do not establish numerical access or professional suitability.
 
 This publication does not release Desktop, switch its production catalog, change
-the query services, purchase data, write business records or notify users.
-Execution and remaining product acceptance are tracked in the
+billing/entitlements, purchase access, write business records or notify users.
+Acceptance is tracked in the
 [product Feature](https://github.com/HiQ-AI/environmental-data/issues/1).

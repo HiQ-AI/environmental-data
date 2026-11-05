@@ -1,13 +1,13 @@
-# environmental-data CLI parameters (0.7.5)
+# environmental-data CLI parameters (0.8.3)
 
 Use the verified executable from preparation for all commands. The examples show its bare name only when that entry is trusted. Command arguments must be passed separately through the host's process tool when possible. If using a shell, quote the complete query and every opaque key/source expression. Never concatenate raw user input into a shell command. Single quotes in the examples work in POSIX and PowerShell for these fixed strings; real apostrophes require the shell's actual escaping rules (PowerShell doubles a single quote; POSIX closes/reopens the quoted string). A literal | must remain inside quotes, not become a pipeline.
 
 ## Program scope and domains
 
-- Program: environmental-data; protocol: aggregate.
+- Program: environmental-data; protocol: relic-datasets.
 - Compiled background source codes: hiqlcd, hiqlcd-al, calcd, hiq-cesi, ecoinvent, carbonminds, agrifootprint, ef, auslci, bafu, bioenergiedat, elcd, needs, ozlci, recycledplastics, usda, uslci, worldsteel.
-- Compiled EPD publisher codes: eco, epditaly, epdnorge.
-- Default kind is datasets. For declarations use --kind epd on both search and lookup; do not mix dataset keys and declaration keys.
+- Compiled EPD publisher codes: none.
+- Default kind is datasets. --kind epd is outside scope. Select one or several supported databases with --sources.
 
 ## Inputs
 
@@ -43,19 +43,4 @@ environmental-data search 'Find construction solid timber, C24 strength class, t
 
 Select a version or model only from the user's requirements and actual metadata; examples do not imply a mandatory default.
 
-## Published EPD search
-
-| Option | Actual behavior |
-| --- | --- |
-| --publishers 'codeA,codeB' | Comma-separated subset of the compiled publisher codes above. Omission uses the compiled set. Use real codes, not guessed publisher names. |
-| --limit 20 | Integer 1..100, default 20, declarations per page. |
-| --cursor '<returned cursor>' | Continue with the actual service cursor and the same query/publishers/limit. Use the returned page structure; no invented page number or total. |
-
-EPD rejects --sources and --model. Published search is public; lookup requires product authentication.
-
-```bash
-environmental-data search 'Published EPD for concrete used in Switzerland; identify declared unit, validity and A1-A3 method coverage' --kind epd --limit 5 --json
-```
-
-For lookup substitute an actual epd_key; include --kind epd. Do not copy an illustrative placeholder as a real key.
 
