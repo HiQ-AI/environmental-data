@@ -9,6 +9,23 @@ Use the verified executable from preparation for all commands. The examples show
 - Compiled EPD publisher codes: eco, epditaly, epdnorge.
 - Default kind is epd. --kind datasets is outside scope. sources is not an EPD publisher listing and fails for this program.
 
+## Argument format and joining rules
+
+Construct arguments as structured values before execution. The executable path is separate from its argv array; quotation marks belong to shell syntax, not to values passed directly in argv.
+
+- Query: pass the complete natural-language request as the single positional argument after search. Do not use --query, split a sentence into several arguments, URL-encode it or pre-escape it for HTTP; the CLI handles transport encoding.
+- Lookup: collect exact epd_key values from actual search results and join them with a comma into one positional argument after lookup. The CLI trims surrounding whitespace, removes empty entries and deduplicates; the resulting list must contain 1..200 keys. Keep each opaque key unchanged: do not decode, rebuild, case-normalize or apply source-coordinate formatting to it.
+- Publishers: join actual compiled publisher codes with commas into one --publishers value. These are not source:version coordinates; no source/model discovery command applies to EPD. Pass an actual returned cursor as one --cursor value unchanged.
+- Flags: each flag and its value are separate argv elements. --json and --full are standalone flags. Omit optional selectors when no restriction is intended; do not fill them with placeholders or empty source coordinates.
+
+For example, the following JSON is an argv array, not a shell command. Use the verified executable path separately:
+
+```json
+["search","Published EPD for concrete used in Switzerland","--publishers","eco,epditaly,epdnorge","--limit","5","--json"]
+```
+
+For lookup, the construction is argv = ["lookup", returnedKeys.join(","), "--json"], with returnedKeys populated only from the actual response. If a shell is necessary, quote each complete value with its real shell escaping rules; the pipe remains inside the quoted source value. Do not interpolate raw user input or use environment variables to carry request parameters.
+
 ## Inputs
 
 | Command/input | Meaning and limits |
