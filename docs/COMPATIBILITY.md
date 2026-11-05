@@ -2,19 +2,21 @@
 
 ## Supported distribution
 
-CLI 0.8.0 has two programs, `environmental-data` and `epd-data`, targeting macOS
+CLI 0.8.1 has two programs, `environmental-data` and `epd-data`, targeting macOS
 arm64/x64, Linux arm64/x64 and Windows x64. The
 [sealed projection](../cli-release.json) identifies the exact revision, scope,
 archives and hashes. macOS uses Developer ID, Hardened Runtime, timestamps and
 notarization. Windows binaries are unsigned; normal OS trust and SmartScreen
 controls remain applicable.
 
-The [0.8.0 release run](https://github.com/HiQ-AI/cortex/actions/runs/41952299592)
+The [0.8.1 release run](https://github.com/HiQ-AI/cortex/actions/runs/41954305504)
 is the authority for actual build, CDN native execution, sealing and Windows
-installer results. At preparation of this migration those results are pending;
-this branch is not a claim that publication or Windows installation has passed.
-The old 0.7.5 Windows extraction failure is historical evidence, not a test result
-for 0.8.0.
+installer results. Those results are pending in this preparation branch.
+Version 0.8.0 passed five builds, five native jobs and sealing but failed Windows
+PowerShell 5.1 parsing of localized migration JSON. Its sealed bytes are retained.
+Version 0.8.1 emits an ASCII-only PowerShell script containing all business-scope
+identity fields (protocol, source codes and publishers), without localized labels.
+This source correction alone is not actual Windows installation acceptance.
 
 ## Native plugin hosts
 
@@ -47,7 +49,7 @@ checks cover old-channel/ID rejection, explicit root registration, sealed CLI pi
 binding, no-op, rollback/tampering and PR recovery.
 
 POSIX installer execution covers managed upgrades, repeat installation, corrupt
-archives, unrelated entries and links. The explicit 0.7.4/0.7.5 aggregate-to-0.8.0
+archives, unrelated entries and links. The explicit 0.7.4/0.7.5 aggregate-to-0.8.1
 datasets migration passes for both old versions and rejects unknown source,
 publisher and protocol changes while retaining the old manifest. The old source
 and publisher sets were compared with their actual tagged declarations.

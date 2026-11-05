@@ -88,7 +88,7 @@ separate properly licensed [spreadsheet capability](docs/SPREADSHEETS.md).
 
 ## Distribution
 
-CLI 0.8.0 supplies two native programs on macOS arm64/x64, Linux arm64/x64 and
+CLI 0.8.1 supplies two native programs on macOS arm64/x64, Linux arm64/x64 and
 Windows x64. The [sealed projection](cli-release.json) pins every archive and
 installer. This repository contains public metadata and operating instructions,
 not private CLI implementation, binaries, database content or credentials.

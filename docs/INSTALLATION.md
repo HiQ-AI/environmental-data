@@ -46,7 +46,7 @@ plugin skills but does not register bundled agent Markdown as roles.
 
 ## Prepare the CLI
 
-CLI 0.8.0 provides `environmental-data` and `epd-data` on macOS arm64/x64, Linux
+CLI 0.8.1 provides `environmental-data` and `epd-data` on macOS arm64/x64, Linux
 arm64/x64 and Windows x64. Read the chosen skill and bundled
 `references/installation.json`. It pins the archive, installer and complete
 SHA256 from [cli-release.json](../cli-release.json).
@@ -121,7 +121,7 @@ single-database subscriptions through the host manager when no longer needed.
 Select the original database inside the unified program with `--sources`; an old
 subscription does not rename itself. EPD stays a separate `epd-data` product.
 
-The 0.8.0 installer supports a narrow same-name managed upgrade from
+The 0.8.1 installer supports a narrow same-name managed upgrade from
 `environmental-data` 0.7.4 or 0.7.5: verified ownership, complete manifest/binary
 hash, unchanged dataset source set and exact known former publishers are required.
 It removes the aggregate's EPD domain, retains the old payload/manifest and
