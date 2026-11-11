@@ -16,7 +16,7 @@
       "name": "Environmental Data",
       "description": "环境数据查询，按需求比较适用性并获取获准详情；保留来源范围、证据与访问限制。",
       "description_en": "Find and match Environmental Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.20261111.52101",
+      "version": "0.20261111.65114",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -88,7 +88,7 @@
       "name": "EPD声明查询",
       "description": "EPD声明查询，按需求比较适用性并获取获准详情；保留来源范围、证据与访问限制。",
       "description_en": "Find and match Published EPD Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.20261111.52101",
+      "version": "0.20261111.65114",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [

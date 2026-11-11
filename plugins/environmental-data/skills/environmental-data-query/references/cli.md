@@ -72,7 +72,7 @@ environmental-data search 'Find construction solid timber, C24 strength class, t
 
 ## Numerical reads
 
-Numerical reads require this product's login. QUERYING_LCA_DATASETS_API_KEY cannot read numbers; unset it and use login. Free databases return values for every signed-in user. Commercial values additionally require that an administrator enabled Environmental Data CLI for the account and remain limited to the user's database entitlements; otherwise rows are restricted. Each command first verifies the dataset is in this program's scope and echoes dataset identity and webUrl.
+lci, lcia and methods require this product's login; QUERYING_LCA_DATASETS_API_KEY cannot run them, so unset it and use login. lookup also works with an API key: its headlineGwp follows that key's own entitlements and API quota. For signed-in users, free databases return values for every signed-in user. Commercial values additionally require that an administrator enabled Environmental Data CLI for the account and remain limited to the user's database entitlements; otherwise rows are restricted. Each command first verifies the dataset is in this program's scope and echoes dataset identity and webUrl.
 
 | Command | Behavior |
 | --- | --- |
