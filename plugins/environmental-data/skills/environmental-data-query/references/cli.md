@@ -1,4 +1,4 @@
-# environmental-data CLI parameters (0.9.1)
+# environmental-data CLI parameters (0.9.2)
 
 Use the verified executable from preparation for all commands. The examples show its bare name only when that entry is trusted. Command arguments must be passed separately through the host's process tool when possible. If using a shell, quote the complete query and every opaque key/source expression. Never concatenate raw user input into a shell command. Single quotes in the examples work in POSIX and PowerShell for these fixed strings; real apostrophes require the shell's actual escaping rules (PowerShell doubles a single quote; POSIX closes/reopens the quoted string). A literal | must remain inside quotes, not become a pipeline.
 
@@ -72,7 +72,7 @@ environmental-data search 'Find construction solid timber, C24 strength class, t
 
 ## Numerical reads
 
-lci, lcia and methods require this product's login; QUERYING_LCA_DATASETS_API_KEY cannot run them, so unset it and use login. lookup also works with an API key: its headlineGwp follows that key's own entitlements and API quota. For signed-in users, free databases return values for every signed-in user. Commercial values additionally require that an administrator enabled Environmental Data CLI for the account and remain limited to the user's database entitlements; otherwise rows are restricted with reason GRANT_REQUIRED. The grant is issued at login, so after an administrator enables the account the user must run login once more. Each command first verifies the dataset is in this program's scope and echoes dataset identity and webUrl.
+lci, lcia, methods and trace require this product's login; QUERYING_LCA_DATASETS_API_KEY cannot run them, so unset it and use login. lookup also works with an API key: its headlineGwp follows that key's own entitlements and API quota. For signed-in users, free databases return values for every signed-in user. Commercial values additionally require that an administrator enabled Environmental Data CLI for the account and remain limited to the user's database entitlements; otherwise rows are restricted with reason GRANT_REQUIRED. The grant is issued at login, so after an administrator enables the account the user must run login once more. Each command first verifies the dataset is in this program's scope and echoes dataset identity and webUrl.
 
 | Command | Behavior |
 | --- | --- |
@@ -82,6 +82,7 @@ lci, lcia and methods require this product's login; QUERYING_LCA_DATASETS_API_KE
 | lcia '<key>' | LCIA results of one dataset; --method full methodId, --method-prefix method segment, --category / --indicator names, --limit 1..200 (default 50), --cursor. The response lists methodIdsWithData. |
 | lcia '<key1,key2,...>' | Several datasets in batches with optional --method only; each item keeps its own restricted/error state. |
 | lcia '<key>' --contributions --method '<methodId>' | Process-stage contribution buckets (electricity/heat, fuels, materials, transport, direct, ...). Bucketed by design; no unit-process detail. |
+| trace '<key>' [--direction up|down] | One layer of supply structure: up = suppliers (default), down = consumers; at most three neighbours ordered by absolute amount (not by contribution). Each node: name, location, source, flow, datasetRef (null for background nodes; use it with lookup for details and webUrl) and value. value is null unless the account is allowed exchange amounts; restricted roots return no nodes. Call again on a node's datasetRef to go one layer further; keep depth small. Sources without trace data return empty nodes. |
 
 Read methods before choosing --method; do not guess methodIds. Avoid unbounded loops: one --all inventory is about ten pages for a large ecoinvent process, and the gateway rate-limits by address (the CLI backs off on 429).
 
