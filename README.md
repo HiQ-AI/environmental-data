@@ -42,6 +42,7 @@ The database plugin ships the `environmental-data-query` skill and three roles:
 | `lci` | Cumulative inventory (elementary flows) of one dataset |
 | `lcia` | Impact results; several datasets at once, one method, or process contributions |
 | `methods` | LCIA methods and indicators of a source, for choosing `lcia --method` |
+| `trace` | One layer of supply structure: up to three suppliers or consumers, each with its own key |
 
 `epd-data` provides `search` and `lookup` for declarations. Eighteen background
 databases are covered, including HiQLCD, CALCD, ecoinvent, Carbon Minds,
