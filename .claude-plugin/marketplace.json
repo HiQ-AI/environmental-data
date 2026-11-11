@@ -12,14 +12,14 @@
       "displayName": "Environmental Data",
       "source": "./plugins/environmental-data",
       "description": "Find and match Environmental Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.20261105.54644"
+      "version": "0.20261111.52101"
     },
     {
       "name": "epd-data",
       "displayName": "EPD声明查询",
       "source": "./plugins/epd-data",
       "description": "Find and match Published EPD Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.20261105.54644"
+      "version": "0.20261111.52101"
     }
   ]
 }
