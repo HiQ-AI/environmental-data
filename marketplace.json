@@ -16,7 +16,7 @@
       "name": "Environmental Data",
       "description": "环境数据查询，按需求比较适用性并获取获准详情；保留来源范围、证据与访问限制。",
       "description_en": "Find and match Environmental Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.20261111.65114",
+      "version": "0.20261111.85056",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -28,8 +28,8 @@
         "environmental-data"
       ],
       "path": "plugins/environmental-data",
-      "requirements": "独立 CLI environmental-data 0.9.0；按固定摘要安装并核实程序范围，安装不授予数据权限。",
-      "requirements_en": "Independent environmental-data 0.9.0; install with pinned hashes and verify scope. Installation grants no data entitlement.",
+      "requirements": "独立 CLI environmental-data 0.9.1；按固定摘要安装并核实程序范围，安装不授予数据权限。",
+      "requirements_en": "Independent environmental-data 0.9.1; install with pinned hashes and verify scope. Installation grants no data entitlement.",
       "components": {
         "skills": [
           {
@@ -53,28 +53,28 @@
         ],
         "cli": {
           "name": "environmental-data",
-          "version": "0.9.0",
+          "version": "0.9.1",
           "executable": "bin/environmental-data",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/environmental-data/environmental-data-darwin-arm64.tar.gz",
-              "sha256": "dd1384e0ef948af178862fcea7e1d9fc4e1c5d7e116d9ff0a6a4d1b0cc1764f4"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/environmental-data/environmental-data-darwin-arm64.tar.gz",
+              "sha256": "65f7cde82f67d5cabf86227dbdc9f81d954b884048fee2fb59940a88c026d616"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/environmental-data/environmental-data-darwin-x64.tar.gz",
-              "sha256": "406bcf6fe4a0801c6655e8a507bc0448b4208b6384fce02da25ba12f3f776fd1"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/environmental-data/environmental-data-darwin-x64.tar.gz",
+              "sha256": "c4063b2ddf3fffab424504455a23aa1e00c848e3870aac8b729a024ae1a87393"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/environmental-data/environmental-data-linux-arm64.tar.gz",
-              "sha256": "463273403d1172f96a8e05e0b190bf48362d5cc716455340e63ecec81455632f"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/environmental-data/environmental-data-linux-arm64.tar.gz",
+              "sha256": "d63d0464878f038e4381fa76cac1fd1ccead782caa6896239d22edafa53dc8f0"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/environmental-data/environmental-data-linux-x64.tar.gz",
-              "sha256": "4badf04b0c306bd10bc3fda558ee29e0b33603f129eb0702486a85f563ed4749"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/environmental-data/environmental-data-linux-x64.tar.gz",
+              "sha256": "1ffe9386cea3692c3f298d340b8fb61ecd403d1b60c627a515cef488c63306c2"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/environmental-data/environmental-data-win32-x64.tar.gz",
-              "sha256": "e6e8cab98981300d613290445c79ddc6545c50f8c35110f600b98a0606b3adee"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/environmental-data/environmental-data-win32-x64.tar.gz",
+              "sha256": "a852f4e5a4c25e19027881fa4684c5431fb44116430df05703867340fcdd21ed"
             }
           }
         }
@@ -88,7 +88,7 @@
       "name": "EPD声明查询",
       "description": "EPD声明查询，按需求比较适用性并获取获准详情；保留来源范围、证据与访问限制。",
       "description_en": "Find and match Published EPD Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
-      "version": "0.20261111.65114",
+      "version": "0.20261111.85056",
       "author": "HiQ",
       "category": "environmental-data",
       "tags": [
@@ -98,8 +98,8 @@
         "epd-data"
       ],
       "path": "plugins/epd-data",
-      "requirements": "独立 CLI epd-data 0.9.0；按固定摘要安装并核实程序范围，安装不授予数据权限。",
-      "requirements_en": "Independent epd-data 0.9.0; install with pinned hashes and verify scope. Installation grants no data entitlement.",
+      "requirements": "独立 CLI epd-data 0.9.1；按固定摘要安装并核实程序范围，安装不授予数据权限。",
+      "requirements_en": "Independent epd-data 0.9.1; install with pinned hashes and verify scope. Installation grants no data entitlement.",
       "components": {
         "skills": [
           {
@@ -110,28 +110,28 @@
         "agents": [],
         "cli": {
           "name": "epd-data",
-          "version": "0.9.0",
+          "version": "0.9.1",
           "executable": "bin/epd-data",
           "releases": {
             "darwin-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/epd-data/epd-data-darwin-arm64.tar.gz",
-              "sha256": "39ebfcfe748c564806fc0e259b5c9a5675a9251303e1712665cc6a047a36daed"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/epd-data/epd-data-darwin-arm64.tar.gz",
+              "sha256": "35518b70236308cfd18e4a46dba5bf22078305c9b812109502c43faaa75be1bf"
             },
             "darwin-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/epd-data/epd-data-darwin-x64.tar.gz",
-              "sha256": "6da1315c00b93cb8de384a01d622b7e41a5c46a956e57560a3318fd41c23bf32"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/epd-data/epd-data-darwin-x64.tar.gz",
+              "sha256": "75431108d9b8f8ae2ae7a96b7a6ce46b7aeec328df462e2a3c9fc7e006eb106c"
             },
             "linux-arm64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/epd-data/epd-data-linux-arm64.tar.gz",
-              "sha256": "f9c1f0b00e364b8a8974fb059a9c942073576c61763c5a079db7ac1b121b2137"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/epd-data/epd-data-linux-arm64.tar.gz",
+              "sha256": "8d450b0eefda75a5dc5e5a0e4435e586a75edf6aac936b7fe312bb34d6e75e76"
             },
             "linux-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/epd-data/epd-data-linux-x64.tar.gz",
-              "sha256": "9cf2a1d2b67a8878807fe9f738090dc236bc7678577967f36a7901711a73dca6"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/epd-data/epd-data-linux-x64.tar.gz",
+              "sha256": "eef105deed14eded4f047954c37d0f2054a1d222507fe5f780f2ded476f9e6a7"
             },
             "win32-x64": {
-              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.0/epd-data/epd-data-win32-x64.tar.gz",
-              "sha256": "13d45320014c9ce74365f3ac9c857fe5a1c1c4a5ff76339c45fbbfa73f680196"
+              "url": "https://download.hiq.earth/cli/environmental-data/releases/v0.9.1/epd-data/epd-data-win32-x64.tar.gz",
+              "sha256": "27b9adc90a8eaeb11208812ab3f535a38631955713b4bfdddc0cec53812b23f8"
             }
           }
         }

@@ -1,4 +1,4 @@
-# environmental-data CLI parameters (0.9.0)
+# environmental-data CLI parameters (0.9.1)
 
 Use the verified executable from preparation for all commands. The examples show its bare name only when that entry is trusted. Command arguments must be passed separately through the host's process tool when possible. If using a shell, quote the complete query and every opaque key/source expression. Never concatenate raw user input into a shell command. Single quotes in the examples work in POSIX and PowerShell for these fixed strings; real apostrophes require the shell's actual escaping rules (PowerShell doubles a single quote; POSIX closes/reopens the quoted string). A literal | must remain inside quotes, not become a pipeline.
 
@@ -72,13 +72,13 @@ environmental-data search 'Find construction solid timber, C24 strength class, t
 
 ## Numerical reads
 
-lci, lcia and methods require this product's login; QUERYING_LCA_DATASETS_API_KEY cannot run them, so unset it and use login. lookup also works with an API key: its headlineGwp follows that key's own entitlements and API quota. For signed-in users, free databases return values for every signed-in user. Commercial values additionally require that an administrator enabled Environmental Data CLI for the account and remain limited to the user's database entitlements; otherwise rows are restricted. Each command first verifies the dataset is in this program's scope and echoes dataset identity and webUrl.
+lci, lcia and methods require this product's login; QUERYING_LCA_DATASETS_API_KEY cannot run them, so unset it and use login. lookup also works with an API key: its headlineGwp follows that key's own entitlements and API quota. For signed-in users, free databases return values for every signed-in user. Commercial values additionally require that an administrator enabled Environmental Data CLI for the account and remain limited to the user's database entitlements; otherwise rows are restricted with reason GRANT_REQUIRED. The grant is issued at login, so after an administrator enables the account the user must run login once more. Each command first verifies the dataset is in this program's scope and echoes dataset identity and webUrl.
 
 | Command | Behavior |
 | --- | --- |
 | lookup '<key1,key2>' | Details, webUrl, headlineGwp (GWP100 with method and unit) and accessDecision for 1..200 keys. Enough when only a GWP100 value is needed. |
 | lci '<key>' | Cumulative elementary-flow inventory of one dataset (not unit-process exchanges). --type input (resources) or output (emissions), --name keyword, --category compartments such as air, --limit 1..200 (default 200), --cursor, --all to read every page serially. |
-| methods '<source>' | LCIA methods/categories/indicators with methodId and unit. --version exact version, --query text, --limit 1..500, --cursor. |
+| methods '<source[:version]>' | LCIA methods/categories/indicators with methodId and unit for one exact version; without a version the latest release is used and echoed. Use the dataset's own version from lookup. --query text, --limit 1..500, --cursor. |
 | lcia '<key>' | LCIA results of one dataset; --method full methodId, --method-prefix method segment, --category / --indicator names, --limit 1..200 (default 50), --cursor. The response lists methodIdsWithData. |
 | lcia '<key1,key2,...>' | Several datasets in batches with optional --method only; each item keeps its own restricted/error state. |
 | lcia '<key>' --contributions --method '<methodId>' | Process-stage contribution buckets (electricity/heat, fuels, materials, transport, direct, ...). Bucketed by design; no unit-process detail. |

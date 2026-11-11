@@ -1,7 +1,7 @@
 {
   "name": "epd-data",
   "displayName": "EPD声明查询",
-  "version": "0.20261111.65114",
+  "version": "0.20261111.85056",
   "description": "Find and match Published EPD Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
   "author": {
     "name": "HiQ"
