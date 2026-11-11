@@ -1,7 +1,7 @@
 {
   "name": "environmental-data",
   "displayName": "Environmental Data",
-  "version": "0.20261111.52101",
+  "version": "0.20261111.65114",
   "description": "Find and match Environmental Data data to user requirements, compare applicability and retrieve authorized details while preserving provenance and access limits.",
   "author": {
     "name": "HiQ"

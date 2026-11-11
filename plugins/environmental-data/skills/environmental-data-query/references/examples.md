@@ -33,7 +33,7 @@ The quoted separator is part of the parameter, not a shell pipeline. Look up sel
 | --- | --- |
 | Missing/untrusted command | Read preparation.md and installation.json; install the checksum-verified pinned program within host permissions. Preserve unknown same-name entries. |
 | INTERNAL_SERVICE_ONLY on lci/lcia/methods | Numerical reads are not open on this site yet. Report it; lookup headlineGwp may still answer a GWP100 question. Do not retry repeatedly. |
-| Numerical command rejected with QUERYING_LCA_DATASETS_API_KEY set | API keys cannot read numbers. Unset it for this command and use the product login. |
+| lci, lcia or methods rejected with QUERYING_LCA_DATASETS_API_KEY set | API keys cannot run these commands. Unset it for this command and use the product login; lookup still works with the key. |
 | Restricted commercial value after login | Entitlement or CLI enablement decision; say which, keep metadata and webUrl, and do not log in again. |
 | Permission-check unavailable / HTTP 503 / DATASET_PERMISSION_UNAVAILABLE | Report a service failure, preserve its actual error code/requestId, and do not interpret it as denied entitlement. The code alone does not identify which upstream directory, transport or permission stage failed. Do not relogin, change accounts or invent numerical results; one transient retry is enough before reporting the blocker. |
 | Missing credential or endpoint explicitly rejects credential | Manage one product login, browser/clickable link, original process result and query continuation; do not inspect credential files. |
