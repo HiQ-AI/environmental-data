@@ -2,12 +2,32 @@
 
 ## Supported distribution
 
-CLI 0.8.3 has two programs, `environmental-data` and `epd-data`, targeting macOS
+CLI 0.9.2 has two programs, `environmental-data` and `epd-data`, targeting macOS
 arm64/x64, Linux arm64/x64 and Windows x64. The
 [sealed projection](../cli-release.json) identifies the exact revision, scope,
 archives and hashes. macOS uses Developer ID, Hardened Runtime, timestamps and
 notarization. Windows binaries are unsigned; normal OS trust and SmartScreen
 controls remain applicable.
+
+The [0.9.2 release run](https://github.com/HiQ-AI/cortex/actions/runs/43045461891)
+completed sealing and the following build and native execution jobs successfully.
+Native probes execute both published program artifacts; they are not authenticated
+business queries.
+
+| Target | Build | Native execution |
+| --- | --- | --- |
+| darwin-arm64 | Passed | Passed |
+| darwin-x64 | Passed | Passed |
+| linux-arm64 | Passed | Passed |
+| linux-x64 | Passed | Passed |
+| win32-x64 | Passed | Passed |
+
+The published Windows installer verification job also passed on `windows-latest`.
+It verifies the published installer hash and installs both programs, checking
+version, `info --json`, binary hashes, package files, entry protection, migration
+and damaged archives.
+
+## Historical release evidence
 
 The [0.8.3 release run](https://github.com/HiQ-AI/cortex/actions/runs/41969079088)
 completed all five builds, native execution of all ten CDN program artifacts and
@@ -62,9 +82,9 @@ archives, unrelated entries and links. The explicit aggregate-to-datasets-only
 migration logic passed for managed 0.7.4/0.7.5 installations and rejected unknown
 source, publisher and protocol changes while retaining the old manifest. Its old
 source/publisher sets were compared with the actual tagged declarations; the
-replacement release binds the same narrow contract to 0.8.3.
+historical 0.8.3 replacement release bound the same narrow contract.
 
-The Windows results above come from the actual final release verifier, not from
+The Windows release results above come from the actual release verifiers, not from
 source review or POSIX execution. They establish installer and migration behavior,
 not all-platform authenticated business queries.
 
