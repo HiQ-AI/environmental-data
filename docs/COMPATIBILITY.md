@@ -2,6 +2,9 @@
 
 ## Supported distribution
 
+The current release is CLI 0.9.2; [cli-release.json](../cli-release.json) pins its
+revision, archives and hashes. The verification record below was made for 0.8.3.
+
 CLI 0.8.3 has two programs, `environmental-data` and `epd-data`, targeting macOS
 arm64/x64, Linux arm64/x64 and Windows x64. The
 [sealed projection](../cli-release.json) identifies the exact revision, scope,
