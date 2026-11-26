@@ -59,11 +59,11 @@ for macOS/Linux or `ps1` for Windows. Download the selected installer into a new
 empty directory. Compare its complete SHA256 against `installers.sh.sha256` or
 `installers.ps1.sha256` using `shasum -a 256`, `sha256sum`, or PowerShell
 `Get-FileHash -Algorithm SHA256`. Inspect the verified script, then run it from
-outside the download directory using `sh <absolute-script-path>` or
-`powershell.exe -NoProfile -File <absolute-script-path>`. Do not pipe a download
+outside the download directory using `sh <absolute-script-path>`. On Windows,
+use `powershell.exe -NoProfile -File <absolute-script-path>` only when execution
+policy permits scripts; the Restricted policy blocks it. Do not pipe a download
 into a shell or change execution policy. The installer verifies the selected
-archive; for manual installation, download that platform's archive and compare
-its complete SHA256 to the corresponding `releases` entry before unpacking.
+archive. If Windows policy blocks the installer, use the manual installation below.
 Retain manifest, LICENSE, NOTICE and bin together. Follow host permissions and
 normal OS trust controls; Windows binaries are unsigned. The exact verification
 boundary is in [compatibility](COMPATIBILITY.md).
@@ -74,6 +74,39 @@ refuse unrelated files, directories, external links and unverifiable entries.
 Keep conflicting entries and select independent install/bin directories when
 necessary, then use the verified absolute path. Installers retain versioned
 payloads, do not edit PATH or credentials, and do not stop other processes.
+
+### Manual Windows installation
+
+On Windows x64, open PowerShell and set the first two paths below to the chosen
+product's bundled `installation.json` and a new, independent installation directory.
+The directory must not already exist; do not use an existing managed entry or
+replace an unknown program. The commands download the pinned archive into a new
+temporary directory, verify its full hash, and extract it with Windows native tar.
+Run the lines in order and stop if any command fails.
+
+```powershell
+$metadataPath = 'C:\absolute\path\to\installation.json'
+$installDir = 'C:\absolute\path\to\new-install-directory'
+$metadata = Get-Content -LiteralPath $metadataPath -Raw | ConvertFrom-Json
+$release = $metadata.releases.'win32-x64'
+$downloadDir = Join-Path ([IO.Path]::GetTempPath()) ([Guid]::NewGuid().ToString())
+New-Item -ItemType Directory -Path $downloadDir -ErrorAction Stop | Out-Null
+$archive = Join-Path $downloadDir 'release.tar.gz'
+Invoke-WebRequest -Uri $release.url -OutFile $archive -UseBasicParsing
+if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash -ne $release.sha256) { throw 'Archive SHA256 mismatch' }
+New-Item -ItemType Directory -Path $installDir -ErrorAction Stop | Out-Null
+& "$env:SystemRoot\System32\tar.exe" -xzf $archive -C $installDir
+if ($LASTEXITCODE -ne 0) { throw 'Archive extraction failed' }
+$exe = Join-Path $installDir "$($metadata.program)-$($metadata.version)\bin\$($metadata.program).exe"
+& $exe version
+& $exe info --json
+& $exe search --help
+& $exe lookup --help
+```
+
+Keep the extracted manifest, LICENSE, NOTICE and bin together. This independent
+installation does not replace a managed entry, modify PATH or migrate credentials.
+Use the resulting absolute `$exe` path for subsequent commands.
 
 After installation, use the trusted absolute path to the selected executable for
 `version` and `info --json`; compare program, version and scope with its
