@@ -7,6 +7,8 @@ description: "Query Published EPD Data environmental data: clarify requirements,
 
 Use this skill for environmental-data candidate discovery, requirement matching, evidence comparison and authorized detail retrieval. Use only the trusted `epd-data` executable; no other program is a fallback after denied access. This program queries published EPD declarations, not background datasets or EPD audits.
 
+
+
 ## Workflow and references
 
 1. Reuse the user's request and known context. Separate hard requirements, preferences and unknowns. Before constructing a professional query or resolving ambiguity, read [requirements and query construction](references/professional-query.md). Searchable requests should proceed; ask only for information that materially changes the object or requested decision. Use an available native clarification tool, otherwise natural language. Optional precision must not block a user who wants to continue.
