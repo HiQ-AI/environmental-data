@@ -70,7 +70,7 @@ and a `webUrl` such as
 Open it to check the same dataset on the website. Missing, restricted and
 unavailable are different outcomes; do not rank values whose methods, models or
 boundaries differ. Queries never import records, edit models or purchase access.
-See [capabilities](docs/CAPABILITIES.md).
+See [capabilities](docs/CAPABILITIES.md) and the [primary aluminium production in China example](docs/primary-aluminium-china.md).
 
 ## Distribution
 
