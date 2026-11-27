@@ -4,11 +4,12 @@ Ask Environmental Data:
 
 > Which datasets are available for primary aluminium production in China?
 
-After [installation and login](INSTALLATION.md), you can also run the question
-with the CLI:
+After [installation and login](INSTALLATION.md), use the trusted absolute path
+of the installed executable to search by product and geography. Replace the
+example path with that path:
 
 ```bash
-environmental-data search 'Which datasets are available for primary aluminium production in China?' --json
+/absolute/path/to/environmental-data search 'aluminum' --location CN --json
 ```
 
 ## Example dataset
@@ -22,7 +23,8 @@ aluminium metal by electrolysis of alumina extracted from bauxite.
 ![Detail-query field excerpt for Aluminum, unwrought, primary, showing China, reference product, amount, model, activity type and technology description](images/primary-aluminium-china-fields.png)
 
 This production-process evidence distinguishes the record from a similarly named
-market or supply mix. Check the description and geography of each returned
-candidate rather than selecting a dataset by name alone. Use the exact returned
-key with `lookup` to inspect details and follow the returned web link for the
-record. Results and access depend on the available sources and account permissions.
+market or supply mix. The excerpt does not contain a dataset key or record link;
+identify the record in search results using the fields shown and check its
+technology description and geography. Use the exact returned key with `lookup`
+to inspect details and follow the returned web link for the record. Results and
+access depend on the available sources and account permissions.
