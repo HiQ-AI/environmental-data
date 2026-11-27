@@ -36,6 +36,7 @@ For lookup, the construction is argv = ["lookup", returnedKeys.join(","), "--jso
 | --kind datasets / epd | Domain selector, not a way to expand compiled scope. Keep the same domain for lookup. |
 | --json | Machine-readable command output; login progress still goes to stderr. Search/lookup already emit JSON envelopes. |
 | --full | All rows/details of this received response. Does not fetch all database records or automatically follow cursors. |
+| usage --json | Default balance of 10000 credits; queries do not consume credits during the promotional period. |
 | info --json | Actual program/version and fixed source/publisher declaration. |
 | doctor | Local credential presence only; JSON, exit 0 or 2. |
 | login --json | One blocking device authorization process; see preparation.md for background ownership and continuation. |
