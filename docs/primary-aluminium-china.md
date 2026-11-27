@@ -35,13 +35,16 @@ use product login.
 Search HiQLCD 1.5.0 for China using the cut-off model:
 
 ```bash
-/absolute/path/to/environmental-data search 'aluminum' --sources 'hiqlcd:1.5.0' --model cut_off --location CN --json
+/absolute/path/to/environmental-data search 'aluminum' --sources 'hiqlcd:1.5.0' --model cut_off --location CN --json --full
 ```
 
-Inspect the search results and use the returned cursor for further pages if
-needed, keeping the same filters. From the actual response, copy the candidate's
-complete `key` unchanged. Replace `SEARCH_RETURNED_KEY` inside the quotes in every command below with that
-value. Do not construct a key from the web URL. Use lookup to check the name,
+Inspect the `data.data` rows. The default preview shows at most 10 rows per
+array, while the default search page contains up to 20; `--full` shows all rows
+in the received page. For further pages, add `--cursor 'RETURNED_CURSOR'` using
+`data.page.cursor` and keep the same filters and `--full`. Copy the candidate's
+complete `datasetRef` unchanged: this is the key for the commands below. Replace
+`SEARCH_RETURNED_KEY` inside the quotes with that value. Do not construct a key
+from the web URL. Use the full lookup to check the name,
 China location, reference product and amount, version, model and technology
 against the production record above; do not select the market dataset. The
 search and lookup could not be verified against a live account for this example:
@@ -49,15 +52,20 @@ the search returned `No credential` (exit 2), so no actual CLI key or lookup
 result is asserted here.
 
 ```bash
-/absolute/path/to/environmental-data lookup 'SEARCH_RETURNED_KEY' --json
+/absolute/path/to/environmental-data lookup 'SEARCH_RETURNED_KEY' --json --full
 /absolute/path/to/environmental-data lci 'SEARCH_RETURNED_KEY' --json
 /absolute/path/to/environmental-data lcia 'SEARCH_RETURNED_KEY' --json
 /absolute/path/to/environmental-data trace 'SEARCH_RETURNED_KEY' --direction up --json
 ```
 
-`lci` returns cumulative elementary flows, not unit-process exchanges. `trace`
-returns one layer of suppliers (`up`) or consumers (`down`), with at most three
-neighbours ordered by absolute amount. Results depend on the source and access.
+`lookup --full` includes descriptions omitted by the default preview. `lci`
+returns cumulative elementary flows, not unit-process exchanges. The `lci` and
+`lcia` examples show a preview of the received page, with at most 10 rows per
+array; use `--full` to see that page in full, and the returned cursor with
+`--cursor` to request further server pages. `--full` does not fetch those pages.
+`trace` returns one layer of suppliers (`up`) or consumers (`down`), with at
+most three neighbours ordered by absolute amount. Results depend on the source
+and access.
 
 For process-stage contributions, select an actual `methodId` for the dataset's
 version from `methods`, or from `methodIdsWithData` in its `lcia` response.
