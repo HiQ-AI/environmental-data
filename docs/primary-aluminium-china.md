@@ -41,21 +41,21 @@ Search HiQLCD 1.5.0 for China using the cut-off model:
 Inspect the `data.data` rows. The default preview shows at most 10 rows per
 array, while the default search page contains up to 20; `--full` shows all rows
 in the received page. For further pages, add `--cursor 'RETURNED_CURSOR'` using
-`data.page.cursor` and keep the same filters and `--full`. Copy the candidate's
-complete `datasetRef` unchanged: this is the key for the commands below. Replace
-`SEARCH_RETURNED_KEY` inside the quotes with that value. Do not construct a key
-from the web URL. Use the full lookup to check the name,
-China location, reference product and amount, version, model and technology
-against the production record above; do not select the market dataset. The
-search and lookup could not be verified against a live account for this example:
-the search returned `No credential` (exit 2), so no actual CLI key or lookup
-result is asserted here.
+`data.page.cursor` and keep the same filters and `--full`. Copy a candidate's
+complete `datasetRef` unchanged; do not construct a key from the web URL. Use
+full lookup to check its name, China location, reference product and amount,
+version, model and technology against the production record above; do not select
+the market dataset.
+
+The following commands use the production record's actual `datasetRef`. A
+lookup in an authorized environment on 27 November 2026 confirmed Aluminum,
+unwrought, primary, HiQLCD 1.5.0, cut-off, China and 1 kg.
 
 ```bash
-/absolute/path/to/environmental-data lookup 'SEARCH_RETURNED_KEY' --json --full
-/absolute/path/to/environmental-data lci 'SEARCH_RETURNED_KEY' --json
-/absolute/path/to/environmental-data lcia 'SEARCH_RETURNED_KEY' --json
-/absolute/path/to/environmental-data trace 'SEARCH_RETURNED_KEY' --direction up --json
+/absolute/path/to/environmental-data lookup 'ZDEfYjJmZDkwOTctOWUwMy00NzJlLWIyNzYtYTkwNmM4MGRlODdjHzEuNS4wH0NVVF9PRkY' --json --full
+/absolute/path/to/environmental-data lci 'ZDEfYjJmZDkwOTctOWUwMy00NzJlLWIyNzYtYTkwNmM4MGRlODdjHzEuNS4wH0NVVF9PRkY' --json
+/absolute/path/to/environmental-data lcia 'ZDEfYjJmZDkwOTctOWUwMy00NzJlLWIyNzYtYTkwNmM4MGRlODdjHzEuNS4wH0NVVF9PRkY' --json
+/absolute/path/to/environmental-data trace 'ZDEfYjJmZDkwOTctOWUwMy00NzJlLWIyNzYtYTkwNmM4MGRlODdjHzEuNS4wH0NVVF9PRkY' --direction up --json
 ```
 
 `lookup --full` includes descriptions omitted by the default preview. `lci`
@@ -73,7 +73,7 @@ Replace `ACTUAL_METHOD_ID` with that complete value:
 
 ```bash
 /absolute/path/to/environmental-data methods 'hiqlcd:1.5.0' --json --full
-/absolute/path/to/environmental-data lcia 'SEARCH_RETURNED_KEY' --contributions --method 'ACTUAL_METHOD_ID' --json
+/absolute/path/to/environmental-data lcia 'ZDEfYjJmZDkwOTctOWUwMy00NzJlLWIyNzYtYTkwNmM4MGRlODdjHzEuNS4wH0NVVF9PRkY' --contributions --method 'ACTUAL_METHOD_ID' --json
 ```
 
 Contributions are process-stage buckets, not unit-process detail. See the
